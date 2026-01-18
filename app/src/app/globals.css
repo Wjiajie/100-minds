@@ -1,0 +1,315 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+:root {
+  /* 禅意色调：和纸白、烟墨黑、古铜金 */
+  --background: #F9F8F3;
+  /* Soft Washi */
+  --foreground: #2D2926;
+  /* Charcoal Ink */
+  --primary: #2D2926;
+  --primary-foreground: #F9F8F3;
+  --secondary: #E8E6DF;
+  /* Stone Grey */
+  --accent: #8C7851;
+  /* Muted Gold */
+  --muted: #8E8A84;
+  --border: #E2E0D6;
+  --card: #F9F8F3;
+  --card-foreground: #2D2926;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --font-sans: "Inter", "Source Sans Pro", system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif), "Noto Serif SC", "Georgia", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141414;
+    /* Softer Dark Focus */
+    --foreground: #D6CEC3;
+    /* Warm Washi Text */
+    --primary: #D6CEC3;
+    --secondary: #1E1E1E;
+    --muted: #8E8A84;
+    --border: #2D2D2D;
+    --card: #1A1A1A;
+    --card-foreground: #D6CEC3;
+  }
+}
+
+.dark {
+  --background: #141414;
+  /* Softer Dark Focus */
+  --foreground: #D6CEC3;
+  /* Warm Washi Text */
+  --primary: #D6CEC3;
+  --secondary: #1E1E1E;
+  --muted: #8E8A84;
+  --border: #2D2D2D;
+  --card: #1A1A1A;
+  --card-foreground: #D6CEC3;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  /* Smooth Theme Switch */
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+/* Prose 样式 - 文章内容 */
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--card-foreground);
+  --tw-prose-links: var(--accent);
+  max-width: none;
+  line-height: 1.8;
+  font-family: var(--font-serif);
+  opacity: 0.92;
+  /* Slightly softer text for dark mode */
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+}
+
+.prose h3 {
+  font-size: 1.375rem;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--muted);
+  margin: 1.5em 0;
+}
+
+.prose code {
+  background: var(--secondary);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.75em;
+  text-align: left;
+}
+
+.prose th {
+  background: var(--secondary);
+  font-weight: 600;
+}
+
+/* KaTeX 公式样式优化 */
+.katex-display {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+/* 动画 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 选中文本样式 */
+::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+
+/* 导航链接动效 */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--foreground);
+  transition: width 0.3s ease;
+  opacity: 0.6;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* 自定义滚动条 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Image Zoom Customization */
+[data-rmiz-overlay] {
+  background-color: color-mix(in srgb, var(--background), transparent 10%) !important;
+  backdrop-filter: blur(10px);
+}
+
+[data-rmiz-btn-unzoom] {
+  background-color: var(--secondary) !important;
+  color: var(--foreground) !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--border) !important;
+}
+
+.custom-zoom-dialog [data-rmiz-content] {
+  cursor: zoom-out;
+}
+
+/* 针对变量背景色的适配 */
+.dark [data-rmiz-overlay] {
+  background-color: rgba(20, 20, 20, 0.9) !important;
+}
+
+/* MDX 图片黑夜模式处理 */
+.mdx-image-dark-safe {
+  transition: filter 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s ease !important;
+}
+
+.dark .mdx-image-dark-safe {
+  /* 移除反相，使用暖色滤镜 */
+  filter: sepia(0.3) brightness(0.8) contrast(1.1);
+  opacity: 0.85;
+}
+
+/* 悬停与放大预览：暖白色高亮 */
+.dark .group:hover .mdx-image-dark-safe,
+.dark [data-rmiz-content] img {
+  filter: sepia(0.2) brightness(0.9) contrast(1) !important;
+  opacity: 1 !important;
+}

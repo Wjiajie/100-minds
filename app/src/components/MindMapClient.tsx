@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MindMapPost } from "@/lib/mind-map";
 import { ArrowDown, Tag } from "lucide-react";
+import { TagCloud } from "@/components/TagCloud";
 
 interface MindMapClientProps {
     initialPosts: MindMapPost[];
@@ -34,7 +35,7 @@ export function MindMapClient({ initialPosts, tags }: MindMapClientProps) {
     return (
         <div className="max-w-6xl mx-auto px-6 sm:px-8 pb-32">
             {/* Header Section */}
-            <div className="pt-32 pb-16 text-center space-y-8 min-h-[60vh] flex flex-col justify-center items-center">
+            <div className="pt-32 pb-16 text-center space-y-8 min-h-[70vh] flex flex-col justify-center items-center">
                 <h1 className="text-4xl sm:text-6xl font-serif font-bold tracking-tight text-foreground">
                     思维地图
                 </h1>
@@ -42,31 +43,12 @@ export function MindMapClient({ initialPosts, tags }: MindMapClientProps) {
                     探索认知的边界。点击下方标签，发现连接事物的隐形脉络。
                 </p>
 
-                {/* Tag Cloud */}
-                <div className="flex flex-wrap justify-center gap-3 max-w-4xl py-8">
-                    {tags.map(({ tag, count }) => (
-                        <button
-                            key={tag}
-                            onClick={() => handleTagClick(tag)}
-                            className={cn(
-                                "group px-4 py-2 rounded-full border transition-all duration-300 flex items-center gap-2",
-                                selectedTag === tag
-                                    ? "bg-foreground text-background border-foreground"
-                                    : "bg-background border-border hover:border-accent hover:text-accent"
-                            )}
-                        >
-                            <span className="text-sm tracking-wide font-medium">#{tag}</span>
-                            <span className={cn(
-                                "text-[10px] py-0.5 px-1.5 rounded-full transition-colors",
-                                selectedTag === tag
-                                    ? "bg-background/20 text-background"
-                                    : "bg-secondary text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent"
-                            )}>
-                                {count}
-                            </span>
-                        </button>
-                    ))}
-                </div>
+                {/* New Tag Cloud */}
+                <TagCloud
+                    tags={tags}
+                    selectedTag={selectedTag}
+                    onTagClick={handleTagClick}
+                />
 
                 {selectedTag && (
                     <button

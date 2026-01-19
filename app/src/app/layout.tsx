@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Noto_Serif_SC } from "next/font/google";
+import { Noto_Serif_SC, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 
 const notoSerif = Noto_Serif_SC({
   variable: "--font-noto-serif",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
+  preload: true,
+});
+
+const notoSans = Noto_Sans_SC({
+  variable: "--font-noto-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
   preload: true,
 });
 
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body
-        className={`antialiased font-sans ${notoSerif.variable}`}
+        className={`antialiased ${notoSans.variable} ${notoSerif.variable} font-sans`}
       >
         <ThemeProvider
           attribute="class"

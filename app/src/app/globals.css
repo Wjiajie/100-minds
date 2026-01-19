@@ -30,7 +30,7 @@
   --color-border: var(--border);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  --font-sans: "Inter", "Source Sans Pro", system-ui, sans-serif;
+  --font-sans: var(--font-noto-sans), "Inter", "Source Sans Pro", system-ui, sans-serif;
   --font-serif: var(--font-noto-serif), "Noto Serif SC", "Georgia", serif;
 }
 
@@ -85,10 +85,13 @@ h4,
   --tw-prose-headings: var(--card-foreground);
   --tw-prose-links: var(--accent);
   max-width: none;
-  line-height: 1.8;
+  line-height: 1.85;
   font-family: var(--font-serif);
-  opacity: 0.92;
-  /* Slightly softer text for dark mode */
+  opacity: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  text-wrap: pretty;
 }
 
 .prose h1,
@@ -289,6 +292,15 @@ html {
 
 .custom-zoom-dialog [data-rmiz-content] {
   cursor: zoom-out;
+}
+
+/* Zen 特色细节 */
+.zen-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.2em;
+  line-height: 2;
+  font-family: var(--font-serif);
 }
 
 /* 针对变量背景色的适配 */

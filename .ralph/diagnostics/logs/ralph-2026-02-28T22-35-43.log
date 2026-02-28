@@ -1,0 +1,5 @@
+2026-02-28T14:35:43.146935Z  INFO ralph: Creating scratchpad directory: C:\Users\jiaji\Documents\github-project\100-minds\.ralph/agent
+2026-02-28T14:35:43.147504Z  WARN ralph: Loop locking not supported on this platform, running without lock
+2026-02-28T14:35:43.147814Z  INFO ralph: Spawning subprocess for TUI mode child_args=["-c", "ralph.yml", "-H", "builtin:docs", "run", "--rpc"]
+2026-02-28T14:35:43.150843Z  INFO ralph: TUI running in subprocess RPC mode
+2026-02-28T14:38:10.545080Z  INFO ralph_tui::app: Ctrl+C detected, signaling abort

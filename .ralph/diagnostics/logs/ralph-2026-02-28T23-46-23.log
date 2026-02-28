@@ -1,0 +1,12 @@
+2026-02-28T15:46:23.827993Z  WARN ralph: Loop locking not supported on this platform, running without lock
+2026-02-28T15:46:23.940680Z  WARN ralph::loop_runner: Failed to record loop start in history: I/O error: File locking not supported on this platform
+2026-02-28T15:46:23.940954Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="C:\\Users\\jiaji\\Documents\\github-project\\100-minds"
+2026-02-28T15:46:23.940991Z  INFO ralph_core::event_loop: Looking for memories at: "C:\\Users\\jiaji\\Documents\\github-project\\100-minds\\.ralph/agent/memories.md" (exists: false)
+2026-02-28T15:46:23.941682Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-02-28T15:46:23.941694Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-02-28T15:51:24.044222Z  WARN ralph_adapters::cli_executor: Execution timeout reached, sending SIGTERM timeout_secs=300
+2026-02-28T15:51:24.118223Z  INFO ralph_core::event_loop: Memory injection check: enabled=true, inject=Auto, workspace_root="C:\\Users\\jiaji\\Documents\\github-project\\100-minds"
+2026-02-28T15:51:24.118280Z  INFO ralph_core::event_loop: Looking for memories at: "C:\\Users\\jiaji\\Documents\\github-project\\100-minds\\.ralph/agent/memories.md" (exists: false)
+2026-02-28T15:51:24.118297Z  INFO ralph_core::event_loop: Successfully loaded 0 memories from store
+2026-02-28T15:51:24.118302Z  INFO ralph_core::event_loop: Memory store is empty - no memories to inject
+2026-02-28T15:51:24.118489Z  INFO ralph_core::event_loop: Injecting scratchpad (863 chars) into prompt

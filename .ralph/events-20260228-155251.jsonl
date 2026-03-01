@@ -1,2 +1,0 @@
-{"ts":"2026-02-28T15:52:51.234399700+00:00","iteration":0,"hat":"loop","topic":"task.start","triggered":"planner","payload":"整理app/src/content/mind-map这个文件夹中的所有Markdown文件，对于每一个文件要求如下：\r\n1. 仔细分析文章中的内容，提取所有的思维模型到frontmatter的tags中。\r\n2. 对文章中首次出现的思维模型，用这个<Term term=\"思维模型名称\">思维模型名称</Term> 来标记。\r\n3. 在app/src/content/models文件夹下，为每一个思维模型新建一篇文章，来介绍这个思维模型的具体内容。要求：\r\n    1. 标题就是思维... [truncated, 454 chars total]"}
-{"payload":"mind-map文件整理完成：44个文件均已包含tags和Term标记；网站逻辑验证通过；错别字检查无重大问题；已创建6个模型文件","topic":"DOCS_COMPLETE","ts":"2026-02-28T16:38:10.922496600+00:00"}

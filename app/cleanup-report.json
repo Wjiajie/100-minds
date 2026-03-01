@@ -1,0 +1,29 @@
+{
+  "duplicates": [],
+  "irrelevant": [
+    {
+      "file": "净现值.mdx",
+      "reason": "disambiguation/notfound/too short"
+    },
+    {
+      "file": "助推.mdx",
+      "reason": "disambiguation/notfound/too short"
+    },
+    {
+      "file": "固定型思维vs.成长型思维.mdx",
+      "reason": "disambiguation/notfound/too short"
+    },
+    {
+      "file": "彼得原理.mdx",
+      "reason": "disambiguation/notfound/too short"
+    },
+    {
+      "file": "设计模式.mdx",
+      "reason": "disambiguation/notfound/too short"
+    },
+    {
+      "file": "顺势-逆势矩阵.mdx",
+      "reason": "disambiguation/notfound/too short"
+    }
+  ]
+}

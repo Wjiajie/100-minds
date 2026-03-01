@@ -1,3 +1,0 @@
-2026-02-28T15:38:16.321229Z  WARN ralph: Loop locking not supported on this platform, running without lock
-2026-02-28T15:38:16.321569Z  INFO ralph: Spawning subprocess for TUI mode child_args=["-c", "ralph.yml", "run", "--rpc"]
-2026-02-28T15:38:16.324634Z  INFO ralph: TUI running in subprocess RPC mode

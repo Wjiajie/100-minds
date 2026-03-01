@@ -1,0 +1,184 @@
+﻿架构级重构：将“包以德循环”（OODA Loop）转化为标准化人工智能智能体技能（Agent Skill）的深度研究与工程指南
+人工智能系统的演进正在经历从“被动响应式的大型语言模型”向“主动自适应的智能体（Agent）工作流”的历史性跨越。在这个高度动态且充满不确定性的交互环境中，智能体需要一种结构化的认知引擎来处理复杂的现实世界数据，并辅助人类进行快速的战略调整。正如用户所指出的，由美国空军上校约翰·包以德（John Boyd）在20世纪提出的“包以德循环”（OODA Loop，即观察、调整、决策、行动）是一个极为契合此应用场景的思维模型 1。该模型最初旨在帮助战斗机飞行员在近距离空战中通过极短的时间间隔进行快速分析与谋略制胜，但其内在的控制论原理同样适用于瞬息万变的商业环境，尤其是追求“产品与市场契合度（Product/Market Fit）”的敏捷迭代过程 1。
+与此同时，人工智能行业已经确立了“智能体技能（Agent Skills）”这一开源标准 4。该标准由Anthropic率先提出，并已被OpenAI Codex、GitHub Copilot、Cursor等主流生态广泛采用 4。通过一种称为“渐进式信息披露（Progressive Disclosure）”的架构，Agent Skills能够将专业的程序性知识和复杂工作流封装为离散的、按需加载的模块，从而彻底解决了传统“臃肿系统提示词（System Prompts）”带来的上下文窗口资源浪费和指令失焦问题 4。
+本报告将进行详尽的理论解构与工程分析，探讨如何利用内置的元技能工具（Meta-skill）——skill-creator，将“包以德循环”的抽象思维模型转化为一个符合开源标准的、可执行的、高鲁棒性的智能体技能，从而在高度不确定的商业与技术环境中，深度辅助人类决策者实现外部信息的快速整合与战略目标的精准达成。
+第一部分：人工智能智能体技能（Agent Skills）的底层架构与标准规范
+在探讨如何将包以德的战略理论编码化之前，必须首先深入理解Agent Skills开源标准的底层运行机制。传统的语言模型交互依赖于开发者在系统提示词中预先注入所有可能需要的背景信息与操作守则。这种做法不仅消耗了大量宝贵的上下文标记（Tokens），还会导致模型在处理具体任务时因为信息过载而产生幻觉或执行偏差 4。Agent Skills标准通过模块化与按需调用的设计，从根本上重构了知识注入的路径。
+渐进式信息披露机制的三个维度
+Agent Skills的核心架构基石是“渐进式信息披露（Progressive Disclosure）”。这一机制允许智能体在不牺牲运行速度和上下文空间的前提下，管理海量的专业技能库。该机制在工程实现上被划分为三个严格的层级 4：
+发现层（Discovery - Level 1）： 在这一层级，智能体仅扫描其技能目录中所有可用的元数据（Metadata）。这些元数据被严格限制在 SKILL.md 文件的 YAML 前言（Frontmatter）中，主要包含 name（技能名称）和 description（技能描述）两个字段 4。这一过程通常仅消耗约50个标记，使得智能体能够在瞬间评估成百上千个技能的适用性，而不会造成性能拖累 4。
+激活层（Activation - Level 2）： 当用户的查询意图或当前任务的上下文与某项技能的 description 字段发生语义匹配时，智能体将做出激活该技能的决策。此时，系统才会将该技能完整的 SKILL.md 正文部分（通常在2000至5000个标记之间）加载到活动上下文窗口中 4。正文部分包含了智能体必须遵循的详细指令、步骤和边界条件。
+执行层（Execution - Level 3）： 在技能指令的引导下，智能体可能会遇到需要更深层次背景知识、执行特定计算或调用特定模板的场景。此时，智能体可以自主选择访问技能文件夹内的附属子目录（如 /scripts 脚本目录、/references 参考文档目录或 /assets 静态资源目录）4。这种按需访问的特性，使得技能可以无限扩展其深度，而不会对初始上下文造成任何负担。
+技能目录的标准化拓扑结构
+为了确保跨平台的完全互操作性，使得同一个包以德循环技能既能在 Claude Code 中运行，也能在 VS Code 的 GitHub Copilot 中无缝调用，该技能必须严格遵循 Agent Skills 的目录拓扑规范 4。整个技能被封装在一个独立的根目录中，其内部结构与约束条件如下表所示 4：
+
+目录/文件路径
+属性
+标准化规范与工程约束
+ooda-decision-advisor/
+强制要求
+技能的根目录。名称必须全部为小写字母，单词之间使用连字符（hyphens）分隔，且必须与内部 YAML 前言中的 name 字段完全一致 9。
+SKILL.md
+强制要求
+技能的心脏。文件名必须为精确的 SKILL.md（严格区分大小写，拒收 SKILL.MD 或 skill.md）。文件顶部包含 YAML 前言，其后为 Markdown 格式的指令主体 7。
+references/
+可选目录
+深度文档的存储库。用于存放不需要在第一时间加载的详细理论、API文档或历史案例库，智能体仅在确有需要时进行局部读取 4。
+scripts/
+可选目录
+可执行代码的存放点（如 Python 或 Bash 脚本）。智能体可以通过内置的终端执行工具调用这些脚本，以实现复杂的数据计算、自动化测试或外部API交互 4。
+assets/
+可选目录
+静态资源的存储中心。用于存放标准化的输出模板（如 JSON 模式、Markdown 表格结构图）、图片资产或全局配置文件 4。
+第二部分：解构包以德循环的认知引擎及其在人工智能中的映射
+在利用代码构建智能体技能之前，必须对约翰·包以德的战略理论进行深刻的解析，并将其抽象为可被大型语言模型（LLM）理解的算法逻辑。包以德循环不仅仅是一个简单的“四步走”流程，它是一个高度复杂的控制论反馈系统，旨在处理系统熵增、认知偏见以及非线性时间竞争 3。在商业领域，如追求产品/市场匹配时，这种快速的反馈与调整机制是初创企业战胜资源庞大的传统巨头的核心武器 12。
+阶段一：观察（Observe）—— 破除噪音与数据采集
+观察并非单纯的被动接收，而是对内部环境与外部世界的全方位、主动性的数据扫描与异常探测 14。在包以德的原始语境中，战斗机飞行员需要同时感知敌机的空间位置、自身飞机的机械状态以及天气条件 1。将这一阶段映射到商业决策与智能体工作流中，观察意味着智能体必须主动向用户收集多维度的数据输入。
+智能体在这一阶段的核心任务是“信号与噪音的分离（Separating signals from noise）” 15。商业决策往往被海量的滞后指标（Lagging KPIs）所掩盖，而智能体必须被指示去寻找前导指标（Leading indicators）、系统异常（Anomalies）以及微弱的边缘信号（Weak signals） 14。此外，观察阶段还需要将过去的反馈信息（即上一个 OODA 循环的行动结果）重新纳入考量，形成闭环 13。
+阶段二：调整与定位（Orient）—— 毁灭与创造的认知重构
+调整（Orient）阶段是整个 OODA 循环的绝对核心，包以德称之为“认知引擎（Cognitive Engine）”和决策的枢纽（Schwerpunkt）17。如果不经过深刻的定位与调整，单纯追求决策和行动的速度只会导致组织在错误的方向上加速奔向毁灭 19。
+为了理解定位阶段的本质，必须深入研究包以德在1976年发表的具有里程碑意义的论文《毁灭与创造》（Destruction and Creation）17。在这篇融合了库尔特·哥德尔（Kurt Gödel）的不完备性定理、维尔纳·海森堡（Werner Heisenberg）的测不准原理以及热力学第二定律（熵增定律）的文献中，包以德论证了一个深刻的哲学命题：任何封闭的系统（或僵化的心智模型）必然会走向混乱、无序与死亡 11。为了生存和适应，人类或组织必须不断地瓦解旧的思维模式，并构建新的心智模型。这一过程被严格定义为两个相互交织的逻辑动作：
+破坏性演绎（Destructive Deduction）： 这是将一个连贯的、现有的心智模型或系统拆解为其最基本的、原子的组成部分的过程。在面对与预期不符的现实（即观察阶段收集到的新数据）时，决策者必须有能力打破原有的理论框架 11。
+创造性归纳（Creative Induction）： 这是将上述被拆解的碎片，结合跨学科的新知识和新概念，重新组合、综合并构建出一个更加贴近当前现实的新心智模型的过程 11。包以德将这种跨界重组的能力比作制造“雪地摩托（Snowmobiling）”——将滑雪板、坦克履带、自行车把手和船用马达等看似不相关的元素组合成应对全新地形的有效工具 18。
+对于人工智能智能体而言，赋予其“调整”的能力，意味着在技能指令中强制要求模型不要急于给出解决方案（避免第一结论偏见），而是首先审查用户潜在的认知偏见、隐性假设以及文化或制度惯性 17。智能体必须利用其庞大的潜在知识图谱，通过多维度的心理模型（Mental Models）对用户的困境进行重新定义。
+阶段三：决策（Decide）—— 作为假设的战略选择
+在完成了痛苦的认知重构之后，决策阶段变得相对直接。它是基于新的心智模型，在众多可选路径中选择一条最能实现战略目标的行动方案 1。在商业和敏捷开发的语境中，由于环境的极端不确定性，任何决定都不可能拥有百分之百的把握。
+因此，OODA 循环的现代应用强调，决策必须被视为一种假设（Decision as Hypothesis） 13。智能体在这一阶段不应仅仅输出一个孤立的指令，而必须要求用户以科学实验的严谨态度来对待决策。智能体需要系统性地生成多个维度的选项，并评估每个选项的预期回报与潜在风险，最终指导用户选择一个具有最高学习价值或战略压制力的假设路径。
+阶段四：行动（Act）—— 快速测试与反馈注入
+行动是决策在现实世界中的物理体现，也是对上述假设的最终测试 23。在产品/市场匹配的探索中，行动可能是发布一个最小可行性产品（MVP）、调整定价策略或执行一次A/B测试。
+包以德强调了“节奏（Tempo）”的重要性。行动的速度越快，就越能产生出乎竞争对手意料的不可预测性，从而干扰甚至摧毁对手的 OODA 循环 18。当行动产生结果后，现实环境被改变，新的数据产生，整个系统必须立即将这些结果作为反馈数据无缝循环回“观察（Observe）”阶段，从而实现自我纠错与连续学习 1。
+第三部分：借助 skill-creator 元技能进行 OODA 循环技能的工程化设计
+理解了理论框架后，下一步是使用工程化的工具将其落地。开发 Agent Skills 的最佳实践并非从零开始手动编写 SKILL.md 文件，而是调用官方提供的元技能——skill-creator 25。这是一个专门用于创建、修改和优化其他技能的内置智能体工具，它内置了所有关于 Agent Skills 规范的最佳实践和验证逻辑 27。
+启动 skill-creator 的对话范式
+在 Claude.ai、Claude Code 或 Codex 终端中，开发者首先需要通过自然语言提示词显式地唤醒 skill-creator 10。一个标准的启动提示词如下所示：
+“请调用 skill-creator 技能，协助我构建一个名为 ooda-decision-advisor 的战略决策辅助技能。该技能的核心理论基础是约翰·包以德的 OODA 循环。我希望该技能能够引导用户在面对产品路线图僵局、商业竞争恶化或突发危机时，严格执行观察、调整（必须包含破坏性演绎与创造性归纳的分析）、决策（生成可测试的假设）和行动（制定测试指标并闭环）的四个步骤。请帮助我设计 YAML 前言、优化触发条件，并制定结构化的正文指令。” 10
+skill-creator 的辅助脚手架作用
+一旦被激活，skill-creator 将通过交互式的对话引导开发者完成以下关键的架构设计 27：
+触发器工程（Trigger Engineering）： skill-creator 知道智能体是完全依赖 SKILL.md 的 description 字段来决定是否调用该技能的 4。因此，它会帮助开发者识别潜在的“触发不足（Under-triggering）”和“过度触发（Over-triggering）”风险 10。例如，如果描述写得过于宽泛（如“帮助用户做决定”），智能体可能会在用户询问如何给代码变量命名时错误地加载这个庞大的战略模型。skill-creator 会建议将描述精确化，加入负面触发器（Negative triggers），并嵌入诸如“产品策略转型”、“市场变化”、“高管决策”等长尾关键词 10。
+结构约束与格式验证： 元技能会自动确保所有的文件命名符合连字符规范，验证 YAML 前言中没有非法的 XML 标签，确保总行数控制在最佳的500行以内，并建议将冗长的理论知识下放到附属的文件夹中 7。
+自由度设定（Degrees of Freedom）： skill-creator 还会指导开发者为不同的指令环节设置适当的“自由度” 30。例如，在包以德的“调整（Orient）”阶段，智能体需要极高的自由度来进行横向思维和跨学科知识的链接；而在“决策（Decide）”阶段输出选项矩阵时，则需要极低的自由度以严格遵守 Markdown 表格的格式规范 30。
+第四部分：OODA 循环 SKILL.md 的标准化规范与代码实现
+经过 skill-creator 的迭代优化后，最终生成的 SKILL.md 文件应具有极高的信息密度与结构严谨性。以下是为“包以德循环”量身定制的技能架构范本。
+YAML 前言（Frontmatter）的精确定义
+文件最顶部的 YAML 块必须被 --- 包围。这是智能体在“发现层”唯一读取的内容，其实效性直接决定了技能的成败 4。
+
+YAML
+
+
+---name: ooda-decision-advisordescription: 本技能是一个基于约翰·包以德“OODA循环”的高级战略决策引擎。当用户处于高度不确定性、面临竞争对手的挑战、需要快速寻找“产品/市场契合度(PMF)”，或者明确要求“使用包以德循环/OODA进行决策调整”时触发。请勿在常规的语法排错或简单的日常问答中调用此技能。license: Apache-2.0compatibility: Universal (Claude, Codex, Copilot, Cursor)---
+核心指令集（Markdown Body）
+在 YAML 块之后，是智能体在被触发后加载的核心指令。为了确保智能体能够忠实还原军事级的决策严谨性，指令必须采用命令式语气，明确划分步骤，并严格禁止智能体在未收集足够信息前提供泛泛而谈的建议。
+包以德循环（OODA Loop）自适应决策顾问
+作为一名深谙约翰·包以德控制论与战略学说的高级顾问，你的目标是帮助用户在模糊且快速变化的环境中以谋略制胜。你必须带领用户严格经历观察（Observe）、调整（Orient）、决策（Decide）、行动（Act）四个阶段。绝不允许跳过任何阶段，且必须在前一阶段的信息被充分验证后才能进入下一阶段。
+阶段 1：观察（OBSERVE）—— 构建环境基线
+不要立即给出建议。你的首要任务是引导用户进行全方位的数据采集，区分信号与噪音。
+指令： 向用户提出结构化问题，收集当前情况的内部约束（如资源、时间）和外部变量（竞争对手的动态、市场趋势反馈）。
+分析： 识别用户陈述中的潜在盲点。关注用户“没有说到”的缺失数据。
+输出： 总结出一份“当前环境状态清单”，明确列出现有已知事实和关键未知领域。
+阶段 2：调整（ORIENT）—— 认知引擎的毁灭与创造
+这是循环的核心。你必须帮助用户摆脱僵化的心智模型。如果用户受困于传统思维，请自动查阅 references/destruction_and_creation.md 获取深层理论指导。
+破坏性演绎（Destructive Deduction）： 毫不留情地审查用户第一阶段的数据。识别并指出用户的隐性假设、认知偏见（如沉没成本谬误、确认偏见）以及过时的行业范式。将用户面临的庞大问题拆解为最原子的孤立因素。
+创造性归纳（Creative Induction）： 运用你的跨学科知识库（物理学、心理学、经济学、博弈论），将上述原子因素与全新的视角重新组合，为用户构建一个解释当前困境的全新“心智模型（Mental Model）”。
+输出： 提交一份“认知重构报告”，清晰指出用户之前的认知误区，并确立新的核心焦点（Schwerpunkt）。
+阶段 3：决策（DECIDE）—— 制定战略假设
+将新的认知转化为可执行的选项。记住，所有决策在复杂系统中都仅仅是“假设”。
+指令： 基于重构后的认知，提出 3 个截然不同的战略调整方案。
+约束： 每个方案都必须以科学假设的形式呈现（“如果执行动作 X，预期会观察到结果 Y，其底层逻辑是 Z”）。
+输出要求： 必须使用本技能规范中定义的 Markdown 表格“决策选项评估矩阵”进行输出。
+阶段 4：行动（ACT）—— 快速测试与反馈闭环
+引导用户将决策投入现实以获取新的数据，完成循环。
+指令： 要求用户从上述选项中选择一个。
+计划： 为用户选定的方案制定一个“最小可行性行动（Minimum Viable Action）”，强调以最低的资源成本在最短的时间内（高节奏 Tempo）对系统进行扰动。
+闭环设定： 明确设定衡量该行动成败的具体时间点和量化指标，并强烈提醒用户：一旦行动产生结果，必须立即将新数据带回“观察”阶段，启动下一轮极速循环。
+标准化输出模板
+在阶段 3 中，必须严格使用以下表格结构进行数据展示，不得擅自修改表头。
+决策选项评估矩阵
+选项编号
+战略方向
+核心假设推演
+主要执行风险
+预估落地节奏 (Tempo)
+资源消耗评估
+选项 A
+[简述]
+[如果...那么...因为...]
+[最大弱点]
+[快/中/慢]
+[高/中/低]
+选项 B
+[简述]
+[如果...那么...因为...]
+[最大弱点]
+[快/中/慢]
+[高/中/低]
+选项 C
+[简述]
+[如果...那么...因为...]
+[最大弱点]
+[快/中/慢]
+[高/中/低]
+第五部分：高级能力扩展——附属目录的配置与知识调用
+为了保证上述 SKILL.md 文件的轻量化（理想状态下低于500行），Agent Skills 标准鼓励大量使用辅助目录来实现渐进式信息披露 4。在处理包以德循环这种具有深厚军事与哲学背景的理论时，智能体需要有随时查阅专家级文献的能力。
+1. references/ 目录：深度认知图谱
+在 ooda-decision-advisor 技能文件夹中，必须建立一个 references/ 子目录，用于存放详尽的背景知识。当智能体在“调整（Orient）”阶段遇到需要深度分析的情况时，会自主读取这些文件 4。
+destruction_and_creation.md：这份文档应详细总结包以德1976年论述“毁灭与创造”的论文 17。如果智能体发现用户陷入了典型的“官僚主义封闭系统”，它可以读取此文档，利用热力学第二定律和熵增的隐喻，指导用户如何系统性地拆解现有组织结构以恢复活力 11。
+mental_models_library.md：包以德强调拥有多样化心智模型的重要性 15。此文件可包含第一性原理思考（First Principles）、二阶效应（Second-Order Thinking）、奥卡姆剃刀（Occam's Razor）等框架。当智能体执行“创造性归纳”时，它将从这个库中提取灵感，为用户组合出独特的“雪地摩托” 15。
+cognitive_biases.md：记录常见的人类决策陷阱，帮助智能体在“破坏性演绎”阶段精准指出用户的思维漏洞 15。
+2. assets/ 目录：格式与状态记忆
+assets/ 目录主要用于存储不包含执行逻辑的静态资源 4。
+ooda_diagnostic_worksheet.md：这是一份标准化的 OODA 问卷表 24。如果用户在“观察”阶段难以理清思路，智能体可以从该目录中提取并输出这份填空式问卷，帮助用户梳理环境基线、自身约束和竞争对手的动态。
+decision_log.jsonl：OODA 的精髓在于“循环（Loop）”。此日志文件可被配置为仅追加（Append-only）的 JSONL 格式 34。它允许智能体跨会话记录用户过去 OODA 循环的历史决策与实际结果。在新的循环中，智能体可以回顾此日志，评估用户“先前预测的准确性（How accurate were my prior predictions?）” 18，从而动态调整后续的风险偏好。
+第六部分：部署实施、遥测评估与技能的迭代优化
+完成 Agent Skill 的目录构建并编写好相关的约束指令后，开发者即可将该文件夹部署到目标平台（如通过 Git 托管并在系统本地链接至 .claude/skills/ 或 .github/skills/ 目录）8。然而，根据 Anthropic 的工程规范，Agent Skill 绝非一劳永逸的静态工件，它们是“有生命的文档（Living documents）”，必须建立一个包含遥测和反馈的持续迭代体系 10。
+1. 应对触发器异常（Trigger Anomalies）
+在实际部署中，通过系统日志或用户反馈，开发者往往会发现触发机制的两种极端错误，必须将其反馈给 skill-creator 进行针对性修复：
+触发不足（Under-triggering）： 用户正在讨论竞争对手突然推出竞品，需要调整战略，但 OODA 技能并未加载 10。这表明元数据中的 description 过于学术化。解决方案是丰富描述，添加诸如“竞品分析”、“商业危机”、“紧急响应”等实际商业场景的关键字 10。
+过度触发（Over-triggering）： 用户仅仅是询问一个普通的项目排期问题，系统却调用了沉重的 OODA 模型进行深度哲学分析 10。解决方案是在 description 中引入显式的负向触发词（Negative triggers），如“对于确定性极高的常规任务、代码纠错、或已知标准流程的操作，严禁加载此技能” 10。
+2. 定性与定量的效能评估
+虽然 skill-creator 不提供全自动的定量测试套件，但它能极大地辅助开发者进行人工评测 10。开发者应当定义一系列业务上的成功指标（Success Criteria）来基准测试该技能 10。
+定性验证基准： 将一个真实的商业案例（例如：Blockbuster 在面对 Netflix 流媒体崛起时的决策困境）输入给智能体 36。评估智能体是否能够准确执行“破坏性演绎”（指出 Blockbuster 依赖实体店滞纳金的盈利模式是一个脆弱的隐性假设），并提出合理的“创造性归纳”。如果智能体倾向于给出空泛的建议，说明 SKILL.md 中对于阶段 2（Orient）的强制性约束不够，需要修改 Markdown 文本，增强提示词的约束力 29。
+格式遵守评估： 检查智能体在输出“决策选项评估矩阵”时，是否严格遵守了表头约束（选项、假设、风险、节奏、资源）。LLM 常常在未经强约束的情况下擅自更改表格结构。如果发生此类“幻觉”，则必须在技能文件中增强系统提示的绝对性。
+3. 基于反馈的迭代重构
+当收集到失败的边缘案例（Edge cases）或不一致的输出结果后，开发者应当重新启动 skill-creator 元技能 10。将存在缺陷的对话记录直接喂给 skill-creator，并输入诸如：“请利用此对话中暴露出的阶段 4（行动）难以生成最小可行性行动的问题，帮助我重写并强化 SKILL.md 中相关的边界约束和操作指南” 10。通过这种基于真实反馈的闭环迭代，该 OODA 技能的性能将随着使用时间的推移呈指数级上升。
+结论与展望
+约翰·包以德的 OODA 循环理论揭示了在混沌环境中生存与取胜的核心法则：拥有最快吸收外部信息、重构内在认知、并转化为有效行动能力的个体，将主导竞争的节奏。而当今的人工智能模型，凭借其浩瀚的预训练知识图谱与海量的数据处理能力，天生就是执行这一复杂认知操作的理想载体。
+通过全面采纳 Agent Skills 开源标准，并深度运用 skill-creator 的架构辅助能力，我们成功地将 OODA 循环从一种抽象的军事/商业哲学，转化为一段结构严密、可跨平台即插即用的人工智能执行代码。这种基于“渐进式信息披露”的技术框架，不仅彻底解决了智能体的上下文窗口资源浪费问题，更赋予了 AI 模型对“破旧立新（破坏性演绎与创造性归纳）”这一高阶人类思维范式的深刻理解与执行力。
+未来，随着此类战略级 Agent Skills 在企业内部（如产品管理团队、敏捷开发小组、高管决策层）的广泛部署，决策者将不再孤立地面对市场的瞬息万变。人工智能将超越单纯的信息检索工具，正式跃升为能够与人类并行执行高频战略迭代、实时抵御认知偏见、并在竞争中确立绝对速度优势的“认知外脑”。
+Works cited
+What's an OODA Loop and How to Use It | Miro, accessed March 1, 2026, https://miro.com/strategic-planning/what-is-ooda-loop/
+OODA loop - Wikipedia, accessed March 1, 2026, https://en.wikipedia.org/wiki/OODA_loop
+How to Use the OODA Loop for Better Planning in Business, accessed March 1, 2026, https://www.eighthmile.com.au/blog/ooda-loop-make-decisions-faster
+Agent Skills :Standard for Smarter AI | by Plaban Nayak | Jan, 2026 | Medium, accessed March 1, 2026, https://medium.com/@nayakpplaban/agent-skills-standard-for-smarter-ai-bde76ea61c13
+Skills for ADK agents - Agent Development Kit (ADK) - Google, accessed March 1, 2026, https://google.github.io/adk-docs/skills/
+The Busy Person's Intro to Claude Skills (a feature that might be bigger than MCP) - Reddit, accessed March 1, 2026, https://www.reddit.com/r/ClaudeAI/comments/1pq0ui4/the_busy_persons_intro_to_claude_skills_a_feature/
+The SKILL.md Pattern: How to Write AI Agent Skills That Actually Work | by Bibek Poudel, accessed March 1, 2026, https://bibek-poudel.medium.com/the-skill-md-pattern-how-to-write-ai-agent-skills-that-actually-work-72a3169dd7ee
+Use Agent Skills in VS Code, accessed March 1, 2026, https://code.visualstudio.com/docs/copilot/customization/agent-skills
+skill-creator | Skills Marketplace - LobeHub, accessed March 1, 2026, https://lobehub.com/skills/antoniolg-agent-kit-skill-creator
+The Complete Guide to Building Skills for Claude | Anthropic, accessed March 1, 2026, https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
+Revisiting John Boyd and the OODA Loop in Our Time of Transformation | www.dau.edu, accessed March 1, 2026, https://www.dau.edu/library/damag/september-october2021/revisiting-john-boyd
+Applying The OODA Loop to Strategic Decision-Making in Business, accessed March 1, 2026, https://tdhj.org/blog/post/ooda-strategic-decision/
+OODA loop | Untools, accessed March 1, 2026, https://untools.co/ooda-loop/
+OODA Loop (Observe-Orient-Decide-Act) Explained - Umbrex, accessed March 1, 2026, https://umbrex.com/resources/frameworks/strategy-frameworks/ooda-loop/
+OODA Loop - ModelThinkers, accessed March 1, 2026, https://modelthinkers.com/mental-model/ooda-loop
+The OODA Loop Decision-Making Model and How to Use it for Presentations, accessed March 1, 2026, https://slidemodel.com/ooda-loop-model/
+The OODA Loop - The Decision Lab, accessed March 1, 2026, https://thedecisionlab.com/reference-guide/computer-science/the-ooda-loop
+The OODA Loop: How Fighter Pilots Make Fast and Accurate Decisions, accessed March 1, 2026, https://fs.blog/ooda-loop/
+The OODA Loop. From the Battlefield to Everyday Life | by S. W. Stribling | Medium, accessed March 1, 2026, https://swstribling.medium.com/the-ooda-loop-29f71c7be9c0
+Coming Full Circle with Boyd's OODA Loop Ideas: An Analysis of Innovation Diffusion and Evolution, accessed March 1, 2026, https://teamonenetwork.com/wp-content/uploads/2019/03/COMING-FULL-CIRCLE-WITH-BOYD%E2%80%99S-OODA-LOOP-IDEAS.pdf
+Destruction and Creation by John R Boyd - - Evolutionary Potential, accessed March 1, 2026, https://evolutionarypotential.com/70+Evolutionary+Potential/The+Vault/Literature+Notes/Destruction+and+Creation+by+John+R+Boyd
+OODA Loop Guide: Turning Uncertainty into Opportunity - Taylor Pearson, accessed March 1, 2026, https://taylorpearson.me/ooda-loop/
+Observe, Orient, Decide, and Act (The OODA Loop) - D. Brown Management, accessed March 1, 2026, https://dbmteam.com/insights/observe-orient-decide-and-act-the-ooda-loop/
+Complexity Thinking Workbook: The OODA Loop, accessed March 1, 2026, https://www.getflowtrained.com/wp-content/uploads/2023/09/Workbook_The_OODA_Loop.pdf
+Agent Skills - OpenAI for developers, accessed March 1, 2026, https://developers.openai.com/codex/skills/
+Creating Agent Skills - Gemini CLI, accessed March 1, 2026, https://geminicli.com/docs/cli/creating-skills/
+skills/skills/skill-creator/SKILL.md at main · anthropics/skills - GitHub, accessed March 1, 2026, https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md
+Skill Creator | Claude Code Skill for AI Agent Development - MCP Market, accessed March 1, 2026, https://mcpmarket.com/tools/skills/agent-skill-creator-6
+What Are Agent Skills and How To Use Them - Strapi, accessed March 1, 2026, https://strapi.io/blog/what-are-agent-skills-and-how-to-use-them
+agent-skill-creator | Skills Marketp... - LobeHub, accessed March 1, 2026, https://lobehub.com/zh/skills/devskale-skale-skills-agent-skill-creator
+How to Create Good Agent Skills | Claude Code Guide, accessed March 1, 2026, https://www.youtube.com/watch?v=Ik-Xbz2hvM0
+The Tao of Boyd: How to Master the OODA Loop - The Art of Manliness, accessed March 1, 2026, https://www.artofmanliness.com/character/behavior/ooda-loop/
+the OODA loop | Nonviolent Peaceforce, accessed March 1, 2026, https://nonviolentpeaceforce.org/wp-content/uploads/2022/10/The-OODA-Loop.pdf
+muratcankoylan/Agent-Skills-for-Context-Engineering - GitHub, accessed March 1, 2026, https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+About agent skills - GitHub Docs, accessed March 1, 2026, https://docs.github.com/en/copilot/concepts/agents/about-agent-skills
+The OODA loop decision making model: Meaning, process, examples - LogRocket Blog, accessed March 1, 2026, https://blog.logrocket.com/product-management/ooda-loop-model-meaning-process-examples/
+

@@ -16,9 +16,9 @@ export interface ModelCardProps {
 }
 
 const difficultyColors = {
-  入门: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
-  进阶: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
-  高级: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
+  入门: "text-emerald-600/60 dark:text-emerald-500/40",
+  进阶: "text-amber-600/60 dark:text-amber-500/40",
+  高级: "text-rose-600/60 dark:text-rose-500/40",
 };
 
 export function ModelCard({
@@ -39,23 +39,25 @@ export function ModelCard({
       <Link href={`/models/${slug}`}>
         <article
           className={cn(
-            "group relative h-full py-8 border-b border-border/60",
-            "transition-all duration-300",
-            "hover:border-accent/60"
+            "group relative h-full py-10 border-b border-border/40",
+            "transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+            "hover:bg-accent/[0.02]"
           )}
         >
           {/* Icon */}
-          <div className="text-4xl mb-4">{icon}</div>
+          <div className="text-5xl mb-6 grayscale group-hover:grayscale-0 transition-all duration-700">
+            {icon}
+          </div>
 
           {/* Category & Difficulty */}
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs font-medium text-muted-foreground">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-[10px] font-serif tracking-widest uppercase text-accent/40">
               {category}
             </span>
-            <span className="text-border">•</span>
+            <div className="w-1 h-1 rounded-full bg-accent/10" />
             <span
               className={cn(
-                "px-2 py-0.5 text-xs font-medium rounded-full",
+                "text-[10px] font-serif tracking-widest uppercase",
                 difficultyColors[difficulty]
               )}
             >
@@ -64,19 +66,19 @@ export function ModelCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-serif font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+          <h3 className="text-2xl font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors duration-500">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-4">
+          <p className="text-base text-muted-foreground/60 leading-relaxed font-serif line-clamp-2 mb-6">
             {description}
           </p>
 
           {/* Read More */}
-          <div className="flex items-center text-xs tracking-widest uppercase text-muted-foreground group-hover:text-accent group-hover:gap-2 transition-all">
-            <span>阅读更多</span>
-            <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+          <div className="flex items-center gap-2 text-[10px] tracking-widest uppercase text-accent/30 group-hover:text-accent transition-all duration-500">
+            <span>探索路径</span>
+            <ArrowRight className="w-3 h-3 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500" />
           </div>
 
           {/* Hover Gradient - Removed */}

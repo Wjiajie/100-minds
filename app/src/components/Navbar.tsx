@@ -42,17 +42,20 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-4 right-4 z-50 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border py-2"
-          : "bg-transparent py-4"
+          ? "top-6 bg-background/60 backdrop-blur-xl border border-border/50 py-1 px-4 max-w-5xl mx-auto rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+          : "top-0 py-6 px-4 bg-transparent border-b border-transparent"
       )}
     >
-      <nav className="max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="flex items-center justify-between h-16">
+      <nav className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <span className="text-2xl font-serif font-black text-foreground tracking-tighter lowercase">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-6 h-6 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-500">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            </div>
+            <span className="text-xl font-serif font-black text-foreground tracking-tight lowercase">
               100-minds
             </span>
           </Link>

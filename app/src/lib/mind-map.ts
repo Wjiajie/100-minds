@@ -59,8 +59,8 @@ export function getMindMapPostBySlug(slug: string): MindMapPost | null {
     const { data, content } = matter(fileContents);
 
     return {
-        slug,
-        title: data.title || slug,
+        slug: decodedSlug,
+        title: data.title || decodedSlug,
         description: data.description || '',
         tags: data.tags || [],
         date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),

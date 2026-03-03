@@ -76,44 +76,51 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section - The Pure Zen Entry */}
-      <section className="relative pt-48 pb-12 px-6 sm:px-8">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="relative pt-48 pb-12 px-6 sm:px-8 overflow-hidden">
+        {/* Vertical Subtitle - Zen Signature */}
+        <div className="hidden lg:block absolute left-12 top-64 zen-vertical pointer-events-none">
+          <span className="text-xs uppercase tracking-[0.3em] font-serif text-accent/40 bg-background px-1 py-4">
+            认知觉醒 · 思维跃迁
+          </span>
+        </div>
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           {/* Tagline - Calmly Large */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.8, ease: [0.23, 1, 0.32, 1] }}
           >
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-16 text-foreground/90">
+            <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight leading-[0.95] mb-20 text-foreground/90 selection:text-accent">
               探索 100+
               <br />
-              思维模型
+              <span className="text-accent/80">思维模型</span>
             </h1>
           </motion.div>
 
           {/* Alain de Botton Quote - Scholarly Ink */}
           <motion.div
-            className="mb-16 max-w-2xl mx-auto relative px-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            className="mb-20 max-w-2xl mx-auto relative px-12"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, delay: 0.4 }}
           >
             {/* Minimalist marker */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-foreground/10" />
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-accent/20" />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-accent/20" />
 
-            <blockquote className="text-xl sm:text-2xl font-serif text-foreground/70 leading-relaxed italic mb-8">
+            <blockquote className="text-2xl sm:text-3xl font-serif text-foreground/70 leading-relaxed italic mb-8">
               “良好决策的头号劲敌就是思考问题缺乏充分的视角。”
             </blockquote>
-            <cite className="not-italic text-sm text-muted-foreground/40 font-serif tracking-widest uppercase">
+            <cite className="not-italic text-sm text-accent/50 font-serif tracking-widest uppercase">
               —— 阿兰·德波顿
             </cite>
           </motion.div>
 
           {/* Subtext - Clear Perspective */}
           <motion.p
-            className="text-lg text-muted-foreground/60 max-w-xl mx-auto mb-16 leading-relaxed font-serif"
+            className="text-xl text-muted-foreground/50 max-w-xl mx-auto mb-20 leading-relaxed font-serif"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -126,7 +133,7 @@ export default function HomePage() {
         </div>
 
         {/* Subtle radial hint for depth */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,0,0,0.01)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(140,120,81,0.03)_0%,transparent_70%)] pointer-events-none" />
       </section>
 
       {/* Philosophy Section */}
@@ -184,7 +191,7 @@ export default function HomePage() {
                   100-minds 深受加百列·温伯格的著作<a href="https://book.douban.com/subject/35771947/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent underline underline-offset-4 decoration-accent/20 transition-colors">《思维模型》</a>启发。我们试图将书中的智慧数字化，为你构建一套动态的认知操作系统。
                 </p>
                 <p>
-                  在这里，<strong>思维导图</strong>是你的知识地图，引导你探索跨学科的因果网络；而<strong>术语表</strong>则是你的实时智囊，通过交互式卡片在阅读中即刻填补认知差。
+                  在这里，<strong>思维地图</strong>是你的思维模型索引图，引导你探索跨学科的因果网络；而<strong>术语表</strong>则是你的实时智囊，通过交互式卡片在阅读中即刻填补认知差。
                 </p>
                 <p className="italic text-sm tracking-widest uppercase text-muted-foreground/30 mt-5">
                   “构建跨学科的认知框架，直到你的大脑能够自动检索出最合适的模型。”

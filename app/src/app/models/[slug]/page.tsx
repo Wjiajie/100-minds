@@ -33,69 +33,66 @@ export default async function ModelDetailPage({ params }: PageProps) {
         <div className="min-h-screen bg-background">
             <Navbar />
 
-            <main className="pt-32 pb-24 px-6 sm:px-8">
-                <div className="max-w-4xl mx-auto">
+            <main className="pt-48 pb-32 px-6 sm:px-8">
+                <div className="max-w-3xl mx-auto">
                     {/* Back Navigation */}
-                    <Link
-                        href="/models"
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12 group"
-                    >
-                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        返回库
-                    </Link>
+                    <div className="flex justify-center mb-24">
+                        <Link
+                            href="/models"
+                            className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-accent/40 hover:text-accent transition-all duration-700 group"
+                        >
+                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-3 transition-transform duration-700" />
+                            <span>返回智慧库</span>
+                            <div className="w-12 h-[1px] bg-accent/20 group-hover:w-20 transition-all duration-700" />
+                        </Link>
+                    </div>
 
                     {/* Article Header */}
-                    <header className="mb-16">
-                        <div className="flex items-center gap-3 mb-6">
-                            <span className="text-4xl">{model.icon}</span>
-                            <span className="px-3 py-1 bg-secondary/50 text-muted-foreground text-[10px] font-medium tracking-widest uppercase">
-                                {model.category}
+                    <header className="mb-32 text-center">
+                        <div className="flex flex-col items-center gap-8 mb-16 animate-slide-up">
+                            <span className="text-7xl filter grayscale hover:grayscale-0 transition-all duration-1000 cursor-default">
+                                {model.icon}
                             </span>
-                            <span className="flex items-center gap-1.5 px-3 py-1 bg-accent/5 text-accent text-[10px] font-medium tracking-widest uppercase border border-accent/10">
-                                <ShieldCheck className="w-3 h-3" />
-                                {model.difficulty}
-                            </span>
+                            <div className="flex items-center gap-6">
+                                <span className="text-[10px] font-serif tracking-[0.3em] uppercase text-accent/50">
+                                    {model.category}
+                                </span>
+                                <div className="w-1.5 h-1.5 rounded-full bg-accent/20" />
+                                <span className="text-[10px] font-serif tracking-[0.3em] uppercase text-accent/50">
+                                    {model.difficulty}
+                                </span>
+                            </div>
                         </div>
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8 leading-tight">
+                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-16 leading-[1.05] tracking-tight animate-fade-in [animation-delay:200ms]">
                             {model.title}
                         </h1>
 
-                        <p className="text-xl text-muted-foreground font-serif italic border-l-2 border-accent/20 pl-6 mb-10 leading-relaxed">
+                        <p className="text-2xl text-muted-foreground/50 font-serif italic max-w-2xl mx-auto leading-relaxed px-8 animate-fade-in [animation-delay:400ms]">
                             {model.description}
                         </p>
 
-                        <div className="flex flex-wrap items-center gap-8 py-6 border-y border-border/30 text-xs text-muted-foreground">
+                        <div className="flex items-center justify-center gap-10 mt-20 text-[10px] tracking-[0.2em] uppercase text-accent/30 font-serif animate-fade-in [animation-delay:600ms]">
                             {model.publishedAt && (
                                 <span className="flex items-center gap-2">
-                                    <Calendar className="w-3.5 h-3.5 opacity-60" />
-                                    更新于 {model.publishedAt}
+                                    {model.publishedAt}
                                 </span>
                             )}
+                            <div className="w-[1px] h-6 bg-accent/10" />
                             {model.tags && model.tags.length > 0 && (
-                                <div className="flex items-center gap-3">
-                                    <Tag className="w-3.5 h-3.5 opacity-60" />
-                                    <div className="flex gap-2">
-                                        {model.tags.map(tag => (
-                                            <span key={tag} className="hover:text-foreground transition-colors cursor-pointer">
-                                                #{tag}
-                                            </span>
-                                        ))}
-                                    </div>
+                                <div className="flex gap-6">
+                                    {model.tags.slice(0, 3).map(tag => (
+                                        <span key={tag} className="hover:text-accent transition-colors cursor-pointer capitalize">
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
                             )}
                         </div>
                     </header>
 
                     {/* Article Content */}
-                    <article className="prose prose-slate dark:prose-invert max-w-none 
-            prose-headings:font-serif prose-headings:font-bold prose-headings:tracking-tight
-            prose-p:leading-relaxed prose-p:text-foreground/90 prose-p:font-serif
-            prose-li:text-foreground/90 prose-li:font-serif
-            prose-strong:text-foreground prose-strong:font-bold
-            prose-blockquote:border-accent/30 prose-blockquote:font-serif prose-blockquote:italic
-            mb-20"
-                    >
+                    <article className="prose animate-fade-in mb-32">
                         <MDXRemote
                             source={model.content}
                             components={mdxComponents}

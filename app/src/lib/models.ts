@@ -51,7 +51,8 @@ export function getAllModels(): ModelMeta[] {
 }
 
 export function getModelBySlug(slug: string): Model | null {
-  const fullPath = path.join(modelsDirectory, `${slug}.mdx`);
+  const decodedSlug = decodeURIComponent(slug);
+  const fullPath = path.join(modelsDirectory, `${decodedSlug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
     return null;
@@ -61,8 +62,8 @@ export function getModelBySlug(slug: string): Model | null {
   const { data, content } = matter(fileContents);
 
   return {
-    slug,
-    title: data.title || slug,
+    slug: decodedSlug,
+    title: data.title || decodedSlug,
     description: data.description || "",
     category: data.category || "未分类",
     icon: data.icon || "💡",

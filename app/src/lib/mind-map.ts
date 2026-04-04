@@ -84,3 +84,58 @@ export function getAllTags(): { tag: string; count: number }[] {
         .map(([tag, count]) => ({ tag, count }))
         .sort((a, b) => b.count - a.count);
 }
+
+export interface GraphNode {
+    id: string;
+    tag: string;
+    count: number;
+}
+
+export interface GraphEdge {
+    source: string;
+    target: string;
+    weight: number;
+}
+
+export interface MindMapGraph {
+    nodes: GraphNode[];
+    edges: GraphEdge[];
+}
+
+export function getMindMapGraph(): MindMapGraph {
+    const posts = getAllMindMapPosts();
+    const tagsCount: Record<string, number> = {};
+    const edgesMap: Record<string, number> = {};
+
+    posts.forEach((post) => {
+        const uniqueTags = Array.from(new Set(post.tags.filter(Boolean)));
+        
+        // Count nodes
+        uniqueTags.forEach((tag) => {
+            tagsCount[tag] = (tagsCount[tag] || 0) + 1;
+        });
+
+        // Count edges (co-occurrences)
+        for (let i = 0; i < uniqueTags.length; i++) {
+            for (let j = i + 1; j < uniqueTags.length; j++) {
+                // Ensure consistent ordering to avoid A->B and B->A as separate edges
+                const [source, target] = [uniqueTags[i], uniqueTags[j]].sort();
+                const edgeKey = `${source}|||${target}`;
+                edgesMap[edgeKey] = (edgesMap[edgeKey] || 0) + 1;
+            }
+        }
+    });
+
+    const nodes: GraphNode[] = Object.entries(tagsCount).map(([tag, count]) => ({
+        id: tag,
+        tag,
+        count
+    })).sort((a, b) => b.count - a.count);
+
+    const edges: GraphEdge[] = Object.entries(edgesMap).map(([key, weight]) => {
+        const [source, target] = key.split('|||');
+        return { source, target, weight };
+    });
+
+    return { nodes, edges };
+}

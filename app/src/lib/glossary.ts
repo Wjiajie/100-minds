@@ -500,7 +500,7 @@ export const glossaryData: Record<string, GlossaryEntry> = {
     term: "路径依赖",
     definition: "现在的决策受到过去决策的严重限制。一旦选择了某条技术或制度路径，退出成本会变得非常高。",
     category: "社会学",
-    relatedTerms: ["惯性", "保留可能性"],
+    relatedTerms: ["惯性"],
     examples: ["QWERTY 键盘布局的延续", "由于历史原因选定的技术栈"],
   },
   "古德哈特定律": {
@@ -1322,11 +1322,6 @@ export const glossaryData: Record<string, GlossaryEntry> = {
     term: "鸵鸟政策",
     definition: "遇到危险或不愉快的情况时，像鸵鸟把头埋进沙子里一样不闻不问、逃避现实的做法。",
     category: "心理与行为",
-  },
-  保留可能性: {
-    term: "保留可能性",
-    definition: "做出能保留未来选择权的决定，以削弱路径依赖的局限性并应对不确定性。",
-    category: "战略与博弈",
   },
   中性思考: {
     term: "中性思考",

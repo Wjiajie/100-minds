@@ -89,6 +89,10 @@ export interface GraphNode {
     id: string;
     tag: string;
     count: number;
+    degree: number;
+    weightedDegree: number;
+    importanceScore: number;
+    layer: 0 | 1 | 2 | 3;
 }
 
 export interface GraphEdge {
@@ -126,16 +130,69 @@ export function getMindMapGraph(): MindMapGraph {
         }
     });
 
-    const nodes: GraphNode[] = Object.entries(tagsCount).map(([tag, count]) => ({
-        id: tag,
-        tag,
-        count
-    })).sort((a, b) => b.count - a.count);
-
     const edges: GraphEdge[] = Object.entries(edgesMap).map(([key, weight]) => {
         const [source, target] = key.split('|||');
         return { source, target, weight };
     });
+
+    const degreeMap: Record<string, number> = {};
+    const weightedDegreeMap: Record<string, number> = {};
+
+    Object.keys(tagsCount).forEach((tag) => {
+        degreeMap[tag] = 0;
+        weightedDegreeMap[tag] = 0;
+    });
+
+    edges.forEach((edge) => {
+        degreeMap[edge.source] = (degreeMap[edge.source] || 0) + 1;
+        degreeMap[edge.target] = (degreeMap[edge.target] || 0) + 1;
+        weightedDegreeMap[edge.source] = (weightedDegreeMap[edge.source] || 0) + edge.weight;
+        weightedDegreeMap[edge.target] = (weightedDegreeMap[edge.target] || 0) + edge.weight;
+    });
+
+    const maxCount = Math.max(...Object.values(tagsCount), 1);
+    const maxDegree = Math.max(...Object.values(degreeMap), 1);
+    const maxWeightedDegree = Math.max(...Object.values(weightedDegreeMap), 1);
+    const maxWeightedDegreeLog = Math.log1p(maxWeightedDegree) || 1;
+
+    const rankedNodes = Object.entries(tagsCount)
+        .map(([tag, count]) => {
+            const degree = degreeMap[tag] || 0;
+            const weightedDegree = weightedDegreeMap[tag] || 0;
+            const importanceScore =
+                0.5 * (count / maxCount) +
+                0.3 * (Math.log1p(weightedDegree) / maxWeightedDegreeLog) +
+                0.2 * (degree / maxDegree);
+
+            return {
+                id: tag,
+                tag,
+                count,
+                degree,
+                weightedDegree,
+                importanceScore,
+                layer: 3 as 0 | 1 | 2 | 3,
+            };
+        })
+        .sort((a, b) => {
+            if (b.importanceScore !== a.importanceScore) {
+                return b.importanceScore - a.importanceScore;
+            }
+            if (b.count !== a.count) {
+                return b.count - a.count;
+            }
+            return a.tag.localeCompare(b.tag, 'zh-CN');
+        });
+
+    const coreLimit = 16;
+    const layerOneLimit = 64;
+    const layerTwoLimit = 160;
+
+    const nodes: GraphNode[] = rankedNodes.map((node, index) => ({
+        ...node,
+        importanceScore: Number(node.importanceScore.toFixed(4)),
+        layer: index < coreLimit ? 0 : index < layerOneLimit ? 1 : index < layerTwoLimit ? 2 : 3,
+    }));
 
     return { nodes, edges };
 }

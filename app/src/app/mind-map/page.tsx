@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { MindMapClient } from "@/components/MindMapClient";
 import { getAllMindMapPosts, getMindMapGraph } from "@/lib/mind-map";
 
@@ -15,7 +14,7 @@ export default function MindMapPage() {
     return (
         <div className="min-h-screen bg-background flex flex-col">
             <Navbar />
-            <main className="flex-1 flex flex-col relative w-full h-[calc(100vh-4rem)] pt-16">
+            <main className="flex-1 flex flex-col relative w-full h-[calc(100vh-4rem)] pt-24 lg:pt-28">
                 <MindMapClient initialPosts={posts} graph={graph} />
             </main>
         </div>

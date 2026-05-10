@@ -43,8 +43,10 @@ body::before {
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --font-sans:
-    var(--font-noto-sans), "Inter", "Source Sans Pro", system-ui, sans-serif;
-  --font-serif: var(--font-noto-serif), "Noto Serif SC", "Georgia", serif;
+    "Noto Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC",
+    "Hiragino Sans GB", "Inter", "Source Sans Pro", system-ui, sans-serif;
+  --font-serif:
+    "Noto Serif SC", "Songti SC", "SimSun", "STSong", "Georgia", serif;
 }
 
 @media (prefers-color-scheme: dark) {

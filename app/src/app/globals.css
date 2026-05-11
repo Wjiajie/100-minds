@@ -355,3 +355,319 @@ html {
   filter: sepia(0.2) brightness(0.9) contrast(1) !important;
   opacity: 1 !important;
 }
+
+@keyframes field-breathe {
+  0%,
+  100% {
+    transform: scale(0.985) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.02) rotate(1.5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes ring-turn {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes node-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.thinking-field {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 8%);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--secondary), transparent 30%),
+      color-mix(in srgb, var(--background), transparent 8%) 58%,
+      color-mix(in srgb, #78909c, transparent 84%)
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+    0 28px 90px rgba(38, 34, 30, 0.08);
+  animation: field-breathe 9s ease-in-out infinite;
+}
+
+.thinking-field::before,
+.thinking-field::after {
+  content: "";
+  position: absolute;
+  inset: 44px;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 68%);
+}
+
+.thinking-field::after {
+  inset: 86px;
+  border-color: color-mix(in srgb, var(--foreground), transparent 82%);
+  transform: rotate(8deg);
+}
+
+.thinking-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid color-mix(in srgb, var(--foreground), transparent 78%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thinking-ring-a {
+  width: 56%;
+  aspect-ratio: 1;
+  animation: ring-turn 28s linear infinite;
+}
+
+.thinking-ring-b {
+  width: 76%;
+  aspect-ratio: 1;
+  border-style: dashed;
+  animation: ring-turn 40s linear infinite reverse;
+}
+
+.thinking-ink {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 42% 58% 48% 52%;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.32), transparent 26%),
+    color-mix(in srgb, var(--foreground), transparent 10%);
+  opacity: 0.92;
+  box-shadow: 0 24px 60px rgba(38, 34, 30, 0.24);
+}
+
+.thinking-node {
+  position: absolute;
+  display: grid;
+  min-width: 3.8rem;
+  height: 3.8rem;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 35%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background), transparent 8%);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  box-shadow: 0 14px 34px rgba(38, 34, 30, 0.08);
+  animation: node-float 4.5s ease-in-out infinite;
+}
+
+.framework-lens {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 12%);
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--background), transparent 4%),
+      color-mix(in srgb, var(--secondary), transparent 42%)
+    );
+  box-shadow: 0 30px 80px rgba(38, 34, 30, 0.07);
+}
+
+.framework-lens::before {
+  content: "";
+  position: absolute;
+  inset: 32px;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 78%);
+}
+
+.framework-book {
+  position: absolute;
+  left: 38px;
+  bottom: 44px;
+  width: 34%;
+  max-width: 180px;
+  aspect-ratio: 3 / 4;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 18px 20px 50px rgba(38, 34, 30, 0.18);
+  transform: rotate(-3deg);
+  z-index: 3;
+}
+
+.framework-plane {
+  position: absolute;
+  inset: 42px 32px 112px 118px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--border), transparent 75%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--border), transparent 80%) 1px,
+      transparent 1px
+    );
+  background-size: 52px 52px;
+}
+
+.framework-plane::before,
+.framework-plane::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 68%;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.framework-plane::after {
+  width: 44%;
+  border-color: color-mix(in srgb, var(--foreground), transparent 82%);
+  transform: translate(-50%, -50%) rotate(18deg);
+}
+
+.framework-paths {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: color-mix(in srgb, var(--accent), transparent 46%);
+  stroke-dasharray: 4 8;
+  stroke-linecap: round;
+  stroke-width: 1.2;
+}
+
+.framework-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  width: 118px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 36% 30%, rgba(255, 255, 255, 0.36), transparent 24%),
+    color-mix(in srgb, var(--foreground), transparent 8%);
+  color: color-mix(in srgb, var(--background), transparent 4%);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 22px 52px rgba(38, 34, 30, 0.2);
+}
+
+.framework-signal {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.2rem;
+  height: 2.8rem;
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 42%);
+  background: color-mix(in srgb, var(--background), transparent 12%);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  box-shadow: 0 14px 34px rgba(38, 34, 30, 0.08);
+}
+
+.framework-signal-a {
+  left: 10%;
+  top: 22%;
+}
+
+.framework-signal-b {
+  right: 12%;
+  top: 16%;
+}
+
+.framework-signal-c {
+  right: 8%;
+  bottom: 24%;
+}
+
+.framework-signal-d {
+  left: 24%;
+  bottom: 14%;
+}
+
+.framework-caption {
+  position: absolute;
+  bottom: 34px;
+  right: 34px;
+  max-width: 20rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .thinking-field {
+    min-height: 390px;
+  }
+
+  .thinking-field::before {
+    inset: 28px;
+  }
+
+  .thinking-field::after {
+    inset: 58px;
+  }
+
+  .framework-lens {
+    min-height: 500px;
+  }
+
+  .framework-book {
+    left: 24px;
+    bottom: 52px;
+    width: 30%;
+  }
+
+  .framework-plane {
+    inset: 32px 20px 132px 56px;
+  }
+
+  .framework-core {
+    width: 92px;
+  }
+
+  .framework-signal {
+    min-width: 3.6rem;
+    height: 2.4rem;
+    font-size: 0.78rem;
+  }
+
+  .framework-caption {
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+    max-width: none;
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ExternalLink, Layers3, Network, Sparkles, Tag, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, ExternalLink, Layers3, Network, Sparkles, Tag, X } from "lucide-react";
 import { MindMapPost, MindMapGraph, GraphNode } from "@/lib/mind-map";
 import { MindMapVisualizer } from "@/components/MindMapVisualizer";
 
@@ -54,6 +54,8 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
         if (!selectedTag) return 0;
         return graph.edges.filter((edge) => edge.source === selectedTag || edge.target === selectedTag).length;
     }, [graph.edges, selectedTag]);
+
+    const selectedModelHref = selectedNode ? `/models/${encodeURIComponent(selectedNode.id)}` : null;
 
     const handleTagSelect = (tag: string) => {
         setSelectedTag(tag || null);
@@ -169,6 +171,18 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                             <p className="font-serif text-sm leading-7 text-muted-foreground">
                                 这个节点连接了 {relatedEdgeCount} 个概念，出现在 {selectedNode.count} 篇文章中，属于「{getLayerLabel(selectedNode.layer)}」。
                             </p>
+                            {selectedModelHref && (
+                                <Link
+                                    href={selectedModelHref}
+                                    className="mt-5 inline-flex min-h-11 w-full items-center justify-between border border-accent/35 bg-accent/10 px-4 py-3 text-left font-serif text-sm font-semibold text-foreground transition hover:border-accent/60 hover:bg-accent/15"
+                                >
+                                    <span className="flex min-w-0 items-center gap-2">
+                                        <BookOpen className="h-4 w-4 flex-shrink-0 text-accent" />
+                                        <span className="truncate">查看「{selectedNode.tag}」模型介绍</span>
+                                    </span>
+                                    <ArrowUpRight className="ml-3 h-4 w-4 flex-shrink-0 text-accent" />
+                                </Link>
+                            )}
                         </div>
 
                         <div className="grid grid-cols-3 border-b border-border/40 text-center">

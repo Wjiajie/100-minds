@@ -2,222 +2,238 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Sparkles, BookOpen, Lightbulb, Target } from "lucide-react";
+import { ArrowRight, Compass, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/Button";
-import { ModelCard } from "@/components/ui/ModelCard";
 
-const featuredModels = [
-  {
-    slug: "first-principles",
-    title: "第一性原理",
-    description: "从最基本的事实出发进行推理，不依赖类比或既有经验，将问题分解到最基础的真理。",
-    icon: "🎯",
-    category: "物理学",
-    difficulty: "进阶" as const,
-  },
-  {
-    slug: "inversion",
-    title: "逆向思维",
-    description: "通过思考相反的情况来解决问题。不是问「如何成功」，而是问「如何确保失败」。",
-    icon: "🔄",
-    category: "数学",
-    difficulty: "入门" as const,
-  },
-  {
-    slug: "second-order-thinking",
-    title: "二阶思维",
-    description: "不仅考虑行动的直接结果，还要考虑这些结果的后续影响和连锁反应。",
-    icon: "🌊",
-    category: "系统思维",
-    difficulty: "进阶" as const,
-  },
-  {
-    slug: "circle-of-competence",
-    title: "能力圈",
-    description: "了解自己的能力边界，只在自己真正理解的领域做决策。",
-    icon: "⭕",
-    category: "投资",
-    difficulty: "入门" as const,
-  },
+const lenses = [
+  { label: "因果", x: "13%", y: "26%", delay: 0 },
+  { label: "概率", x: "74%", y: "18%", delay: 0.25 },
+  { label: "系统", x: "83%", y: "64%", delay: 0.5 },
+  { label: "反证", x: "24%", y: "77%", delay: 0.75 },
+  { label: "边界", x: "52%", y: "46%", delay: 1 },
 ];
 
-const categories = [
-  { name: "心理学", count: 15, icon: "🧠", color: "from-pink-500 to-rose-500" },
-  { name: "经济学", count: 12, icon: "📈", color: "from-green-500 to-emerald-500" },
-  { name: "物理学", count: 8, icon: "⚛️", color: "from-blue-500 to-cyan-500" },
-  { name: "系统思维", count: 10, icon: "🔗", color: "from-purple-500 to-violet-500" },
-  { name: "哲学", count: 6, icon: "💭", color: "from-amber-500 to-orange-500" },
-  { name: "生物学", count: 7, icon: "🧬", color: "from-teal-500 to-green-500" },
+const frameSignals = [
+  { label: "问题", className: "framework-signal framework-signal-a" },
+  { label: "假设", className: "framework-signal framework-signal-b" },
+  { label: "证据", className: "framework-signal framework-signal-c" },
+  { label: "行动", className: "framework-signal framework-signal-d" },
 ];
 
-const features = [
-  {
-    icon: BookOpen,
-    title: "深度解析",
-    description: "每个思维模型都配有详细的解释、应用场景和实际案例",
-  },
-  {
-    icon: Lightbulb,
-    title: "交互式学习",
-    description: "点击文章中的概念即可查看详细释义，无需离开当前页面",
-  },
-  {
-    icon: Target,
-    title: "实践导向",
-    description: "提供具体的应用步骤和练习，帮助你将模型内化为思维习惯",
-  },
+const frameMoves = [
+  ["01", "少一点结论", "先留出问题的形状"],
+  ["02", "多一个模型", "把盲点变成假设"],
+  ["03", "快一步验证", "让判断回到现实"],
 ];
+
+function ThinkingField() {
+  return (
+    <div className="thinking-field" aria-hidden="true">
+      <div className="thinking-ring thinking-ring-a" />
+      <div className="thinking-ring thinking-ring-b" />
+      <div className="thinking-ink" />
+      {lenses.map((lens) => (
+        <motion.span
+          key={lens.label}
+          className="thinking-node"
+          style={{ left: lens.x, top: lens.y }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 + lens.delay, duration: 0.8 }}
+        >
+          {lens.label}
+        </motion.span>
+      ))}
+    </div>
+  );
+}
+
+function FrameworkLens() {
+  return (
+    <div className="framework-lens" aria-label="思维框架取景器">
+      <div
+        role="img"
+        aria-label="《思维模型》书封"
+        className="framework-book mdx-image-dark-safe"
+        style={{
+          backgroundImage:
+            "url('https://cdn.sa.net/2026/01/18/skhptnTxN5cPJAG.png')",
+        }}
+      />
+      <div className="framework-plane">
+        <svg
+          className="framework-paths"
+          viewBox="0 0 420 420"
+          role="presentation"
+          aria-hidden="true"
+        >
+          <path d="M78 240 C128 122 265 94 344 168" />
+          <path d="M102 284 C186 346 302 320 352 230" />
+          <path d="M130 150 C214 224 245 248 326 292" />
+        </svg>
+        <div className="framework-core">
+          <span>frame</span>
+        </div>
+        {frameSignals.map((signal) => (
+          <motion.span
+            key={signal.label}
+            className={signal.className}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            {signal.label}
+          </motion.span>
+        ))}
+      </div>
+      <p className="framework-caption">
+        把一本书里的模型，展开成可被反复观察、移动和连接的认知画布。
+      </p>
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/10 antialiased font-sans">
       <Navbar />
 
-      {/* Hero Section - The Pure Zen Entry */}
-      <section className="relative pt-48 pb-12 px-6 sm:px-8 overflow-hidden">
-        {/* Vertical Subtitle - Zen Signature */}
-        <div className="hidden lg:block absolute left-12 top-64 zen-vertical pointer-events-none">
-          <span className="text-xs uppercase tracking-[0.3em] font-serif text-accent/40 bg-background px-1 py-4">
-            认知觉醒 · 思维跃迁
-          </span>
-        </div>
+      <section className="relative isolate min-h-[92svh] overflow-hidden px-6 pb-20 pt-36 sm:px-8 sm:pt-40 lg:pt-44">
+        <div className="absolute inset-x-0 top-0 h-px bg-border/50" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--border),transparent_72%)_1px,transparent_1px),linear-gradient(180deg,color-mix(in_srgb,var(--border),transparent_78%)_1px,transparent_1px)] bg-[size:72px_72px] opacity-25" />
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          {/* Tagline - Calmly Large */}
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[0.98fr_0.78fr] lg:grid-cols-[1fr_0.82fr]">
+          <div>
+            <motion.p
+              className="mb-8 inline-flex items-center gap-3 border-b border-accent/30 pb-2 text-xs font-medium uppercase tracking-[0.36em] text-accent"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Sparkles className="h-4 w-4" />
+              cognitive atlas
+            </motion.p>
+
+            <motion.h1
+              className="max-w-4xl text-[4.3rem] font-black leading-[0.9] tracking-normal text-foreground sm:text-[5.4rem] md:text-[5.8rem] lg:text-[8.1rem]"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.1, ease: [0.23, 1, 0.32, 1] }}
+            >
+              探索
+              <span className="block text-accent">100+</span>
+              思维模型
+            </motion.h1>
+
+            <motion.div
+              className="mt-12 max-w-2xl border-l border-foreground/20 pl-6"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.25 }}
+            >
+              <blockquote className="text-2xl leading-relaxed text-foreground/72 sm:text-3xl">
+                “良好决策的头号劲敌，是思考问题缺乏充分的视角。”
+              </blockquote>
+              <cite className="mt-5 block text-sm not-italic tracking-[0.28em] text-muted">
+                阿兰·德波顿
+              </cite>
+            </motion.div>
+
+            <motion.div
+              className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-center"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.45 }}
+            >
+              <Link
+                href="/mind-map"
+                className="inline-flex h-14 w-fit items-center justify-center gap-3 bg-foreground px-8 text-base font-medium text-background transition-colors duration-300 hover:bg-foreground/90 focus:outline-none"
+              >
+                进入思维地图
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <p className="max-w-sm text-sm leading-7 text-muted-foreground">
+                用跨学科模型建立认知索引，让复杂问题先呈现结构，再进入判断。
+              </p>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
+            className="relative mx-auto w-full max-w-[520px]"
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.8, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
           >
-            <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight leading-[0.95] mb-20 text-foreground/90 selection:text-accent">
-              探索 100+
-              <br />
-              <span className="text-accent/80">思维模型</span>
-            </h1>
+            <ThinkingField />
+            <div className="mt-8 grid grid-cols-3 border-y border-border/70 text-center text-sm text-muted-foreground">
+              <span className="py-4">观察</span>
+              <span className="border-x border-border/70 py-4">建模</span>
+              <span className="py-4">决策</span>
+            </div>
           </motion.div>
-
-          {/* Alain de Botton Quote - Scholarly Ink */}
-          <motion.div
-            className="mb-20 max-w-2xl mx-auto relative px-12"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, delay: 0.4 }}
-          >
-            {/* Minimalist marker */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-accent/20" />
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-accent/20" />
-
-            <blockquote className="text-2xl sm:text-3xl font-serif text-foreground/70 leading-relaxed italic mb-8">
-              “良好决策的头号劲敌就是思考问题缺乏充分的视角。”
-            </blockquote>
-            <cite className="not-italic text-sm text-accent/50 font-serif tracking-widest uppercase">
-              —— 阿兰·德波顿
-            </cite>
-          </motion.div>
-
-          {/* Subtext - Clear Perspective */}
-          <motion.p
-            className="text-xl text-muted-foreground/50 max-w-xl mx-auto mb-20 leading-relaxed font-serif"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            建立跨学科的认知框架，汲取各领域的核心智慧，
-            <br className="hidden sm:block" />
-            让思考拥有前所未有的广度与深度。
-          </motion.p>
         </div>
-
-        {/* Subtle radial hint for depth */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(140,120,81,0.03)_0%,transparent_70%)] pointer-events-none" />
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-24 px-6 sm:px-8 border-t border-border/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="text-4xl sm:text-5xl font-serif font-medium text-foreground/80 mb-16 tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
+      <section className="relative overflow-hidden border-t border-border/60 px-6 py-24 sm:px-8 lg:py-32">
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.84fr_1fr] lg:items-center">
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1 }}
           >
-            建立你自己的思维框架
-          </motion.h2>
-
-          <motion.div
-            className="space-y-12 text-lg sm:text-xl text-muted-foreground/60 leading-[1.8] font-serif max-w-2xl mx-auto mb-16 px-4 text-left sm:text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <p>
-              我们每天都在做出无数的决策。但大多数时候，我们的思考被惯性和直觉驱动，这往往会导致认知的盲点。
-            </p>
-            <p>
-              建立思维框架并不是为了让你变得“更聪明”，而是为你提供一套可靠的导航工具。当面对复杂问题时，你可以从不同的学科视角切入，用不同的逻辑模型推演结果。
-            </p>
+            <FrameworkLens />
           </motion.div>
 
-          {/* Book Inspiration Section - Zen Layout */}
           <motion.div
-            className="mt-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center text-left"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 1, delay: 0.15 }}
           >
-            <div className="md:col-span-4 flex justify-center">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-accent/10 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                <img
-                  src="https://cdn.sa.net/2026/01/18/skhptnTxN5cPJAG.png"
-                  alt="《思维模型》由加百列·温伯格 著"
-                  className="relative w-48 shadow-2xl rounded-sm border border-border/10 mdx-image-dark-safe"
-                />
-              </div>
-            </div>
-            <div className="md:col-span-8 flex flex-col justify-center gap-6">
-              <h3 className="text-2xl font-serif font-bold text-foreground/80 tracking-tight">
-                从《思维模型》出发
-              </h3>
-              <div className="space-y-4 text-base text-muted-foreground/60 leading-relaxed font-serif">
-                <p>
-                  100-minds 深受加百列·温伯格的著作<a href="https://book.douban.com/subject/35771947/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent underline underline-offset-4 decoration-accent/20 transition-colors">《思维模型》</a>启发。我们试图将书中的智慧数字化，为你构建一套动态的认知操作系统。
-                </p>
-                <p>
-                  在这里，<strong>思维地图</strong>是你的思维模型索引图，引导你探索跨学科的因果网络；而<strong>术语表</strong>则是你的实时智囊，通过交互式卡片在阅读中即刻填补认知差。
-                </p>
-                <p className="italic text-sm tracking-widest uppercase text-muted-foreground/30 mt-5">
-                  “构建跨学科的认知框架，直到你的大脑能够自动检索出最合适的模型。”
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-accent">
+              <Compass className="h-4 w-4" />
+              build your frame
+            </p>
+            <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">
+              建立你自己的思维框架
+            </h2>
+            <p className="mt-8 max-w-2xl text-xl leading-10 text-foreground/70">
+              思维框架不是答案库，而是一套观察复杂问题的取景器。
+              当直觉太快、信息太杂时，它帮你换一个入口。
+            </p>
 
-          {/* Unified CTA Buttons Section */}
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-24"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <Link href="/mind-map">
-              <Button size="lg" className="px-14 h-16 text-base font-medium transition-all hover:bg-foreground/80 rounded-none bg-foreground text-background">
+            <div className="mt-12 border-y border-border/70">
+              {frameMoves.map(([index, title, body]) => (
+                <motion.div
+                  key={title}
+                  className="grid gap-3 border-b border-border/50 py-5 last:border-b-0 sm:grid-cols-[3.5rem_1fr_1.2fr] sm:items-baseline"
+                  initial={{ opacity: 0, x: 18 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.65, delay: Number(index) * 0.08 }}
+                >
+                  <span className="text-xs tracking-[0.28em] text-accent">
+                    {index}
+                  </span>
+                  <h3 className="text-xl font-medium text-foreground">
+                    {title}
+                  </h3>
+                  <p className="text-sm leading-7 text-muted-foreground">
+                    {body}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            <Link href="/mind-map" className="mt-12 inline-flex">
+              <span className="inline-flex h-14 items-center justify-center gap-3 border border-border px-8 text-base font-medium text-foreground transition-colors duration-300 hover:border-accent hover:text-accent">
                 开始探索
-                <ArrowRight className="w-5 h-5 ml-3" />
-              </Button>
-            </Link>
-            <Link href="/glossary">
-              <Button variant="ghost" size="lg" className="px-14 h-16 text-base font-medium rounded-none text-muted-foreground/80 hover:text-foreground">
-                浏览术语表
-              </Button>
+                <ArrowRight className="h-5 w-5" />
+              </span>
             </Link>
           </motion.div>
         </div>

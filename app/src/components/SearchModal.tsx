@@ -3,10 +3,9 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, BookText, FileText, Command } from "lucide-react";
+import { Search, FileText, Command } from "lucide-react";
 import Fuse from "fuse.js";
 import { useRouter } from "next/navigation";
-import { cn } from "@/lib/utils";
 
 interface SearchResult {
     id: string;
@@ -72,7 +71,6 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
 
     // Groups
     const articles = results.filter(r => r.type === 'article');
-    const glossary = results.filter(r => r.type === 'glossary');
 
     return (
         <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -149,28 +147,6 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                                                     </section>
                                                 )}
 
-                                                {glossary.length > 0 && (
-                                                    <section>
-                                                        <h3 className="px-4 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase text-muted-foreground/40">术语表词条</h3>
-                                                        <div className="space-y-1">
-                                                            {glossary.map((item) => (
-                                                                <button
-                                                                    key={item.id}
-                                                                    onClick={() => handleSelect(item)}
-                                                                    className="w-full group flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary/30 transition-all text-left"
-                                                                >
-                                                                    <div className="mt-1 p-2 rounded-xl bg-secondary/50 text-muted-foreground group-hover:text-foreground group-hover:bg-background transition-colors">
-                                                                        <BookText className="w-4 h-4" />
-                                                                    </div>
-                                                                    <div className="flex-1 min-w-0">
-                                                                        <h4 className="font-serif font-bold text-foreground mb-1 group-hover:text-accent transition-colors">{item.title}</h4>
-                                                                        <p className="text-sm text-muted-foreground line-clamp-1 italic">{item.description}</p>
-                                                                    </div>
-                                                                </button>
-                                                            ))}
-                                                        </div>
-                                                    </section>
-                                                )}
                                             </div>
                                         )}
                                     </div>

@@ -11,7 +11,6 @@ import { SearchModal } from "./SearchModal";
 const navLinks = [
   { href: "/", label: "首页" },
   { href: "/mind-map", label: "思维地图" },
-  { href: "/glossary", label: "术语表" },
 ];
 
 export function Navbar() {

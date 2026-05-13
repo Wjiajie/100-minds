@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 205 |
-| todo | 53 |
+| done | 210 |
+| todo | 48 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 算法 | `src/content/models/算法.mdx` | done | 1763 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Knuth 与 CLRS 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 横向思维 | `src/content/models/横向思维.mdx` | done | 1701 | verified | 2026-05-13 | 本批补全；de Bono 官网、InstructionalDesign、Wikipedia URL HTTP 200；de Bono 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 道德风险 | `src/content/models/道德风险.mdx` | done | 1786 | verified | 2026-05-13 | 本批补全；Britannica、IMF、PubMed URL HTTP 200；Arrow 1963 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | done | 2000 | verified | 2026-05-13 | 本批补全；Open Library 与 Scientific American URL HTTP 200；ScienceDirect 403 直链改为 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 效用递减 | `src/content/models/效用递减.mdx` | done | 1699 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Jevons 与 Menger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 科斯定理 | `src/content/models/科斯定理.mdx` | done | 1667 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Coase 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 稀缺 | `src/content/models/稀缺.mdx` | done | 1840 | verified | 2026-05-13 | 本批补全；Princeton PDF、Frontiers、Wikipedia URL HTTP 200；Mullainathan 与 Shafir 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 破窗理论 | `src/content/models/破窗理论.mdx` | done | 1711 | verified | 2026-05-13 | 本批补全；OJP、University of Washington PDF、Wikipedia URL HTTP 200；Wilson 与 Kelling 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | done | 1719 | verified | 2026-05-13 | 本批补全；Skeptic's Dictionary、Cambridge Core PDF URL HTTP 200；Wikipedia 偶发超时改为搜索关键词；Ioannidis 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 过滤气泡 | `src/content/models/过滤气泡.mdx` | done | 1678 | verified | 2026-05-13 | 本批补全；TED、Open Library、Wikipedia、arXiv URL HTTP 200；Pariser 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 科斯定理 | `src/content/models/科斯定理.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
-| 稀缺 | `src/content/models/稀缺.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
-| 破窗理论 | `src/content/models/破窗理论.mdx` | todo | 229 | missing | 2026-05-13 | 短文优先，待补全 |
-| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
-| 过滤气泡 | `src/content/models/过滤气泡.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
+| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
+| 第一性原理 | `src/content/models/第一性原理.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
+| 科学方法 | `src/content/models/科学方法.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
+| 纳什均衡 | `src/content/models/纳什均衡.mdx` | todo | 233 | missing | 2026-05-13 | 短文优先，待补全 |
+| 最简可行产品 | `src/content/models/最简可行产品.mdx` | todo | 234 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -251,11 +251,11 @@
 | 道德风险 | `src/content/models/道德风险.mdx` | done | 1786 | verified | 2026-05-13 | 本批补全；Britannica、IMF、PubMed URL HTTP 200；Arrow 1963 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | done | 2000 | verified | 2026-05-13 | 本批补全；Open Library 与 Scientific American URL HTTP 200；ScienceDirect 403 直链改为 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 效用递减 | `src/content/models/效用递减.mdx` | done | 1699 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Jevons 与 Menger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 科斯定理 | `src/content/models/科斯定理.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
-| 稀缺 | `src/content/models/稀缺.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
-| 破窗理论 | `src/content/models/破窗理论.mdx` | todo | 229 | missing | 2026-05-13 | 短文优先，待补全 |
-| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
-| 过滤气泡 | `src/content/models/过滤气泡.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
+| 科斯定理 | `src/content/models/科斯定理.mdx` | done | 1667 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Coase 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 稀缺 | `src/content/models/稀缺.mdx` | done | 1840 | verified | 2026-05-13 | 本批补全；Princeton PDF、Frontiers、Wikipedia URL HTTP 200；Mullainathan 与 Shafir 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 破窗理论 | `src/content/models/破窗理论.mdx` | done | 1711 | verified | 2026-05-13 | 本批补全；OJP、University of Washington PDF、Wikipedia URL HTTP 200；Wilson 与 Kelling 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | done | 1719 | verified | 2026-05-13 | 本批补全；Skeptic's Dictionary、Cambridge Core PDF URL HTTP 200；Wikipedia 偶发超时改为搜索关键词；Ioannidis 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 过滤气泡 | `src/content/models/过滤气泡.mdx` | done | 1678 | verified | 2026-05-13 | 本批补全；TED、Open Library、Wikipedia、arXiv URL HTTP 200；Pariser 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
 | 第一性原理 | `src/content/models/第一性原理.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
 | 科学方法 | `src/content/models/科学方法.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |

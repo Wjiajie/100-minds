@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 215 |
-| todo | 43 |
+| done | 220 |
+| todo | 38 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | done | 1630 | verified | 2026-05-13 | 本批补全；Wikipedia、Google Books、Britannica URL HTTP 200；Siebert 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 第一性原理 | `src/content/models/第一性原理.mdx` | done | 1529 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；Aristotle 原典与 Munger 书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 科学方法 | `src/content/models/科学方法.mdx` | done | 1575 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Popper、Kuhn 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 纳什均衡 | `src/content/models/纳什均衡.mdx` | done | 1527 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Nash 论文以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 最简可行产品 | `src/content/models/最简可行产品.mdx` | done | 1750 | verified | 2026-05-13 | 本批补全；Lean Startup、HBR、Wikipedia URL HTTP 200；Ries 与 Blank 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | done | 1627 | verified | 2026-05-13 | 本批补全；Britannica、MDPI URL HTTP 200；Lorenz 1972 演讲以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 线流图 | `src/content/models/线流图.mdx` | done | 1572 | verified | 2026-05-13 | 本批补全；System Dynamics Society、Wikipedia URL HTTP 200；Meadows PDF 404，改以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 风险预防原则 | `src/content/models/风险预防原则.mdx` | done | 1511 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200；Rio Declaration Principle 15 的测试 PDF 404，改以原则名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 滑坡论 | `src/content/models/滑坡论.mdx` | done | 1390 | verified | 2026-05-13 | 本批补全；Britannica 与 Stanford Encyclopedia URL HTTP 200；Walton、Govier 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 零和 | `src/content/models/零和.mdx` | done | 1524 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；von Neumann 与 Morgenstern 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
-| 线流图 | `src/content/models/线流图.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
-| 风险预防原则 | `src/content/models/风险预防原则.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
-| 滑坡论 | `src/content/models/滑坡论.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
-| 零和 | `src/content/models/零和.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
+| 承诺 | `src/content/models/承诺.mdx` | todo | 237 | missing | 2026-05-13 | 短文优先，待补全 |
+| 组织文化 | `src/content/models/组织文化.mdx` | todo | 239 | missing | 2026-05-13 | 短文优先，待补全 |
+| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | todo | 241 | missing | 2026-05-13 | 短文优先，待补全 |
+| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | todo | 242 | missing | 2026-05-13 | 短文优先，待补全 |
+| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -261,11 +261,11 @@
 | 科学方法 | `src/content/models/科学方法.mdx` | done | 1575 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Popper、Kuhn 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 纳什均衡 | `src/content/models/纳什均衡.mdx` | done | 1527 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Nash 论文以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 最简可行产品 | `src/content/models/最简可行产品.mdx` | done | 1750 | verified | 2026-05-13 | 本批补全；Lean Startup、HBR、Wikipedia URL HTTP 200；Ries 与 Blank 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
-| 线流图 | `src/content/models/线流图.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
-| 风险预防原则 | `src/content/models/风险预防原则.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
-| 滑坡论 | `src/content/models/滑坡论.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
-| 零和 | `src/content/models/零和.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
+| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | done | 1627 | verified | 2026-05-13 | 本批补全；Britannica、MDPI URL HTTP 200；Lorenz 1972 演讲以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 线流图 | `src/content/models/线流图.mdx` | done | 1572 | verified | 2026-05-13 | 本批补全；System Dynamics Society、Wikipedia URL HTTP 200；Meadows PDF 404，改以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 风险预防原则 | `src/content/models/风险预防原则.mdx` | done | 1511 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200；Rio Declaration Principle 15 的测试 PDF 404，改以原则名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 滑坡论 | `src/content/models/滑坡论.mdx` | done | 1390 | verified | 2026-05-13 | 本批补全；Britannica 与 Stanford Encyclopedia URL HTTP 200；Walton、Govier 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 零和 | `src/content/models/零和.mdx` | done | 1524 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；von Neumann 与 Morgenstern 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 承诺 | `src/content/models/承诺.mdx` | todo | 237 | missing | 2026-05-13 | 短文优先，待补全 |
 | 组织文化 | `src/content/models/组织文化.mdx` | todo | 239 | missing | 2026-05-13 | 短文优先，待补全 |
 | 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | todo | 241 | missing | 2026-05-13 | 短文优先，待补全 |

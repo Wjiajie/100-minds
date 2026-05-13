@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 230 |
-| todo | 28 |
+| done | 235 |
+| todo | 23 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 预期值 | `src/content/models/预期值.mdx` | done | 1654 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Huygens 与概率史以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 飞轮 | `src/content/models/飞轮.mdx` | done | 1525 | verified | 2026-05-13 | 本批补全；Jim Collins、Wikipedia URL HTTP 200；Good to Great 与 Turning the Flywheel 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 自然选择 | `src/content/models/自然选择.mdx` | done | 1634 | verified | 2026-05-13 | 本批补全；Britannica、Linnean Society URL HTTP 200；Darwin-Wallace 1858 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 认知失调 | `src/content/models/认知失调.mdx` | done | 1591 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200，De Gruyter URL HTTP 202；Festinger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | done | 1696 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Maslow 与 Kenrick 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | done | 1492 | verified | 2026-05-13 | 本批补全；Britannica、Springer URL HTTP 200；Janis 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | done | 1571 | verified | 2026-05-13 | 本批补全；Britannica、PubMed、Wikipedia URL HTTP 200；Metropolis 与 Ulam 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | done | 1544 | verified | 2026-05-13 | 本批补全；Britannica、PLOS、PubMed URL HTTP 200；Kruger-Dunning 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 预测市场 | `src/content/models/预测市场.mdx` | done | 1560 | verified | 2026-05-13 | 本批补全；NBER、Britannica Money、AEA URL HTTP 200；Arrow 等 Science 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 过拟合 | `src/content/models/过拟合.mdx` | done | 1514 | verified | 2026-05-13 | 本批补全；scikit-learn、AWS、Springer URL HTTP 200；Elements of Statistical Learning 以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | todo | 247 | missing | 2026-05-13 | 短文优先，待补全 |
-| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | todo | 248 | missing | 2026-05-13 | 短文优先，待补全 |
-| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
-| 预测市场 | `src/content/models/预测市场.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
-| 过拟合 | `src/content/models/过拟合.mdx` | todo | 250 | missing | 2026-05-13 | 短文优先，待补全 |
+| 林迪效应 | `src/content/models/林迪效应.mdx` | todo | 254 | missing | 2026-05-13 | 短文优先，待补全 |
+| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
+| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
+| 肥尾分布 | `src/content/models/肥尾分布.mdx` | todo | 259 | missing | 2026-05-13 | 短文优先，待补全 |
+| 逆向选择 | `src/content/models/逆向选择.mdx` | todo | 260 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -276,11 +276,11 @@
 | 自然选择 | `src/content/models/自然选择.mdx` | done | 1634 | verified | 2026-05-13 | 本批补全；Britannica、Linnean Society URL HTTP 200；Darwin-Wallace 1858 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 认知失调 | `src/content/models/认知失调.mdx` | done | 1591 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200，De Gruyter URL HTTP 202；Festinger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | done | 1696 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Maslow 与 Kenrick 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | todo | 247 | missing | 2026-05-13 | 短文优先，待补全 |
-| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | todo | 248 | missing | 2026-05-13 | 短文优先，待补全 |
-| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
-| 预测市场 | `src/content/models/预测市场.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
-| 过拟合 | `src/content/models/过拟合.mdx` | todo | 250 | missing | 2026-05-13 | 短文优先，待补全 |
+| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | done | 1492 | verified | 2026-05-13 | 本批补全；Britannica、Springer URL HTTP 200；Janis 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | done | 1571 | verified | 2026-05-13 | 本批补全；Britannica、PubMed、Wikipedia URL HTTP 200；Metropolis 与 Ulam 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | done | 1544 | verified | 2026-05-13 | 本批补全；Britannica、PLOS、PubMed URL HTTP 200；Kruger-Dunning 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 预测市场 | `src/content/models/预测市场.mdx` | done | 1560 | verified | 2026-05-13 | 本批补全；NBER、Britannica Money、AEA URL HTTP 200；Arrow 等 Science 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 过拟合 | `src/content/models/过拟合.mdx` | done | 1514 | verified | 2026-05-13 | 本批补全；scikit-learn、AWS、Springer URL HTTP 200；Elements of Statistical Learning 以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 林迪效应 | `src/content/models/林迪效应.mdx` | todo | 254 | missing | 2026-05-13 | 短文优先，待补全 |
 | 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
 | 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |

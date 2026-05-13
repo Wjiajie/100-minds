@@ -1,8 +1,39 @@
 ---
 title: 聚集性幻觉
-description: 关于聚集性幻觉的详细解释
+description: 人把随机数据里的自然成串和局部聚集误看成隐藏规律的认知偏差。
 ---
 
-## 聚集性幻觉
+## 1. 💡 核心定义 (Core Definition)
 
-随机数据通常包含一定的规律，比如抛20次硬币有一半的概率能连续抛出4次正面。如果类似的规律被错误解读，误认为能证明某种现象不是随机的。这种低估随机或半随机数据小样本中的变异量，出于直觉犯的错被称为**聚集性幻觉**（clustering illusion）。
+聚集性幻觉是指人们把随机数据中自然出现的 "一串"、"一团" 或 "连续几次" 误认为有特殊规律。随机并不等于均匀。硬币连出几次正面、股票几天连续上涨、篮球手连续投进几个球，都可能只是随机序列里本来就会出现的局部聚集。
+
+这个模型提醒我们：看到图案，不等于找到了原因。人的眼睛很擅长补故事，尤其在样本很小、情绪很强、结果很显眼的时候。
+
+## 2. 📖 历史渊源与生动故事 (Origin & Story)
+
+认知心理学家 Thomas Gilovich、Robert Vallone 和 Amos Tversky 研究过篮球里的 "手感热"。球迷和球员常相信，一个人连续投中后，下一球更可能进。研究者分析投篮序列后发现，人们对随机序列的直觉太平滑了，低估了偶然连中的概率。
+
+类似故事也出现在战争、投资和流行病地图里。人们看到落点、病例或涨跌在某个区域聚集，就会急着找解释。可如果随机点足够多，地图上本来就会出现空白区和密集区。真正难的是区分 "看起来像模式" 和 "统计上不太可能只是随机"。
+
+## 3. 🔍 模型深度解析 (Deep Dive)
+
+聚集性幻觉背后有两个直觉错误。第一，人们以为随机序列应该更平均。比如抛硬币 20 次，很多人觉得 HHTHTTHT 这种交错结果更随机，而 HHHHTT 这种连续结果不像随机。实际上，连续段并不罕见。第二，人们会先看见结果，再反向画边界。只要边界是事后画的，总能圈出一个看似惊人的聚集。
+
+它和赌徒谬误相邻，但方向不同。赌徒谬误是看到连续正面后，以为反面 "该来了"；聚集性幻觉则是看到连续正面后，以为这里有某种特殊状态。两者都把随机短段看得太有意义。
+
+应对方法是提前定义检验规则：样本多大，边界怎么划，什么程度才算异常，是否有基准率。没有这些约束，故事会比数据跑得快。
+
+## 4. 🛠️ 典型应用场景 (Application Scenarios)
+
+- 投资交易：连续盈利不一定说明策略有效，可能只是样本太短。
+- 体育判断：球员短时间连中或连丢，未必代表状态发生了可预测变化。
+- 运营分析：某个渠道连续几天转化率高，需要看样本量、置信区间和是否事后挑选。
+- 风险排查：事故或投诉在局部聚集时，先做统计检验，再决定是否投入调查资源。
+
+## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+
+- Wikipedia: [Clustering illusion](https://en.wikipedia.org/wiki/Clustering_illusion)，适合快速理解定义与相关偏差。
+- Gilovich, Vallone, Tversky, "The Hot Hand in Basketball: On the Misperception of Random Sequences"：[ScienceDirect](https://www.sciencedirect.com/science/article/pii/0010028585900106)，论文 DOI 10.1016/0010-0285(85)90010-6。
+- Daniel Kahneman and Amos Tversky, "Subjective probability: A judgment of representativeness"，Cognitive Psychology, 1972，DOI 10.1016/0010-0285(72)90016-3。
+- Thomas Gilovich, How We Know What Isn't So, The Free Press, 1991。
+- Reddit：未找到可靠单篇来源；可用搜索关键词 "clustering illusion hot hand random sequences" 继续查找讨论。

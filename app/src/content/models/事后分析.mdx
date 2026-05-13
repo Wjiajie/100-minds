@@ -1,8 +1,51 @@
 ---
 title: 事后分析
-description: 在项目或事件结束后进行的复盘，旨在总结经验教训。也叫回溯分析。医疗领域称为验尸（Postmortem）。
+description: 事后分析是在事件结束后还原过程、理解原因并把教训转成行动的复盘方法。
 ---
 
-## 事后分析
+## 1. 💡 核心定义 (Core Definition)
 
-**事后分析** 在项目或事件结束后进行的复盘，旨在总结经验教训。也叫回溯分析。医疗领域称为验尸（Postmortem）。
+事后分析，也常叫 postmortem、事故复盘或项目回顾，是在事件结束后，把发生了什么、为什么发生、当时如何响应、以后怎么避免重演写清楚。
+
+它不是追责大会，也不是写一份漂亮报告存档。好的事后分析会留下时间线、决策点、影响范围、根因、贡献因素和后续行动。它真正关心的问题不是「谁搞砸了」，而是「系统为什么允许这件事发生」。
+
+一份复盘如果没有行动项、负责人和截止时间，通常只是情绪整理，不是事后分析。
+
+## 2. 📖 历史渊源与生动故事 (Origin & Story)
+
+Postmortem 原本是医学里的尸检词汇，后来被工程、航空、医疗安全、项目管理等领域借用。软件和互联网团队尤其喜欢这个词，因为系统事故常常不是单点错误，而是一串小失误在压力下接上了。
+
+Google SRE 体系把 blameless postmortem 写成了文化的一部分。服务恢复后，团队还要记录事故影响、处理动作、根因和预防措施。重点不是惩罚值班工程师，而是让同类事故下次更难发生。
+
+Atlassian 的事故管理资料也强调，事故复盘最好在记忆还新鲜时完成，通常在事件解决后不久召开会议，整理时间线，再把改进项放回团队计划。否则，复盘会变成「大家都觉得有收获」，但没人真的改变工作方式。
+
+## 3. 🔍 模型深度解析 (Deep Dive)
+
+事后分析有三个层次。
+
+第一层是事实。什么时候报警，谁看到了什么，做了哪些操作，系统如何变化。没有时间线，复盘很容易变成各说各话。
+
+第二层是解释。这里要区分直接原因和贡献因素。数据库连接池耗尽可能是直接原因，但更深处也许是容量预估不足、监控阈值太宽、发布前没有压测。
+
+第三层是改变。复盘的价值在行动项里：补监控、改流程、删危险开关、调整权限、写演练脚本。行动项越具体，越可能真正降低下次事故的概率。
+
+事后分析最大的敌人是事后聪明。知道结果以后，人会高估当时的可预测性，觉得「这不是很明显吗」。所以复盘要尽量回到当时的信息状态，问当事人在那一刻看到了什么，而不是用结局倒推他们应该知道什么。
+
+## 4. 🛠️ 典型应用场景 (Application Scenarios)
+
+系统事故后，事后分析用于沉淀事故时间线、根因和修复计划。它能把一次宕机变成组织学习，而不是只靠少数人记忆。
+
+项目结束后，团队可以用事后分析复盘范围蔓延、延期、沟通断点和上线质量。这里不只复盘失败，成功项目也值得复盘，因为好运和能力需要分开。
+
+个人决策里，事后分析可以和决策日志配合。先记录当时的判断依据，结果出来后再比对，能减少「我早就知道」的错觉。
+
+医疗、航空和安全领域更重视无责复盘。高风险系统里，责怪个人通常只能让问题隐藏得更深；修正系统约束，才更接近预防。
+
+## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+
+- [Google SRE Book: Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/) 解释了无责事故复盘、触发条件、文档结构和评审文化。
+- [Atlassian: The importance of an incident postmortem process](https://www.atlassian.com/incident-management/postmortem) 给出了事故复盘流程、时间线和行动项建议。
+- [Atlassian: Creating postmortem reports](https://www.atlassian.com/incident-management/postmortem/reports) 区分了复盘会议和复盘报告两个产物。
+- [Farnam Street: Hindsight Bias](https://fs.blog/what-is-hindsight-bias/) 可作为事后分析中防止「事后聪明」的辅助阅读。
+- [Britannica: Hindsight bias](https://www.britannica.com/topic/hindsight-bias) 解释了结果已知后，人为什么会高估自己原本的预测能力。
+- Reddit: 未找到可靠单篇来源；可检索关键词 `blameless postmortem incident review lessons learned discussion`。

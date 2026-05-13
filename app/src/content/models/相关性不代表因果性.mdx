@@ -1,8 +1,41 @@
 ---
 title: 相关性不代表因果性
-description: 关于相关性不代表因果性的详细解释
+description: 两个变量一起变化并不自动说明其中一个导致了另一个。
 ---
 
 ## 相关性不代表因果性
 
-仅仅因为两起事件相继发生，或者说相关（correlated），并不意味着前者导致了后者。统计学家用“**相关性不代表因果性**”（correlation does not imply causation）来描述这种谬论。比如你可能听说过这样的轶事：人们在接种疫苗后感冒了，或是出现了症状，于是将罪魁祸首归咎于疫苗，这就是典型的混淆了相关性与因果性。
+## 1. 💡 核心定义 (Core Definition)
+
+**相关性不代表因果性**（Correlation does not imply causation）指两个变量一起变化，并不能单独证明其中一个导致了另一个。冰淇淋销量和溺水人数都可能在夏天上升，但冰淇淋并没有把人推下水。它们共享了一个更合理的第三因素：天气变热。
+
+这个模型不是说相关性没价值。相关性常常是线索，是警报，是下一步调查的入口。它只是不能独自完成因果判断。看到一张走势相同的图，先别急着写结论，先问：有没有反向因果、共同原因、选择偏差、时间滞后或纯粹巧合？
+
+## 2. 📖 历史渊源与生动故事 (Origin & Story)
+
+统计学和流行病学里，这个提醒出现得很早。抽烟与肺癌的争论就是典型案例：早期证据多来自观察数据，反对者曾用"只是相关"来削弱结论。后来，研究者把剂量反应、生物机制、时间顺序、不同人群重复证据等拼起来，才形成更强的因果判断。
+
+另一边，Tyler Vigen 的 Spurious Correlations 项目把这个模型讲得很有画面感。他把完全无关的数据画在一起，比如某些消费数据和离奇死亡数据，曲线能贴得惊人。读者一笑之后会记住一件事：数据图很会骗人，尤其当我们急着给它配故事的时候。
+
+## 3. 🔍 模型深度解析 (Deep Dive)
+
+相关到因果之间至少隔着几道门。第一道是时间顺序：原因必须先于结果，或至少在机制上能解释结果。第二道是混淆因素：A 和 B 是否都被 C 推动？第三道是反向因果：看似 A 导致 B，实际可能是 B 影响 A。第四道是机制：有没有可解释的路径，而不是只靠曲线长得像。第五道是干预证据：当我们改变 A，B 是否按预测改变？
+
+随机对照实验是强工具，但现实里并不总能做。公共政策、医学伦理和商业决策经常只能依靠观察数据。此时更稳妥的做法是建立因果图、控制混淆因素、做自然实验、比较多组证据，并明确剩余不确定性。好的判断不是把相关性一票否决，而是知道它够不够支撑当前行动。
+
+## 4. 🛠️ 典型应用场景 (Application Scenarios)
+
+- 看增长数据时，不把"使用某功能的用户留存更高"直接解释为"该功能提升留存"。
+- 读健康新闻时，区分观察性关联、动物实验和随机对照试验。
+- 做产品实验时，用 A/B 测试或准实验减少自选择偏差。
+- 分析组织问题时，警惕"加班多的团队产出高"这种可能由项目紧急度共同驱动的关系。
+- 评估投资指标时，别把回测相关性当成可交易的稳定因果机制。
+
+## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+
+- [Correlation does not imply causation - Wikipedia](https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation)
+- [Spurious Correlations - Tyler Vigen](https://www.tylervigen.com/spurious-correlations)
+- [Evidence in Medicine: Correlation and Causation - Science-Based Medicine](https://sciencebasedmedicine.org/evidence-in-medicine-correlation-and-causation/)
+- [Judea Pearl, Causality: Models, Reasoning, and Inference - Cambridge University Press frontmatter](https://www.cambridge.org/core/books/causality/frontmatter/D3719CC4D3203BC4F1F7CE5D7D44F8F4)
+- [Michael Nielsen, "If correlation doesn't imply causation, then what does?"](https://michaelnielsen.org/ddi/if-correlation-doesnt-imply-causation-then-what-does/)
+- 未找到可靠单篇 Reddit 讨论；更适合使用搜索关键词 "correlation causation confounding reverse causality causal inference"。

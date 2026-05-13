@@ -1,8 +1,42 @@
 ---
 title: 因果循环图
-description: 系统思考中的一种可视化工具，通过变量和箭头来揭示系统中起作用的因果反馈闭环。
+description: 用变量、箭头和正负极性画出反馈回路，帮助我们看见系统为什么会自己放大或自我纠偏。
 ---
 
-## 因果循环图
+## 1. 💡 核心定义 (Core Definition)
 
-**因果循环图**（Causal Loop Diagram，CLD）是系统思考中极为重要的一种可视化辅助工具。它通过代表“变量”的文字和带有极性符号（“+”表示同向变化，“-”表示反向变化）的“因果箭头”，清晰地描绘出系统要素之间如何彼此影响。通过绘制因果循环图，能够帮助我们跳出线性思维，敏锐地识别出系统中隐藏的“增强回路”（如恶性/良性循环）和“调节回路”，从而找到干预系统的最佳杠杆点。
+因果循环图（causal loop diagram, CLD）是系统思考里的画图工具。它用变量表示系统中的要素，用箭头表示影响方向，再用“+”和“-”标出影响的极性。
+
+“+”不是好，“-”也不是坏。它们只说明方向：A 增加会让 B 也增加，就是正向；A 增加会让 B 减少，就是反向。当这些箭头连成闭环时，我们就能看见系统的反馈结构。
+
+## 2. 📖 历史渊源与生动故事 (Origin & Story)
+
+因果循环图来自系统动力学传统。Jay Forrester 在 MIT 发展系统动力学时，想解决的不是“某个变量为什么变了”，而是“为什么一整套变量会一起产生反直觉的行为”。后来 John Sterman、Peter Senge 等人把这套工具带进组织学习和商业决策。
+
+一个常见例子是加班赶进度。项目落后，团队加班；短期产出提高，延误看起来缓解；但疲劳累积后错误增加，返工变多，项目又更落后。线性思维会说“加班能提高产出”。因果循环图会逼你把后半段也画出来。
+
+## 3. 🔍 模型深度解析 (Deep Dive)
+
+因果循环图最核心的是两类回路。
+
+增强回路（reinforcing loop）会放大变化。用户越多，内容越多；内容越多，吸引更多用户。它可以带来增长，也可以带来崩塌，比如恐慌抛售。
+
+调节回路（balancing loop）会抵消变化。室温低于目标值，暖气启动；温度接近目标，暖气减弱。它让系统趋向某个目标，但如果存在延迟，也可能造成震荡。
+
+画图时最常见的错误，是把愿望画成因果。比如“培训增加，绩效提高”听起来顺，但中间可能缺少练习质量、管理支持、岗位匹配这些变量。好的因果循环图不是为了漂亮，而是为了暴露你的假设。
+
+## 4. 🛠️ 典型应用场景 (Application Scenarios)
+
+在组织管理中，它能分析增长卡点、质量事故、客户流失和士气下滑。很多问题不是单点故障，而是几个反馈回路互相推着走。
+
+在产品策略中，它能帮助团队区分增长飞轮和虚假飞轮。真正的飞轮必须有可观察变量和闭环反馈；如果只有口号，没有因果链，就只是愿景图。
+
+在公共政策中，它适合讨论住房、交通、教育、医疗这类延迟长、反馈多的问题。它不能替代数据模型，但能让争论先从“你错我对”变成“我们假设的因果链哪里不同”。
+
+## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+
+- [System Dynamics Society: Study of System Dynamics](https://systemdynamics.org/what-is-system-dynamics-old/)，解释反馈、循环因果和增强/调节回路。
+- [The Systems Thinker: Causal Loop Construction, The Basics](https://thesystemsthinker.com/causal-loop-construction-the-basics/)，实践导向的因果循环图入门。
+- [John D. Sterman, *Business Dynamics*](https://www.mheducation.com/highered/product/Business-Dynamics-Sterman.html)，系统动力学经典教材，包含因果循环图与存量流量图。
+- Donella H. Meadows, *Thinking in Systems: A Primer*，系统思考的常用入门书。
+- Reddit：未找到可靠单篇来源。可用搜索关键词："causal loop diagram reinforcing balancing loop system dynamics"。

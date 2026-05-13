@@ -1,8 +1,39 @@
 ---
 title: A/B测试
-description: 比较两个版本（A和B）的随机测试方法，用于确定哪个版本效果更好。
+description: 通过随机分流比较两个版本，让真实用户行为而不是会议判断来回答改动是否有效。
 ---
 
-## A/B测试
+## 1. 💡 核心定义 (Core Definition)
 
-A/B测试为一种随机测试，将两个不同的东西（即A和B）进行假设比较。该测试运用统计学上的假设检验和双总体假设检验。A/B测试可以用来测试某一个变量两个不同版本的差异，一般是让A和B只有该变量不同，再测试其他人对于A和B的反应差异，再判断A和B的方式何者较佳。
+A/B 测试是一种随机对照实验：把用户随机分到 A 版本和 B 版本，让两个版本只在某个关键改动上不同，再比较预先设定的指标。它的价值不在于 "看哪个更顺眼"，而在于把争论从意见拉回证据。
+
+一个合格的 A/B 测试至少要回答四件事：假设是什么，主要指标是什么，样本量够不够，什么结果算值得上线。少了这些，测试很容易变成事后挑数字。
+
+## 2. 📖 历史渊源与生动故事 (Origin & Story)
+
+A/B 测试的根在更早的随机对照实验。农业、医学和工业质量管理都用过类似方法：把处理组和对照组分开，让随机化抵消那些看不见的差异。互联网产品把这种方法带到了日常运营里，因为网页、按钮、推荐排序和邮件标题都可以快速分流。
+
+一个经典场景是搜索结果页的改动。团队觉得新样式更清楚，但用户可能没有感觉，甚至点得更少。A/B 测试让一部分用户看到旧版本，另一部分看到新版本，然后比较点击、留存、收入和投诉等指标。很多时候，最有自信的方案会输得很安静。
+
+## 3. 🔍 模型深度解析 (Deep Dive)
+
+A/B 测试的核心不是 "A 和 B 比一下" 这么简单，而是控制混杂因素。随机分流能让新老用户、不同地区、不同设备、不同时间段大体均衡。这样当两个版本出现差异时，才更有理由把差异归因于改动本身。
+
+常见坑有几个。第一，测试中途看见显著就停，容易放大假阳性。第二，同时改了按钮文案、颜色和价格，结果好坏都不知道是哪一处造成的。第三，只盯一个增长指标，忽略退款、加载速度、投诉和长期留存。第四，样本太小，却把随机波动当作用户偏好。
+
+成熟团队通常会设置主指标和护栏指标。主指标回答 "这次改动想改善什么"，护栏指标回答 "不能牺牲什么"。比如提升注册率时，也要看激活率、退订率和客服压力。
+
+## 4. 🛠️ 典型应用场景 (Application Scenarios)
+
+- 产品界面：比较不同注册流程、按钮文案、信息架构或推荐排序。
+- 增长运营：测试邮件标题、落地页、优惠表达和提醒时机。
+- 搜索与广告：评估排序算法、广告样式和相关性策略对行为的影响。
+- 组织决策：当团队陷入审美争论时，用小流量实验换取更便宜的答案。
+
+## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+
+- Ron Kohavi 等，"Controlled experiments on the web: survey and practical guide"：[Springer Open Access](https://link.springer.com/article/10.1007/s10618-008-0114-1)。
+- Ron Kohavi 等，"Online randomized controlled experiments at scale"：[Trials / BMC](https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-020-4084-y)。
+- Microsoft Research: [Online Experimentation at Microsoft](https://www.microsoft.com/en-us/research/publication/online-experimentation-at-microsoft/)。
+- 书籍：Kohavi, Tang, Xu, Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing, Cambridge University Press, DOI 10.1017/9781108653985。
+- Reddit：未找到可靠单篇来源；可用搜索关键词 "A/B testing sample size peeking guardrail metrics" 继续找实践讨论。

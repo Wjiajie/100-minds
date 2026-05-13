@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 225 |
-| todo | 33 |
+| done | 230 |
+| todo | 28 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 承诺 | `src/content/models/承诺.mdx` | done | 1676 | verified | 2026-05-13 | 本批补全；O'Reilly、SCIRP URL HTTP 200；Freedman 与 Fraser 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 组织文化 | `src/content/models/组织文化.mdx` | done | 1718 | verified | 2026-05-13 | 本批补全；MIT Sloan、Wikipedia URL HTTP 200；Schein 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | done | 1508 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia、Wikipedia URL HTTP 200；Jaynes 与 McGrayne 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | done | 1507 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Bayes 1763 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | done | 1548 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Schelling 与 Kahn 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 预期值 | `src/content/models/预期值.mdx` | done | 1654 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Huygens 与概率史以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 飞轮 | `src/content/models/飞轮.mdx` | done | 1525 | verified | 2026-05-13 | 本批补全；Jim Collins、Wikipedia URL HTTP 200；Good to Great 与 Turning the Flywheel 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 自然选择 | `src/content/models/自然选择.mdx` | done | 1634 | verified | 2026-05-13 | 本批补全；Britannica、Linnean Society URL HTTP 200；Darwin-Wallace 1858 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 认知失调 | `src/content/models/认知失调.mdx` | done | 1591 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200，De Gruyter URL HTTP 202；Festinger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | done | 1696 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Maslow 与 Kenrick 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 预期值 | `src/content/models/预期值.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
-| 飞轮 | `src/content/models/飞轮.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |
-| 自然选择 | `src/content/models/自然选择.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |
-| 认知失调 | `src/content/models/认知失调.mdx` | todo | 245 | missing | 2026-05-13 | 短文优先，待补全 |
-| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | todo | 246 | missing | 2026-05-13 | 短文优先，待补全 |
+| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | todo | 247 | missing | 2026-05-13 | 短文优先，待补全 |
+| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | todo | 248 | missing | 2026-05-13 | 短文优先，待补全 |
+| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
+| 预测市场 | `src/content/models/预测市场.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |
+| 过拟合 | `src/content/models/过拟合.mdx` | todo | 250 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -271,11 +271,11 @@
 | 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | done | 1508 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia、Wikipedia URL HTTP 200；Jaynes 与 McGrayne 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | done | 1507 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Bayes 1763 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | done | 1548 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Schelling 与 Kahn 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 预期值 | `src/content/models/预期值.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
-| 飞轮 | `src/content/models/飞轮.mdx` | todo | 244 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 自然选择 | `src/content/models/自然选择.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |
-| 认知失调 | `src/content/models/认知失调.mdx` | todo | 245 | missing | 2026-05-13 | 短文优先，待补全 |
-| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | todo | 246 | missing | 2026-05-13 | 短文优先，待补全 |
+| 预期值 | `src/content/models/预期值.mdx` | done | 1654 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Huygens 与概率史以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 飞轮 | `src/content/models/飞轮.mdx` | done | 1525 | verified | 2026-05-13 | 本批补全；Jim Collins、Wikipedia URL HTTP 200；Good to Great 与 Turning the Flywheel 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 自然选择 | `src/content/models/自然选择.mdx` | done | 1634 | verified | 2026-05-13 | 本批补全；Britannica、Linnean Society URL HTTP 200；Darwin-Wallace 1858 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 认知失调 | `src/content/models/认知失调.mdx` | done | 1591 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200，De Gruyter URL HTTP 202；Festinger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | done | 1696 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Maslow 与 Kenrick 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | todo | 247 | missing | 2026-05-13 | 短文优先，待补全 |
 | 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | todo | 248 | missing | 2026-05-13 | 短文优先，待补全 |
 | 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | todo | 249 | missing | 2026-05-13 | 短文优先，待补全 |

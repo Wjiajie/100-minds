@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 200 |
-| todo | 58 |
+| done | 205 |
+| todo | 53 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 群体思维 | `src/content/models/群体思维.mdx` | done | 1810 | verified | 2026-05-13 | 本批补全；Britannica 与 Open Library URL 全部 HTTP 200；Janis 原书与 Political Psychology 论文以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 史翠珊效应 | `src/content/models/史翠珊效应.mdx` | done | 1891 | verified | 2026-05-13 | 本批补全；California Coastal Records 与 LA Times URL 全部 HTTP 200；Techdirt 与 The Smoking Gun 403 直链改为题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 无知之幕 | `src/content/models/无知之幕.mdx` | done | 1647 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Harvard University Press 返回 202 但可达；Rawls 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 收益递减 | `src/content/models/收益递减.mdx` | done | 1697 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Ricardo 原著以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 顺势-逆势矩阵 | `src/content/models/顺势-逆势矩阵.mdx` | done | 2003 | verified | 2026-05-13 | 本批补全；TechCrunch 与 Oaktree URL 全部 HTTP 200；Oxford Academic 403 直链改为 Marks 书名章节；未纳入 Reddit（未找到可靠单篇来源） |
+| 算法 | `src/content/models/算法.mdx` | done | 1763 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Knuth 与 CLRS 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 横向思维 | `src/content/models/横向思维.mdx` | done | 1701 | verified | 2026-05-13 | 本批补全；de Bono 官网、InstructionalDesign、Wikipedia URL HTTP 200；de Bono 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 道德风险 | `src/content/models/道德风险.mdx` | done | 1786 | verified | 2026-05-13 | 本批补全；Britannica、IMF、PubMed URL HTTP 200；Arrow 1963 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | done | 2000 | verified | 2026-05-13 | 本批补全；Open Library 与 Scientific American URL HTTP 200；ScienceDirect 403 直链改为 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 效用递减 | `src/content/models/效用递减.mdx` | done | 1699 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Jevons 与 Menger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 算法 | `src/content/models/算法.mdx` | todo | 224 | missing | 2026-05-13 | 短文优先，待补全 |
-| 横向思维 | `src/content/models/横向思维.mdx` | todo | 226 | missing | 2026-05-13 | 短文优先，待补全 |
-| 道德风险 | `src/content/models/道德风险.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
-| 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
-| 效用递减 | `src/content/models/效用递减.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
+| 科斯定理 | `src/content/models/科斯定理.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
+| 稀缺 | `src/content/models/稀缺.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
+| 破窗理论 | `src/content/models/破窗理论.mdx` | todo | 229 | missing | 2026-05-13 | 短文优先，待补全 |
+| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
+| 过滤气泡 | `src/content/models/过滤气泡.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -246,11 +246,11 @@
 | 无知之幕 | `src/content/models/无知之幕.mdx` | done | 1647 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Harvard University Press 返回 202 但可达；Rawls 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 收益递减 | `src/content/models/收益递减.mdx` | done | 1697 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Ricardo 原著以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 顺势-逆势矩阵 | `src/content/models/顺势-逆势矩阵.mdx` | done | 2003 | verified | 2026-05-13 | 本批补全；TechCrunch 与 Oaktree URL 全部 HTTP 200；Oxford Academic 403 直链改为 Marks 书名章节；未纳入 Reddit（未找到可靠单篇来源） |
-| 算法 | `src/content/models/算法.mdx` | todo | 224 | missing | 2026-05-13 | 短文优先，待补全 |
-| 横向思维 | `src/content/models/横向思维.mdx` | todo | 226 | missing | 2026-05-13 | 短文优先，待补全 |
-| 道德风险 | `src/content/models/道德风险.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
-| 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
-| 效用递减 | `src/content/models/效用递减.mdx` | todo | 227 | missing | 2026-05-13 | 短文优先，待补全 |
+| 算法 | `src/content/models/算法.mdx` | done | 1763 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Knuth 与 CLRS 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 横向思维 | `src/content/models/横向思维.mdx` | done | 1701 | verified | 2026-05-13 | 本批补全；de Bono 官网、InstructionalDesign、Wikipedia URL HTTP 200；de Bono 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 道德风险 | `src/content/models/道德风险.mdx` | done | 1786 | verified | 2026-05-13 | 本批补全；Britannica、IMF、PubMed URL HTTP 200；Arrow 1963 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 皮格马利翁效应 | `src/content/models/皮格马利翁效应.mdx` | done | 2000 | verified | 2026-05-13 | 本批补全；Open Library 与 Scientific American URL HTTP 200；ScienceDirect 403 直链改为 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 效用递减 | `src/content/models/效用递减.mdx` | done | 1699 | verified | 2026-05-13 | 本批补全；Britannica 系列 URL 全部 HTTP 200；Jevons 与 Menger 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 科斯定理 | `src/content/models/科斯定理.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
 | 稀缺 | `src/content/models/稀缺.mdx` | todo | 228 | missing | 2026-05-13 | 短文优先，待补全 |
 | 破窗理论 | `src/content/models/破窗理论.mdx` | todo | 229 | missing | 2026-05-13 | 短文优先，待补全 |

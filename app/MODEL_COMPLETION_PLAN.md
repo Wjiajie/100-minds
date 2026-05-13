@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 210 |
-| todo | 48 |
+| done | 215 |
+| todo | 43 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 科斯定理 | `src/content/models/科斯定理.mdx` | done | 1667 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Coase 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 稀缺 | `src/content/models/稀缺.mdx` | done | 1840 | verified | 2026-05-13 | 本批补全；Princeton PDF、Frontiers、Wikipedia URL HTTP 200；Mullainathan 与 Shafir 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 破窗理论 | `src/content/models/破窗理论.mdx` | done | 1711 | verified | 2026-05-13 | 本批补全；OJP、University of Washington PDF、Wikipedia URL HTTP 200；Wilson 与 Kelling 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | done | 1719 | verified | 2026-05-13 | 本批补全；Skeptic's Dictionary、Cambridge Core PDF URL HTTP 200；Wikipedia 偶发超时改为搜索关键词；Ioannidis 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 过滤气泡 | `src/content/models/过滤气泡.mdx` | done | 1678 | verified | 2026-05-13 | 本批补全；TED、Open Library、Wikipedia、arXiv URL HTTP 200；Pariser 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | done | 1630 | verified | 2026-05-13 | 本批补全；Wikipedia、Google Books、Britannica URL HTTP 200；Siebert 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 第一性原理 | `src/content/models/第一性原理.mdx` | done | 1529 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；Aristotle 原典与 Munger 书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 科学方法 | `src/content/models/科学方法.mdx` | done | 1575 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Popper、Kuhn 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 纳什均衡 | `src/content/models/纳什均衡.mdx` | done | 1527 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Nash 论文以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 最简可行产品 | `src/content/models/最简可行产品.mdx` | done | 1750 | verified | 2026-05-13 | 本批补全；Lean Startup、HBR、Wikipedia URL HTTP 200；Ries 与 Blank 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
-| 第一性原理 | `src/content/models/第一性原理.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
-| 科学方法 | `src/content/models/科学方法.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
-| 纳什均衡 | `src/content/models/纳什均衡.mdx` | todo | 233 | missing | 2026-05-13 | 短文优先，待补全 |
-| 最简可行产品 | `src/content/models/最简可行产品.mdx` | todo | 234 | missing | 2026-05-13 | 短文优先，待补全 |
+| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
+| 线流图 | `src/content/models/线流图.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
+| 风险预防原则 | `src/content/models/风险预防原则.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
+| 滑坡论 | `src/content/models/滑坡论.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
+| 零和 | `src/content/models/零和.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -256,11 +256,11 @@
 | 破窗理论 | `src/content/models/破窗理论.mdx` | done | 1711 | verified | 2026-05-13 | 本批补全；OJP、University of Washington PDF、Wikipedia URL HTTP 200；Wilson 与 Kelling 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 得州神枪手谬误 | `src/content/models/得州神枪手谬误.mdx` | done | 1719 | verified | 2026-05-13 | 本批补全；Skeptic's Dictionary、Cambridge Core PDF URL HTTP 200；Wikipedia 偶发超时改为搜索关键词；Ioannidis 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 过滤气泡 | `src/content/models/过滤气泡.mdx` | done | 1678 | verified | 2026-05-13 | 本批补全；TED、Open Library、Wikipedia、arXiv URL HTTP 200；Pariser 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | todo | 230 | missing | 2026-05-13 | 短文优先，待补全 |
-| 第一性原理 | `src/content/models/第一性原理.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
-| 科学方法 | `src/content/models/科学方法.mdx` | todo | 232 | missing | 2026-05-13 | 短文优先，待补全 |
-| 纳什均衡 | `src/content/models/纳什均衡.mdx` | todo | 233 | missing | 2026-05-13 | 短文优先，待补全 |
-| 最简可行产品 | `src/content/models/最简可行产品.mdx` | todo | 234 | missing | 2026-05-13 | 短文优先，待补全 |
+| 眼镜蛇效应 | `src/content/models/眼镜蛇效应.mdx` | done | 1630 | verified | 2026-05-13 | 本批补全；Wikipedia、Google Books、Britannica URL HTTP 200；Siebert 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 第一性原理 | `src/content/models/第一性原理.mdx` | done | 1529 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；Aristotle 原典与 Munger 书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 科学方法 | `src/content/models/科学方法.mdx` | done | 1575 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia 与 Britannica URL HTTP 200；Popper、Kuhn 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 纳什均衡 | `src/content/models/纳什均衡.mdx` | done | 1527 | verified | 2026-05-13 | 本批补全；Britannica 与 Nobel Prize URL HTTP 200；Nash 论文以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 最简可行产品 | `src/content/models/最简可行产品.mdx` | done | 1750 | verified | 2026-05-13 | 本批补全；Lean Startup、HBR、Wikipedia URL HTTP 200；Ries 与 Blank 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
 | 线流图 | `src/content/models/线流图.mdx` | todo | 235 | missing | 2026-05-13 | 短文优先，待补全 |
 | 风险预防原则 | `src/content/models/风险预防原则.mdx` | todo | 236 | missing | 2026-05-13 | 短文优先，待补全 |

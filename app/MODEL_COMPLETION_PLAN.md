@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 220 |
-| todo | 38 |
+| done | 225 |
+| todo | 33 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 蝴蝶效应 | `src/content/models/蝴蝶效应.mdx` | done | 1627 | verified | 2026-05-13 | 本批补全；Britannica、MDPI URL HTTP 200；Lorenz 1972 演讲以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 线流图 | `src/content/models/线流图.mdx` | done | 1572 | verified | 2026-05-13 | 本批补全；System Dynamics Society、Wikipedia URL HTTP 200；Meadows PDF 404，改以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 风险预防原则 | `src/content/models/风险预防原则.mdx` | done | 1511 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200；Rio Declaration Principle 15 的测试 PDF 404，改以原则名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 滑坡论 | `src/content/models/滑坡论.mdx` | done | 1390 | verified | 2026-05-13 | 本批补全；Britannica 与 Stanford Encyclopedia URL HTTP 200；Walton、Govier 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 零和 | `src/content/models/零和.mdx` | done | 1524 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；von Neumann 与 Morgenstern 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 承诺 | `src/content/models/承诺.mdx` | done | 1676 | verified | 2026-05-13 | 本批补全；O'Reilly、SCIRP URL HTTP 200；Freedman 与 Fraser 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 组织文化 | `src/content/models/组织文化.mdx` | done | 1718 | verified | 2026-05-13 | 本批补全；MIT Sloan、Wikipedia URL HTTP 200；Schein 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | done | 1508 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia、Wikipedia URL HTTP 200；Jaynes 与 McGrayne 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | done | 1507 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Bayes 1763 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | done | 1548 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Schelling 与 Kahn 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 承诺 | `src/content/models/承诺.mdx` | todo | 237 | missing | 2026-05-13 | 短文优先，待补全 |
-| 组织文化 | `src/content/models/组织文化.mdx` | todo | 239 | missing | 2026-05-13 | 短文优先，待补全 |
-| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | todo | 241 | missing | 2026-05-13 | 短文优先，待补全 |
-| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | todo | 242 | missing | 2026-05-13 | 短文优先，待补全 |
-| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
+| 预期值 | `src/content/models/预期值.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
+| 飞轮 | `src/content/models/飞轮.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |
+| 自然选择 | `src/content/models/自然选择.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |
+| 认知失调 | `src/content/models/认知失调.mdx` | todo | 245 | missing | 2026-05-13 | 短文优先，待补全 |
+| 马斯洛需求层次 | `src/content/models/马斯洛需求层次.mdx` | todo | 246 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -266,11 +266,11 @@
 | 风险预防原则 | `src/content/models/风险预防原则.mdx` | done | 1511 | verified | 2026-05-13 | 本批补全；Britannica URL HTTP 200；Rio Declaration Principle 15 的测试 PDF 404，改以原则名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 滑坡论 | `src/content/models/滑坡论.mdx` | done | 1390 | verified | 2026-05-13 | 本批补全；Britannica 与 Stanford Encyclopedia URL HTTP 200；Walton、Govier 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 零和 | `src/content/models/零和.mdx` | done | 1524 | verified | 2026-05-13 | 本批补全；Britannica 与 Wikipedia URL HTTP 200；von Neumann 与 Morgenstern 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 承诺 | `src/content/models/承诺.mdx` | todo | 237 | missing | 2026-05-13 | 短文优先，待补全 |
-| 组织文化 | `src/content/models/组织文化.mdx` | todo | 239 | missing | 2026-05-13 | 短文优先，待补全 |
-| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | todo | 241 | missing | 2026-05-13 | 短文优先，待补全 |
-| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | todo | 242 | missing | 2026-05-13 | 短文优先，待补全 |
-| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
+| 承诺 | `src/content/models/承诺.mdx` | done | 1676 | verified | 2026-05-13 | 本批补全；O'Reilly、SCIRP URL HTTP 200；Freedman 与 Fraser 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 组织文化 | `src/content/models/组织文化.mdx` | done | 1718 | verified | 2026-05-13 | 本批补全；MIT Sloan、Wikipedia URL HTTP 200；Schein 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 贝叶斯学派 | `src/content/models/贝叶斯学派.mdx` | done | 1508 | verified | 2026-05-13 | 本批补全；Stanford Encyclopedia、Wikipedia URL HTTP 200；Jaynes 与 McGrayne 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 贝叶斯定理 | `src/content/models/贝叶斯定理.mdx` | done | 1507 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Bayes 1763 论文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 相互确保毁灭 | `src/content/models/相互确保毁灭.mdx` | done | 1548 | verified | 2026-05-13 | 本批补全；Britannica、Wikipedia URL HTTP 200；Schelling 与 Kahn 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 预期值 | `src/content/models/预期值.mdx` | todo | 243 | missing | 2026-05-13 | 短文优先，待补全 |
 | 飞轮 | `src/content/models/飞轮.mdx` | todo | 244 | needs-audit | 2026-05-13 | 短文优先，待补全 |
 | 自然选择 | `src/content/models/自然选择.mdx` | todo | 244 | missing | 2026-05-13 | 短文优先，待补全 |

@@ -1,6 +1,6 @@
 ﻿# 100-minds 模型内容补全进度
 
-更新时间：2026-05-13
+更新时间：2026-05-14
 
 ## 执行规则
 
@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 235 |
-| todo | 23 |
+| done | 240 |
+| todo | 18 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 魔鬼辩护人 | `src/content/models/魔鬼辩护人.mdx` | done | 1492 | verified | 2026-05-13 | 本批补全；Britannica、Springer URL HTTP 200；Janis 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 蒙特卡洛模拟 | `src/content/models/蒙特卡洛模拟.mdx` | done | 1571 | verified | 2026-05-13 | 本批补全；Britannica、PubMed、Wikipedia URL HTTP 200；Metropolis 与 Ulam 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | done | 1544 | verified | 2026-05-13 | 本批补全；Britannica、PLOS、PubMed URL HTTP 200；Kruger-Dunning 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 预测市场 | `src/content/models/预测市场.mdx` | done | 1560 | verified | 2026-05-13 | 本批补全；NBER、Britannica Money、AEA URL HTTP 200；Arrow 等 Science 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 过拟合 | `src/content/models/过拟合.mdx` | done | 1514 | verified | 2026-05-13 | 本批补全；scikit-learn、AWS、Springer URL HTTP 200；Elements of Statistical Learning 以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 林迪效应 | `src/content/models/林迪效应.mdx` | done | 1396 | verified | 2026-05-14 | 本批补全；Wikipedia、Taleb 官网 URL HTTP 200；Antifragile 与 Mandelbrot 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Christensen Institute、HBR、Britannica Money URL HTTP 200；Christensen 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | done | 1562 | verified | 2026-05-14 | 本批补全；Wikipedia、CiNii URL HTTP 200；ScienceDirect 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 肥尾分布 | `src/content/models/肥尾分布.mdx` | done | 1471 | verified | 2026-05-14 | 本批补全；Wikipedia、dblp、arXiv URL HTTP 200；Clauset-Shalizi-Newman 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 逆向选择 | `src/content/models/逆向选择.mdx` | done | 1521 | verified | 2026-05-14 | 本批补全；Britannica、Nobel Prize URL HTTP 200；Akerlof 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 林迪效应 | `src/content/models/林迪效应.mdx` | todo | 254 | missing | 2026-05-13 | 短文优先，待补全 |
-| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
-| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
-| 肥尾分布 | `src/content/models/肥尾分布.mdx` | todo | 259 | missing | 2026-05-13 | 短文优先，待补全 |
-| 逆向选择 | `src/content/models/逆向选择.mdx` | todo | 260 | missing | 2026-05-13 | 短文优先，待补全 |
+| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | todo | 263 | missing | 2026-05-13 | 短文优先，待补全 |
+| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | todo | 264 | missing | 2026-05-13 | 短文优先，待补全 |
+| 决策树 | `src/content/models/决策树.mdx` | todo | 288 | missing | 2026-05-13 | 短文优先，待补全 |
+| 条件概率 | `src/content/models/条件概率.mdx` | todo | 295 | missing | 2026-05-13 | 短文优先，待补全 |
+| 逆火效应 | `src/content/models/逆火效应.mdx` | todo | 308 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -281,11 +281,11 @@
 | 邓宁-克鲁格效应 | `src/content/models/邓宁-克鲁格效应.mdx` | done | 1544 | verified | 2026-05-13 | 本批补全；Britannica、PLOS、PubMed URL HTTP 200；Kruger-Dunning 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 预测市场 | `src/content/models/预测市场.mdx` | done | 1560 | verified | 2026-05-13 | 本批补全；NBER、Britannica Money、AEA URL HTTP 200；Arrow 等 Science 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 过拟合 | `src/content/models/过拟合.mdx` | done | 1514 | verified | 2026-05-13 | 本批补全；scikit-learn、AWS、Springer URL HTTP 200；Elements of Statistical Learning 以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 林迪效应 | `src/content/models/林迪效应.mdx` | todo | 254 | missing | 2026-05-13 | 短文优先，待补全 |
-| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
-| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | todo | 256 | missing | 2026-05-13 | 短文优先，待补全 |
-| 肥尾分布 | `src/content/models/肥尾分布.mdx` | todo | 259 | missing | 2026-05-13 | 短文优先，待补全 |
-| 逆向选择 | `src/content/models/逆向选择.mdx` | todo | 260 | missing | 2026-05-13 | 短文优先，待补全 |
+| 林迪效应 | `src/content/models/林迪效应.mdx` | done | 1396 | verified | 2026-05-14 | 本批补全；Wikipedia、Taleb 官网 URL HTTP 200；Antifragile 与 Mandelbrot 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Christensen Institute、HBR、Britannica Money URL HTTP 200；Christensen 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | done | 1562 | verified | 2026-05-14 | 本批补全；Wikipedia、CiNii URL HTTP 200；ScienceDirect 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 肥尾分布 | `src/content/models/肥尾分布.mdx` | done | 1471 | verified | 2026-05-14 | 本批补全；Wikipedia、dblp、arXiv URL HTTP 200；Clauset-Shalizi-Newman 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 逆向选择 | `src/content/models/逆向选择.mdx` | done | 1521 | verified | 2026-05-14 | 本批补全；Britannica、Nobel Prize URL HTTP 200；Akerlof 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | todo | 263 | missing | 2026-05-13 | 短文优先，待补全 |
 | 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | todo | 264 | missing | 2026-05-13 | 短文优先，待补全 |
 | 决策树 | `src/content/models/决策树.mdx` | todo | 288 | missing | 2026-05-13 | 短文优先，待补全 |

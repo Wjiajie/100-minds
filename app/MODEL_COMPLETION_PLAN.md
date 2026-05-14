@@ -16,31 +16,30 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 260 |
+| done | 265 |
 | todo | 0 |
 | needs-reference-audit | 0 |
-| done-candidate | 9 |
+| done-candidate | 4 |
 | blocked-needs-source | 0 |
 
 ## 本批记录
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 敏感性分析 | `src/content/models/敏感性分析.mdx` | done | 1787 | verified | 2026-05-15 | 本批补全；Wikipedia、Wiley-VCH、CiNii URL HTTP 200；Saltelli 原书与 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 反面模式 | `src/content/models/反面模式.mdx` | done | 1764 | verified | 2026-05-15 | 本批补全；Wikipedia、DBLP、Open Library URL HTTP 200；Fowler 直连 TLS 重置改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
-| 磁滞现象 | `src/content/models/磁滞现象.mdx` | done | 1753 | verified | 2026-05-15 | 本批补全；Britannica、LibreTexts、Merriam-Webster URL HTTP 200；Ewing 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 并行处理 | `src/content/models/并行处理.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、MathWorld URL HTTP 200；Encyclopedia.com 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
-| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done | 1667 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Newsweek URL HTTP 200；NIST 403 改为题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 策略税 | `src/content/models/策略税.mdx` | done | 1655 | verified | 2026-05-15 | 本批完成 done-candidate 审计；DaveNet、Stratechery、Christensen Institute URL HTTP 200；Super Thinking 与 Poor Charlie's Almanack 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 彼得原理 | `src/content/models/彼得原理.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、Carlson PDF URL HTTP 200；WorldCat 429 改为书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 创新者 | `src/content/models/创新者.mdx` | done | 1565 | verified | 2026-05-15 | 本批完成 done-candidate 审计并校正主题为 Rogers 扩散理论；Wikipedia、TechTarget、Shopify URL HTTP 200；Rogers 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done | 1673 | verified | 2026-05-15 | 本批完成 done-candidate 审计；CiNii、UNC PDF URL HTTP 200；SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Columbia PDF URL HTTP 200；OUP 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 策略税 | `src/content/models/策略税.mdx` | done-candidate | 3258 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
-| 彼得原理 | `src/content/models/彼得原理.mdx` | done-candidate | 3522 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
-| 创新者 | `src/content/models/创新者.mdx` | done-candidate | 3571 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
-| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done-candidate | 3585 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
-| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done-candidate | 3606 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
+| 沉没成本 | `src/content/models/沉没成本.mdx` | done-candidate | 3681 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
+| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done-candidate | 3692 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
+| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done-candidate | 4080 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
+| 北极星 | `src/content/models/北极星.mdx` | done-candidate | 5492 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
 
 ## 进度表
 
@@ -306,11 +305,11 @@
 | 磁滞现象 | `src/content/models/磁滞现象.mdx` | done | 1753 | verified | 2026-05-15 | 本批补全；Britannica、LibreTexts、Merriam-Webster URL HTTP 200；Ewing 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 并行处理 | `src/content/models/并行处理.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、MathWorld URL HTTP 200；Encyclopedia.com 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
 | 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done | 1667 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Newsweek URL HTTP 200；NIST 403 改为题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 策略税 | `src/content/models/策略税.mdx` | done-candidate | 3258 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 彼得原理 | `src/content/models/彼得原理.mdx` | done-candidate | 3522 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 创新者 | `src/content/models/创新者.mdx` | done-candidate | 3571 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done-candidate | 3585 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done-candidate | 3606 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
+| 策略税 | `src/content/models/策略税.mdx` | done | 1655 | verified | 2026-05-15 | 本批完成 done-candidate 审计；DaveNet、Stratechery、Christensen Institute URL HTTP 200；Super Thinking 与 Poor Charlie's Almanack 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 彼得原理 | `src/content/models/彼得原理.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、Carlson PDF URL HTTP 200；WorldCat 429 改为书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 创新者 | `src/content/models/创新者.mdx` | done | 1565 | verified | 2026-05-15 | 本批完成 done-candidate 审计并校正主题为 Rogers 扩散理论；Wikipedia、TechTarget、Shopify URL HTTP 200；Rogers 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done | 1673 | verified | 2026-05-15 | 本批完成 done-candidate 审计；CiNii、UNC PDF URL HTTP 200；SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Columbia PDF URL HTTP 200；OUP 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 沉没成本 | `src/content/models/沉没成本.mdx` | done-candidate | 3681 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
 | 不可逆决策 | `src/content/models/不可逆决策.mdx` | done-candidate | 3692 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
 | 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done-candidate | 4080 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |

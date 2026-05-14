@@ -16,31 +16,31 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 255 |
-| todo | 3 |
+| done | 260 |
+| todo | 0 |
 | needs-reference-audit | 0 |
-| done-candidate | 11 |
+| done-candidate | 9 |
 | blocked-needs-source | 0 |
 
 ## 本批记录
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 九九定律 | `src/content/models/九九定律.mdx` | done | 1876 | verified | 2026-05-15 | 本批补全；Wikipedia、SIGMOD DBLP URL HTTP 200；Bentley 原文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 权力真空 | `src/content/models/权力真空.mdx` | done | 1702 | verified | 2026-05-15 | 本批补全；Cambridge、Britannica、Brookings URL HTTP 200；Weber 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 网络效应 | `src/content/models/网络效应.mdx` | done | 1822 | verified | 2026-05-15 | 本批补全；Wikipedia、AEA、IDEAS/RePEc URL HTTP 200；Katz-Shapiro 原论文与 Information Rules 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 惯性 | `src/content/models/惯性.mdx` | done | 1621 | verified | 2026-05-15 | 本批补全；Britannica、OpenStax、NASA URL HTTP 200；Newton 原典以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 反应偏差 | `src/content/models/反应偏差.mdx` | done | 1931 | verified | 2026-05-15 | 本批补全；Cambridge、SAGE、LibreTexts URL HTTP 200；Scribbr 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
+| 敏感性分析 | `src/content/models/敏感性分析.mdx` | done | 1787 | verified | 2026-05-15 | 本批补全；Wikipedia、Wiley-VCH、CiNii URL HTTP 200；Saltelli 原书与 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 反面模式 | `src/content/models/反面模式.mdx` | done | 1764 | verified | 2026-05-15 | 本批补全；Wikipedia、DBLP、Open Library URL HTTP 200；Fowler 直连 TLS 重置改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
+| 磁滞现象 | `src/content/models/磁滞现象.mdx` | done | 1753 | verified | 2026-05-15 | 本批补全；Britannica、LibreTexts、Merriam-Webster URL HTTP 200；Ewing 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 并行处理 | `src/content/models/并行处理.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、MathWorld URL HTTP 200；Encyclopedia.com 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
+| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done | 1667 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Newsweek URL HTTP 200；NIST 403 改为题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 敏感性分析 | `src/content/models/敏感性分析.mdx` | todo | 584 | missing | 2026-05-13 | 短文优先，待补全 |
-| 反面模式 | `src/content/models/反面模式.mdx` | todo | 620 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 磁滞现象 | `src/content/models/磁滞现象.mdx` | todo | 686 | missing | 2026-05-13 | 短文优先，待补全 |
-| 并行处理 | `src/content/models/并行处理.mdx` | done-candidate | 3003 | needs-audit | 2026-05-13 | todo 剩余 3 个完成后，开始长文候选引用核验与风格校准 |
-| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done-candidate | 3206 | needs-audit | 2026-05-13 | todo 剩余 3 个完成后，开始长文候选引用核验与风格校准 |
+| 策略税 | `src/content/models/策略税.mdx` | done-candidate | 3258 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
+| 彼得原理 | `src/content/models/彼得原理.mdx` | done-candidate | 3522 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
+| 创新者 | `src/content/models/创新者.mdx` | done-candidate | 3571 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
+| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done-candidate | 3585 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
+| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done-candidate | 3606 | needs-audit | 2026-05-13 | 长文候选；进入引用核验与风格校准 |
 
 ## 进度表
 
@@ -301,11 +301,11 @@
 | 网络效应 | `src/content/models/网络效应.mdx` | done | 1822 | verified | 2026-05-15 | 本批补全；Wikipedia、AEA、IDEAS/RePEc URL HTTP 200；Katz-Shapiro 原论文与 Information Rules 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 惯性 | `src/content/models/惯性.mdx` | done | 1621 | verified | 2026-05-15 | 本批补全；Britannica、OpenStax、NASA URL HTTP 200；Newton 原典以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 反应偏差 | `src/content/models/反应偏差.mdx` | done | 1931 | verified | 2026-05-15 | 本批补全；Cambridge、SAGE、LibreTexts URL HTTP 200；Scribbr 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
-| 敏感性分析 | `src/content/models/敏感性分析.mdx` | todo | 584 | missing | 2026-05-13 | 短文优先，待补全 |
-| 反面模式 | `src/content/models/反面模式.mdx` | todo | 620 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 磁滞现象 | `src/content/models/磁滞现象.mdx` | todo | 686 | missing | 2026-05-13 | 短文优先，待补全 |
-| 并行处理 | `src/content/models/并行处理.mdx` | done-candidate | 3003 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done-candidate | 3206 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
+| 敏感性分析 | `src/content/models/敏感性分析.mdx` | done | 1787 | verified | 2026-05-15 | 本批补全；Wikipedia、Wiley-VCH、CiNii URL HTTP 200；Saltelli 原书与 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 反面模式 | `src/content/models/反面模式.mdx` | done | 1764 | verified | 2026-05-15 | 本批补全；Wikipedia、DBLP、Open Library URL HTTP 200；Fowler 直连 TLS 重置改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
+| 磁滞现象 | `src/content/models/磁滞现象.mdx` | done | 1753 | verified | 2026-05-15 | 本批补全；Britannica、LibreTexts、Merriam-Webster URL HTTP 200；Ewing 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 并行处理 | `src/content/models/并行处理.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、MathWorld URL HTTP 200；Encyclopedia.com 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
+| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done | 1667 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Newsweek URL HTTP 200；NIST 403 改为题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 策略税 | `src/content/models/策略税.mdx` | done-candidate | 3258 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
 | 彼得原理 | `src/content/models/彼得原理.mdx` | done-candidate | 3522 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
 | 创新者 | `src/content/models/创新者.mdx` | done-candidate | 3571 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |

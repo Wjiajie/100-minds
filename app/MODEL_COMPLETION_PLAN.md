@@ -1,6 +1,6 @@
 ﻿# 100-minds 模型内容补全进度
 
-更新时间：2026-05-14
+更新时间：2026-05-15
 
 ## 执行规则
 
@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 250 |
-| todo | 8 |
+| done | 255 |
+| todo | 3 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 侯世达定律 | `src/content/models/侯世达定律.mdx` | done | 1444 | verified | 2026-05-14 | 本批补全；Wikipedia、WorldCat、Google Books URL HTTP 200；Hofstadter 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 观察者效应 | `src/content/models/观察者效应.mdx` | done | 1316 | verified | 2026-05-14 | 本批补全；Wikipedia 系列 URL HTTP 200；Scribbr 403 改为搜索关键词；Landsberger 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | done | 1575 | verified | 2026-05-14 | 本批补全；Wikipedia、Cambridge Core PDF URL HTTP 200；Taylor & Francis 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 框架效应 | `src/content/models/框架效应.mdx` | done | 1493 | verified | 2026-05-14 | 本批补全；Britannica、CiNii URL HTTP 200；Tversky-Kahneman 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 重复博弈 | `src/content/models/重复博弈.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Britannica、Econometric Society URL HTTP 200；Axelrod 原书与 folk theorem 论文以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 九九定律 | `src/content/models/九九定律.mdx` | done | 1876 | verified | 2026-05-15 | 本批补全；Wikipedia、SIGMOD DBLP URL HTTP 200；Bentley 原文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 权力真空 | `src/content/models/权力真空.mdx` | done | 1702 | verified | 2026-05-15 | 本批补全；Cambridge、Britannica、Brookings URL HTTP 200；Weber 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 网络效应 | `src/content/models/网络效应.mdx` | done | 1822 | verified | 2026-05-15 | 本批补全；Wikipedia、AEA、IDEAS/RePEc URL HTTP 200；Katz-Shapiro 原论文与 Information Rules 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 惯性 | `src/content/models/惯性.mdx` | done | 1621 | verified | 2026-05-15 | 本批补全；Britannica、OpenStax、NASA URL HTTP 200；Newton 原典以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 反应偏差 | `src/content/models/反应偏差.mdx` | done | 1931 | verified | 2026-05-15 | 本批补全；Cambridge、SAGE、LibreTexts URL HTTP 200；Scribbr 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 九九定律 | `src/content/models/九九定律.mdx` | todo | 397 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 权力真空 | `src/content/models/权力真空.mdx` | todo | 419 | missing | 2026-05-13 | 短文优先，待补全 |
-| 网络效应 | `src/content/models/网络效应.mdx` | todo | 421 | missing | 2026-05-13 | 短文优先，待补全 |
-| 惯性 | `src/content/models/惯性.mdx` | todo | 435 | missing | 2026-05-13 | 短文优先，待补全 |
-| 反应偏差 | `src/content/models/反应偏差.mdx` | todo | 497 | missing | 2026-05-13 | 短文优先，待补全 |
+| 敏感性分析 | `src/content/models/敏感性分析.mdx` | todo | 584 | missing | 2026-05-13 | 短文优先，待补全 |
+| 反面模式 | `src/content/models/反面模式.mdx` | todo | 620 | needs-audit | 2026-05-13 | 短文优先，待补全 |
+| 磁滞现象 | `src/content/models/磁滞现象.mdx` | todo | 686 | missing | 2026-05-13 | 短文优先，待补全 |
+| 并行处理 | `src/content/models/并行处理.mdx` | done-candidate | 3003 | needs-audit | 2026-05-13 | todo 剩余 3 个完成后，开始长文候选引用核验与风格校准 |
+| 暴力解决方案 | `src/content/models/暴力解决方案.mdx` | done-candidate | 3206 | needs-audit | 2026-05-13 | todo 剩余 3 个完成后，开始长文候选引用核验与风格校准 |
 
 ## 进度表
 
@@ -296,11 +296,11 @@
 | 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | done | 1575 | verified | 2026-05-14 | 本批补全；Wikipedia、Cambridge Core PDF URL HTTP 200；Taylor & Francis 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 框架效应 | `src/content/models/框架效应.mdx` | done | 1493 | verified | 2026-05-14 | 本批补全；Britannica、CiNii URL HTTP 200；Tversky-Kahneman 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 重复博弈 | `src/content/models/重复博弈.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Britannica、Econometric Society URL HTTP 200；Axelrod 原书与 folk theorem 论文以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 九九定律 | `src/content/models/九九定律.mdx` | todo | 397 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 权力真空 | `src/content/models/权力真空.mdx` | todo | 419 | missing | 2026-05-13 | 短文优先，待补全 |
-| 网络效应 | `src/content/models/网络效应.mdx` | todo | 421 | missing | 2026-05-13 | 短文优先，待补全 |
-| 惯性 | `src/content/models/惯性.mdx` | todo | 435 | missing | 2026-05-13 | 短文优先，待补全 |
-| 反应偏差 | `src/content/models/反应偏差.mdx` | todo | 497 | missing | 2026-05-13 | 短文优先，待补全 |
+| 九九定律 | `src/content/models/九九定律.mdx` | done | 1876 | verified | 2026-05-15 | 本批补全；Wikipedia、SIGMOD DBLP URL HTTP 200；Bentley 原文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 权力真空 | `src/content/models/权力真空.mdx` | done | 1702 | verified | 2026-05-15 | 本批补全；Cambridge、Britannica、Brookings URL HTTP 200；Weber 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 网络效应 | `src/content/models/网络效应.mdx` | done | 1822 | verified | 2026-05-15 | 本批补全；Wikipedia、AEA、IDEAS/RePEc URL HTTP 200；Katz-Shapiro 原论文与 Information Rules 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 惯性 | `src/content/models/惯性.mdx` | done | 1621 | verified | 2026-05-15 | 本批补全；Britannica、OpenStax、NASA URL HTTP 200；Newton 原典以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 反应偏差 | `src/content/models/反应偏差.mdx` | done | 1931 | verified | 2026-05-15 | 本批补全；Cambridge、SAGE、LibreTexts URL HTTP 200；Scribbr 403 改为搜索关键词；未纳入 Reddit（未找到可靠单篇来源） |
 | 敏感性分析 | `src/content/models/敏感性分析.mdx` | todo | 584 | missing | 2026-05-13 | 短文优先，待补全 |
 | 反面模式 | `src/content/models/反面模式.mdx` | todo | 620 | needs-audit | 2026-05-13 | 短文优先，待补全 |
 | 磁滞现象 | `src/content/models/磁滞现象.mdx` | todo | 686 | missing | 2026-05-13 | 短文优先，待补全 |

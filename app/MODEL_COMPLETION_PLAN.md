@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 245 |
-| todo | 13 |
+| done | 250 |
+| todo | 8 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | done | 1412 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Taleb 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | done | 1568 | verified | 2026-05-14 | 本批补全；Britannica、LibreTexts、Wikipedia URL HTTP 200；Le Chatelier 1888 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 决策树 | `src/content/models/决策树.mdx` | done | 1369 | verified | 2026-05-14 | 本批补全；Britannica、scikit-learn、Wikipedia URL HTTP 200；Russell-Norvig 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 条件概率 | `src/content/models/条件概率.mdx` | done | 1438 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Ross 概率教材以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 逆火效应 | `src/content/models/逆火效应.mdx` | done | 1565 | verified | 2026-05-14 | 本批补全；Southampton URL HTTP 200；SSRN 与 SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 侯世达定律 | `src/content/models/侯世达定律.mdx` | done | 1444 | verified | 2026-05-14 | 本批补全；Wikipedia、WorldCat、Google Books URL HTTP 200；Hofstadter 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 观察者效应 | `src/content/models/观察者效应.mdx` | done | 1316 | verified | 2026-05-14 | 本批补全；Wikipedia 系列 URL HTTP 200；Scribbr 403 改为搜索关键词；Landsberger 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | done | 1575 | verified | 2026-05-14 | 本批补全；Wikipedia、Cambridge Core PDF URL HTTP 200；Taylor & Francis 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 框架效应 | `src/content/models/框架效应.mdx` | done | 1493 | verified | 2026-05-14 | 本批补全；Britannica、CiNii URL HTTP 200；Tversky-Kahneman 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 重复博弈 | `src/content/models/重复博弈.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Britannica、Econometric Society URL HTTP 200；Axelrod 原书与 folk theorem 论文以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 侯世达定律 | `src/content/models/侯世达定律.mdx` | todo | 310 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 观察者效应 | `src/content/models/观察者效应.mdx` | todo | 320 | missing | 2026-05-13 | 短文优先，待补全 |
-| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | todo | 345 | missing | 2026-05-13 | 短文优先，待补全 |
-| 框架效应 | `src/content/models/框架效应.mdx` | todo | 347 | missing | 2026-05-13 | 短文优先，待补全 |
-| 重复博弈 | `src/content/models/重复博弈.mdx` | todo | 368 | missing | 2026-05-13 | 短文优先，待补全 |
+| 九九定律 | `src/content/models/九九定律.mdx` | todo | 397 | needs-audit | 2026-05-13 | 短文优先，待补全 |
+| 权力真空 | `src/content/models/权力真空.mdx` | todo | 419 | missing | 2026-05-13 | 短文优先，待补全 |
+| 网络效应 | `src/content/models/网络效应.mdx` | todo | 421 | missing | 2026-05-13 | 短文优先，待补全 |
+| 惯性 | `src/content/models/惯性.mdx` | todo | 435 | missing | 2026-05-13 | 短文优先，待补全 |
+| 反应偏差 | `src/content/models/反应偏差.mdx` | todo | 497 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -291,11 +291,11 @@
 | 决策树 | `src/content/models/决策树.mdx` | done | 1369 | verified | 2026-05-14 | 本批补全；Britannica、scikit-learn、Wikipedia URL HTTP 200；Russell-Norvig 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 条件概率 | `src/content/models/条件概率.mdx` | done | 1438 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Ross 概率教材以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 逆火效应 | `src/content/models/逆火效应.mdx` | done | 1565 | verified | 2026-05-14 | 本批补全；Southampton URL HTTP 200；SSRN 与 SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 侯世达定律 | `src/content/models/侯世达定律.mdx` | todo | 310 | needs-audit | 2026-05-13 | 短文优先，待补全 |
-| 观察者效应 | `src/content/models/观察者效应.mdx` | todo | 320 | missing | 2026-05-13 | 短文优先，待补全 |
-| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | todo | 345 | missing | 2026-05-13 | 短文优先，待补全 |
-| 框架效应 | `src/content/models/框架效应.mdx` | todo | 347 | missing | 2026-05-13 | 短文优先，待补全 |
-| 重复博弈 | `src/content/models/重复博弈.mdx` | todo | 368 | missing | 2026-05-13 | 短文优先，待补全 |
+| 侯世达定律 | `src/content/models/侯世达定律.mdx` | done | 1444 | verified | 2026-05-14 | 本批补全；Wikipedia、WorldCat、Google Books URL HTTP 200；Hofstadter 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 观察者效应 | `src/content/models/观察者效应.mdx` | done | 1316 | verified | 2026-05-14 | 本批补全；Wikipedia 系列 URL HTTP 200；Scribbr 403 改为搜索关键词；Landsberger 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | done | 1575 | verified | 2026-05-14 | 本批补全；Wikipedia、Cambridge Core PDF URL HTTP 200；Taylor & Francis 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 框架效应 | `src/content/models/框架效应.mdx` | done | 1493 | verified | 2026-05-14 | 本批补全；Britannica、CiNii URL HTTP 200；Tversky-Kahneman 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 重复博弈 | `src/content/models/重复博弈.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Britannica、Econometric Society URL HTTP 200；Axelrod 原书与 folk theorem 论文以书名/DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 九九定律 | `src/content/models/九九定律.mdx` | todo | 397 | needs-audit | 2026-05-13 | 短文优先，待补全 |
 | 权力真空 | `src/content/models/权力真空.mdx` | todo | 419 | missing | 2026-05-13 | 短文优先，待补全 |
 | 网络效应 | `src/content/models/网络效应.mdx` | todo | 421 | missing | 2026-05-13 | 短文优先，待补全 |

@@ -16,8 +16,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 240 |
-| todo | 18 |
+| done | 245 |
+| todo | 13 |
 | needs-reference-audit | 0 |
 | done-candidate | 11 |
 | blocked-needs-source | 0 |
@@ -26,21 +26,21 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 林迪效应 | `src/content/models/林迪效应.mdx` | done | 1396 | verified | 2026-05-14 | 本批补全；Wikipedia、Taleb 官网 URL HTTP 200；Antifragile 与 Mandelbrot 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 颠覆性创新 | `src/content/models/颠覆性创新.mdx` | done | 1576 | verified | 2026-05-14 | 本批补全；Christensen Institute、HBR、Britannica Money URL HTTP 200；Christensen 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | done | 1562 | verified | 2026-05-14 | 本批补全；Wikipedia、CiNii URL HTTP 200；ScienceDirect 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 肥尾分布 | `src/content/models/肥尾分布.mdx` | done | 1471 | verified | 2026-05-14 | 本批补全；Wikipedia、dblp、arXiv URL HTTP 200；Clauset-Shalizi-Newman 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 逆向选择 | `src/content/models/逆向选择.mdx` | done | 1521 | verified | 2026-05-14 | 本批补全；Britannica、Nobel Prize URL HTTP 200；Akerlof 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | done | 1412 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Taleb 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | done | 1568 | verified | 2026-05-14 | 本批补全；Britannica、LibreTexts、Wikipedia URL HTTP 200；Le Chatelier 1888 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 决策树 | `src/content/models/决策树.mdx` | done | 1369 | verified | 2026-05-14 | 本批补全；Britannica、scikit-learn、Wikipedia URL HTTP 200；Russell-Norvig 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 条件概率 | `src/content/models/条件概率.mdx` | done | 1438 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Ross 概率教材以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 逆火效应 | `src/content/models/逆火效应.mdx` | done | 1565 | verified | 2026-05-14 | 本批补全；Southampton URL HTTP 200；SSRN 与 SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | todo | 263 | missing | 2026-05-13 | 短文优先，待补全 |
-| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | todo | 264 | missing | 2026-05-13 | 短文优先，待补全 |
-| 决策树 | `src/content/models/决策树.mdx` | todo | 288 | missing | 2026-05-13 | 短文优先，待补全 |
-| 条件概率 | `src/content/models/条件概率.mdx` | todo | 295 | missing | 2026-05-13 | 短文优先，待补全 |
-| 逆火效应 | `src/content/models/逆火效应.mdx` | todo | 308 | missing | 2026-05-13 | 短文优先，待补全 |
+| 侯世达定律 | `src/content/models/侯世达定律.mdx` | todo | 310 | needs-audit | 2026-05-13 | 短文优先，待补全 |
+| 观察者效应 | `src/content/models/观察者效应.mdx` | todo | 320 | missing | 2026-05-13 | 短文优先，待补全 |
+| 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | todo | 345 | missing | 2026-05-13 | 短文优先，待补全 |
+| 框架效应 | `src/content/models/框架效应.mdx` | todo | 347 | missing | 2026-05-13 | 短文优先，待补全 |
+| 重复博弈 | `src/content/models/重复博弈.mdx` | todo | 368 | missing | 2026-05-13 | 短文优先，待补全 |
 
 ## 进度表
 
@@ -286,11 +286,11 @@
 | 最后通牒博弈 | `src/content/models/最后通牒博弈.mdx` | done | 1562 | verified | 2026-05-14 | 本批补全；Wikipedia、CiNii URL HTTP 200；ScienceDirect 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 肥尾分布 | `src/content/models/肥尾分布.mdx` | done | 1471 | verified | 2026-05-14 | 本批补全；Wikipedia、dblp、arXiv URL HTTP 200；Clauset-Shalizi-Newman 论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 逆向选择 | `src/content/models/逆向选择.mdx` | done | 1521 | verified | 2026-05-14 | 本批补全；Britannica、Nobel Prize URL HTTP 200；Akerlof 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | todo | 263 | missing | 2026-05-13 | 短文优先，待补全 |
-| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | todo | 264 | missing | 2026-05-13 | 短文优先，待补全 |
-| 决策树 | `src/content/models/决策树.mdx` | todo | 288 | missing | 2026-05-13 | 短文优先，待补全 |
-| 条件概率 | `src/content/models/条件概率.mdx` | todo | 295 | missing | 2026-05-13 | 短文优先，待补全 |
-| 逆火效应 | `src/content/models/逆火效应.mdx` | todo | 308 | missing | 2026-05-13 | 短文优先，待补全 |
+| 黑天鹅事件 | `src/content/models/黑天鹅事件.mdx` | done | 1412 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Taleb 经典著作以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 勒夏特列原理 | `src/content/models/勒夏特列原理.mdx` | done | 1568 | verified | 2026-05-14 | 本批补全；Britannica、LibreTexts、Wikipedia URL HTTP 200；Le Chatelier 1888 原文以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 决策树 | `src/content/models/决策树.mdx` | done | 1369 | verified | 2026-05-14 | 本批补全；Britannica、scikit-learn、Wikipedia URL HTTP 200；Russell-Norvig 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 条件概率 | `src/content/models/条件概率.mdx` | done | 1438 | verified | 2026-05-14 | 本批补全；Britannica、Wikipedia URL HTTP 200；Ross 概率教材以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 逆火效应 | `src/content/models/逆火效应.mdx` | done | 1565 | verified | 2026-05-14 | 本批补全；Southampton URL HTTP 200；SSRN 与 SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 侯世达定律 | `src/content/models/侯世达定律.mdx` | todo | 310 | needs-audit | 2026-05-13 | 短文优先，待补全 |
 | 观察者效应 | `src/content/models/观察者效应.mdx` | todo | 320 | missing | 2026-05-13 | 短文优先，待补全 |
 | 观察者期望偏差 | `src/content/models/观察者期望偏差.mdx` | todo | 345 | missing | 2026-05-13 | 短文优先，待补全 |

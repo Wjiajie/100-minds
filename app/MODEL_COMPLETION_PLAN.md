@@ -16,30 +16,26 @@
 | 指标 | 数量 |
 |---|---:|
 | 模型总数 | 269 |
-| done | 265 |
+| done | 269 |
 | todo | 0 |
 | needs-reference-audit | 0 |
-| done-candidate | 4 |
+| done-candidate | 0 |
 | blocked-needs-source | 0 |
 
 ## 本批记录
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 策略税 | `src/content/models/策略税.mdx` | done | 1655 | verified | 2026-05-15 | 本批完成 done-candidate 审计；DaveNet、Stratechery、Christensen Institute URL HTTP 200；Super Thinking 与 Poor Charlie's Almanack 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 彼得原理 | `src/content/models/彼得原理.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、Carlson PDF URL HTTP 200；WorldCat 429 改为书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 创新者 | `src/content/models/创新者.mdx` | done | 1565 | verified | 2026-05-15 | 本批完成 done-candidate 审计并校正主题为 Rogers 扩散理论；Wikipedia、TechTarget、Shopify URL HTTP 200；Rogers 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 不证实偏差 | `src/content/models/不证实偏差.mdx` | done | 1673 | verified | 2026-05-15 | 本批完成 done-candidate 审计；CiNii、UNC PDF URL HTTP 200；SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Columbia PDF URL HTTP 200；OUP 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 沉没成本 | `src/content/models/沉没成本.mdx` | done | 1574 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、EconPapers URL HTTP 200；Arkes-Blumer 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia URL HTTP 200；Amazon 2015 shareholder letter 与 Pindyck 论文以题名/关键词记录；Dixit-Pindyck 与 Annie Duke 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done | 1371 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Stanford Encyclopedia、Wikipedia URL HTTP 200；Merriam-Webster 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 北极星 | `src/content/models/北极星.mdx` | done | 1407 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Amplitude、Wikipedia、Stratrix URL HTTP 200；Hacking Growth 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 
 ## 下一批候选
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 沉没成本 | `src/content/models/沉没成本.mdx` | done-candidate | 3681 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
-| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done-candidate | 3692 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
-| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done-candidate | 4080 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
-| 北极星 | `src/content/models/北极星.mdx` | done-candidate | 5492 | needs-audit | 2026-05-13 | 最后 4 个长文候选；进入引用核验与风格校准 |
+| 无 | `-` | done | 0 | verified | 2026-05-15 | 已完成全部 269 个模型；无剩余 todo / needs-reference-audit / done-candidate |
 
 ## 进度表
 
@@ -310,7 +306,7 @@
 | 创新者 | `src/content/models/创新者.mdx` | done | 1565 | verified | 2026-05-15 | 本批完成 done-candidate 审计并校正主题为 Rogers 扩散理论；Wikipedia、TechTarget、Shopify URL HTTP 200；Rogers 原书以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 不证实偏差 | `src/content/models/不证实偏差.mdx` | done | 1673 | verified | 2026-05-15 | 本批完成 done-candidate 审计；CiNii、UNC PDF URL HTTP 200；SAGE 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
 | 艾森豪威尔决策矩阵 | `src/content/models/艾森豪威尔决策矩阵.mdx` | done | 1582 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia、Columbia PDF URL HTTP 200；OUP 403 改以 DOI/题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 沉没成本 | `src/content/models/沉没成本.mdx` | done-candidate | 3681 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done-candidate | 3692 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done-candidate | 4080 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
-| 北极星 | `src/content/models/北极星.mdx` | done-candidate | 5492 | needs-audit | 2026-05-13 | 长文候选；首轮不重写，后续统一核验引用与风格 |
+| 沉没成本 | `src/content/models/沉没成本.mdx` | done | 1574 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、EconPapers URL HTTP 200；Arkes-Blumer 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia URL HTTP 200；Amazon 2015 shareholder letter 与 Pindyck 论文以题名/关键词记录；Dixit-Pindyck 与 Annie Duke 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done | 1371 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Stanford Encyclopedia、Wikipedia URL HTTP 200；Merriam-Webster 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 北极星 | `src/content/models/北极星.mdx` | done | 1407 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Amplitude、Wikipedia、Stratrix URL HTTP 200；Hacking Growth 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |

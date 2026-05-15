@@ -6,16 +6,37 @@ import { glossaryData } from "@/lib/glossary";
 import { groupByPinyin } from "@/lib/pinyin";
 import { GlossaryDialog } from "@/components/ui/GlossaryDialog";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export default function GlossaryPage() {
-  const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
+  const searchParams = useSearchParams();
+  const queryTerm = searchParams.get("term");
+  const queryOpenToken = searchParams.get("open") ?? "initial";
+  const querySelectedTerm = queryTerm && glossaryData[queryTerm] ? queryTerm : null;
+  const queryDialogKey = querySelectedTerm ? `${querySelectedTerm}:${queryOpenToken}` : null;
+  const [manualSelectedTerm, setManualSelectedTerm] = useState<string | null>(null);
+  const [dismissedQueryDialogKey, setDismissedQueryDialogKey] = useState<string | null>(null);
+  const selectedTerm = manualSelectedTerm ?? (
+    querySelectedTerm && dismissedQueryDialogKey !== queryDialogKey
+      ? querySelectedTerm
+      : null
+  );
   const terms = Object.values(glossaryData);
   const groupedTerms = groupByPinyin(terms, (t) => t.term);
   const initials = Object.keys(groupedTerms).sort();
 
   const handleOpenTerm = (term: string) => {
-    setSelectedTerm(term);
+    setManualSelectedTerm(term);
+  };
+
+  const handleDialogOpenChange = (open: boolean) => {
+    if (open) return;
+
+    setManualSelectedTerm(null);
+    if (queryDialogKey) {
+      setDismissedQueryDialogKey(queryDialogKey);
+    }
   };
 
   return (
@@ -86,7 +107,12 @@ export default function GlossaryPage() {
         <GlossaryDialog
           {...glossaryData[selectedTerm]}
           open={!!selectedTerm}
-          onOpenChange={(open) => !open && setSelectedTerm(null)}
+          onOpenChange={handleDialogOpenChange}
+          onSelectRelated={(term) => {
+            if (glossaryData[term]) {
+              setManualSelectedTerm(term);
+            }
+          }}
         />
       )}
 

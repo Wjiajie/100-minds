@@ -26,6 +26,28 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
   // Keyboard shortcut for search
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -82,6 +104,7 @@ export function Navbar() {
             </div>
 
             <button
+              type="button"
               className={cn(
                 "p-2 transition-colors text-muted-foreground hover:text-foreground"
               )}
@@ -92,13 +115,17 @@ export function Navbar() {
             </button>
 
             <button
+              type="button"
               className={cn(
-                "md:hidden p-2 rounded-lg transition-colors",
-                "text-slate-500 hover:text-slate-700 hover:bg-slate-100",
-                "dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800"
+                "md:hidden flex h-11 w-11 items-center justify-center rounded-full border border-transparent transition-colors",
+                isMobileMenuOpen
+                  ? "border-accent/45 bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:border-border/60 hover:text-foreground"
               )}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="菜单"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              aria-label={isMobileMenuOpen ? "关闭菜单" : "打开菜单"}
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -111,7 +138,10 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border bg-background animate-fade-in shadow-xl">
+          <div
+            id="mobile-navigation"
+            className="md:hidden mt-3 overflow-hidden border border-border/60 bg-background/95 animate-fade-in shadow-xl backdrop-blur-xl"
+          >
             <div className="flex flex-col gap-2 px-4 mb-6">
               {navLinks.map((link) => (
                 <Link

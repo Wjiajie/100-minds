@@ -14,6 +14,7 @@ export interface GlossaryDialogProps {
     examples?: string[];
     open: boolean;
     onOpenChange: (open: boolean) => void;
+    onSelectRelated?: (term: string) => void;
 }
 
 export function GlossaryDialog({
@@ -25,6 +26,7 @@ export function GlossaryDialog({
     examples,
     open,
     onOpenChange,
+    onSelectRelated,
 }: GlossaryDialogProps) {
     return (
         <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -42,6 +44,9 @@ export function GlossaryDialog({
                         <Dialog.Content asChild>
                             <div className="fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] px-4 focus:outline-none">
                                 <Dialog.Title className="sr-only">{term}</Dialog.Title>
+                                <Dialog.Description className="sr-only">
+                                    {definition}
+                                </Dialog.Description>
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -101,12 +106,14 @@ export function GlossaryDialog({
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {relatedTerms.map((related) => (
-                                                        <span
+                                                        <button
+                                                            type="button"
                                                             key={related}
+                                                            onClick={() => onSelectRelated?.(related)}
                                                             className="px-3 py-1 bg-secondary/50 text-muted-foreground text-xs hover:bg-secondary hover:text-foreground cursor-pointer transition-colors border border-transparent hover:border-border"
                                                         >
                                                             {related}
-                                                        </span>
+                                                        </button>
                                                     ))}
                                                 </div>
                                             </div>

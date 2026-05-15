@@ -47,81 +47,75 @@ export default async function MindMapPostPage({ params }: PageProps) {
         <div className="min-h-screen bg-background">
             <Navbar />
 
-            <main className="pt-32 pb-24 px-4 sm:px-6">
+            <main className="pt-40 pb-32 px-6 sm:px-8">
                 <div className="max-w-3xl mx-auto">
                     {/* Back Navigation */}
-                    <div className="mb-8 px-2">
+                    <div className="flex justify-center mb-20">
                         <Link
                             href="/mind-map"
-                            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+                            className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-accent/45 hover:text-accent transition-all duration-700 group"
                         >
-                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                            返回思维地图
+                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-3 transition-transform duration-700" />
+                            <span>返回思维地图</span>
+                            <div className="w-12 h-[1px] bg-accent/20 group-hover:w-20 transition-all duration-700" />
                         </Link>
                     </div>
 
-                    <div className="bg-card rounded-xl sm:rounded-2xl shadow-sm border border-border/40 overflow-hidden">
-                        <div className="px-6 py-10 sm:px-10 md:px-14 lg:py-16">
-                            {/* Article Header */}
-                            <header className="mb-10 text-center">
-                                <div className="flex flex-wrap items-center justify-center gap-4 mb-6 text-xs text-muted-foreground">
-                                    {post.date && (
-                                        <span className="flex items-center gap-2">
-                                            <Calendar className="w-3.5 h-3.5 opacity-60" />
-                                            {new Date(post.date).toLocaleDateString('zh-CN')}
-                                        </span>
-                                    )}
-                                    {post.tags && post.tags.length > 0 && (
-                                        <div className="flex items-center gap-3">
-                                            <Tag className="w-3.5 h-3.5 opacity-60" />
-                                            <div className="flex gap-2">
-                                                {post.tags.map(tag => (
-                                                    <span key={tag} className="bg-secondary/50 px-2 py-0.5 rounded text-muted-foreground/80">
-                                                        #{tag}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-6 leading-tight tracking-tight px-4">
-                                    {post.title}
-                                </h1>
-
-                                {post.description && (
-                                    <p className="text-base sm:text-lg text-muted-foreground font-serif italic leading-relaxed max-w-2xl mx-auto px-4">
-                                        {post.description}
-                                    </p>
-                                )}
-                            </header>
-
-                            {/* Divider */}
-                            <div className="w-20 h-px bg-border/60 mx-auto mb-10" />
-
-                            {/* Article Content */}
-                            <article className="prose prose-slate dark:prose-invert max-w-none 
-                                prose-headings:font-serif prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground
-                                prose-p:leading-relaxed prose-p:text-foreground/90 prose-p:font-serif prose-p:text-base sm:prose-p:text-lg
-                                prose-li:text-foreground/90 prose-li:font-serif prose-li:leading-relaxed
-                                prose-strong:text-foreground prose-strong:font-bold
-                                prose-blockquote:border-l-4 prose-blockquote:border-accent/40 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:bg-secondary/10 prose-blockquote:py-2 prose-blockquote:pr-4 prose-blockquote:rounded-r
-                                prose-img:rounded-xl prose-img:shadow-md
-                                [&>p]:mb-6"
-                            >
-                                <MDXRemote
-                                    source={post.content}
-                                    components={mdxComponents as any}
-                                    options={{
-                                        mdxOptions: {
-                                            remarkPlugins: [remarkMath],
-                                            rehypePlugins: [rehypeKatex],
-                                        }
-                                    }}
-                                />
-                            </article>
+                    {/* Article Header */}
+                    <header className="mb-28 text-center">
+                        <div className="mb-10 flex flex-wrap items-center justify-center gap-5 text-[10px] font-serif uppercase tracking-[0.22em] text-accent/50">
+                            {post.date && (
+                                <span className="flex items-center gap-2">
+                                    <Calendar className="w-3.5 h-3.5 opacity-60" />
+                                    {new Date(post.date).toLocaleDateString('zh-CN')}
+                                </span>
+                            )}
+                            {post.tags && post.tags.length > 0 && (
+                                <span className="flex items-center gap-2">
+                                    <Tag className="w-3.5 h-3.5 opacity-60" />
+                                    {post.tags.length} 个相关模型
+                                </span>
+                            )}
                         </div>
-                    </div>
+
+                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-12 leading-[1.05] tracking-tight">
+                            {post.title}
+                        </h1>
+
+                        {post.description && (
+                            <p className="text-2xl text-muted-foreground/55 font-serif italic max-w-2xl mx-auto leading-relaxed px-2 sm:px-8">
+                                {post.description}
+                            </p>
+                        )}
+
+                        {post.tags && post.tags.length > 0 && (
+                            <div className="mt-14 flex flex-wrap justify-center gap-2">
+                                {post.tags.map(tag => (
+                                    <Link
+                                        key={tag}
+                                        href={`/models/${encodeURIComponent(tag)}`}
+                                        className="border border-border/60 bg-secondary/25 px-3 py-1.5 text-[10px] font-medium tracking-[0.12em] text-muted-foreground transition hover:border-accent/45 hover:text-accent"
+                                    >
+                                        #{tag}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+                    </header>
+
+                    {/* Article Content */}
+                    <article className="prose animate-fade-in mb-32">
+                        <MDXRemote
+                            source={post.content}
+                            components={mdxComponents}
+                            options={{
+                                mdxOptions: {
+                                    remarkPlugins: [remarkMath],
+                                    rehypePlugins: [rehypeKatex],
+                                }
+                            }}
+                        />
+                    </article>
                 </div>
             </main>
 

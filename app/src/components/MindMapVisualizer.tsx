@@ -10,6 +10,7 @@ interface MindMapVisualizerProps {
     selectedNode: string | null;
     onNodeSelect: (id: string) => void;
     onRevealLevelChange?: (level: 0 | 1 | 2 | 3) => void;
+    requestedRevealLevel?: 0 | 1 | 2 | 3;
 }
 
 interface D3Node extends GraphNode, d3.SimulationNodeDatum {
@@ -29,6 +30,13 @@ const REVEAL_THRESHOLDS = [
     { level: 2 as const, min: 1.9, label: "中层网络" },
     { level: 3 as const, min: 2.7, label: "完整细节" },
 ];
+
+const REVEAL_SCALE_BY_LEVEL: Record<0 | 1 | 2 | 3, number> = {
+    0: 0.78,
+    1: 1.35,
+    2: 2.05,
+    3: 2.85,
+};
 
 const ZEN_WARM_PALETTE = [
     "#9b6748",
@@ -108,11 +116,14 @@ export function MindMapVisualizer({
     selectedNode,
     onNodeSelect,
     onRevealLevelChange,
+    requestedRevealLevel,
 }: MindMapVisualizerProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const svgRef = useRef<SVGSVGElement>(null);
     const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
     const resetTransformRef = useRef<d3.ZoomTransform | null>(null);
+    const currentTransformRef = useRef<d3.ZoomTransform | null>(null);
+    const lastRequestedRevealLevelRef = useRef<0 | 1 | 2 | 3 | undefined>(undefined);
     const [hoveredNode, setHoveredNode] = useState<string | null>(null);
     const [revealLevel, setRevealLevel] = useState<0 | 1 | 2 | 3>(0);
     const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
@@ -218,6 +229,7 @@ export function MindMapVisualizer({
             .scaleExtent([0.55, 3.6])
             .on("zoom", (event) => {
                 const nextLevel = levelForScale(event.transform.k);
+                currentTransformRef.current = event.transform;
                 container.attr("transform", event.transform);
 
                 if (nextLevel !== revealLevelRef.current) {
@@ -363,6 +375,7 @@ export function MindMapVisualizer({
         const fitNodes = coreNodes.length >= 6 ? coreNodes : nodes;
         const fitTransform = getFitTransform(fitNodes, width, height, headerSafeHeight, 1.18);
         resetTransformRef.current = fitTransform;
+        currentTransformRef.current = fitTransform;
 
         const baseAlpha = prefersReducedMotion ? 0.012 : 0.024;
         simulation
@@ -418,6 +431,40 @@ export function MindMapVisualizer({
             svg.on("click", null).on(".zoom", null);
         };
     }, [containerSize, graph]);
+
+    useEffect(() => {
+        if (requestedRevealLevel === undefined) return;
+        if (lastRequestedRevealLevelRef.current === requestedRevealLevel) return;
+        if (!svgRef.current || !containerRef.current || !zoomRef.current) return;
+
+        lastRequestedRevealLevelRef.current = requestedRevealLevel;
+
+        if (requestedRevealLevel === 0 && resetTransformRef.current) {
+            d3.select(svgRef.current)
+                .transition()
+                .duration(520)
+                .call(zoomRef.current.transform, resetTransformRef.current);
+            return;
+        }
+
+        const current = currentTransformRef.current ?? resetTransformRef.current ?? getResetTransform(
+            containerRef.current.clientWidth,
+            containerRef.current.clientHeight
+        );
+        const nextScale = REVEAL_SCALE_BY_LEVEL[requestedRevealLevel];
+        const centerX = containerRef.current.clientWidth / 2;
+        const centerY = containerRef.current.clientHeight / 2;
+        const worldX = (centerX - current.x) / current.k;
+        const worldY = (centerY - current.y) / current.k;
+        const nextTransform = d3.zoomIdentity
+            .translate(centerX - worldX * nextScale, centerY - worldY * nextScale)
+            .scale(nextScale);
+
+        d3.select(svgRef.current)
+            .transition()
+            .duration(520)
+            .call(zoomRef.current.transform, nextTransform);
+    }, [requestedRevealLevel]);
 
     useEffect(() => {
         if (!svgRef.current) return;

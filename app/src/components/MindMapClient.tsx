@@ -26,6 +26,7 @@ function getLayerLabel(layer: GraphNode["layer"]) {
 export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
     const [revealLevel, setRevealLevel] = useState<0 | 1 | 2 | 3>(0);
+    const [requestedRevealLevel, setRequestedRevealLevel] = useState<0 | 1 | 2 | 3>(0);
 
     const selectedNode = selectedTag
         ? graph.nodes.find((node) => node.id === selectedTag) ?? null
@@ -61,20 +62,26 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
         setSelectedTag(tag || null);
     };
 
+    const handleRevealLevelRequest = (level: 0 | 1 | 2 | 3) => {
+        setRequestedRevealLevel(level);
+        setRevealLevel(level);
+    };
+
     const layerNodeTitle = revealLevel === 0 ? "核心节点" : "当前圈层节点";
 
     return (
         <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden lg:flex-row">
-            <div className="relative h-[52vh] w-full flex-shrink-0 overflow-hidden border-b border-border/40 bg-background lg:h-full lg:w-[62%] lg:border-b-0 lg:border-r">
+            <div className="relative h-[50svh] w-full flex-shrink-0 overflow-hidden border-b border-border/40 bg-background lg:h-full lg:w-[62%] lg:border-b-0 lg:border-r">
                 <MindMapVisualizer
                     graph={graph}
                     selectedNode={selectedTag}
                     onNodeSelect={handleTagSelect}
                     onRevealLevelChange={setRevealLevel}
+                    requestedRevealLevel={requestedRevealLevel}
                 />
             </div>
 
-            <aside className="relative z-10 flex h-[48vh] w-full flex-col overflow-y-auto bg-card/20 backdrop-blur-xl lg:h-full lg:w-[38%] custom-scrollbar">
+            <aside className="relative z-10 -mt-5 flex h-[55svh] w-full flex-col overflow-y-auto rounded-t-[28px] border-t border-border/60 bg-card/90 shadow-[0_-20px_60px_rgba(38,34,30,0.08)] backdrop-blur-xl lg:mt-0 lg:h-full lg:w-[38%] lg:rounded-none lg:border-t-0 lg:shadow-none custom-scrollbar">
                 {!selectedNode ? (
                     <div className="flex min-h-full flex-col">
                         <div className="border-b border-border/40 px-7 py-8">
@@ -119,6 +126,25 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                                 <p className="font-serif text-sm leading-7 text-muted-foreground">
                                     {revealDescriptions[revealLevel]}
                                 </p>
+                                <div className="mt-5 grid grid-cols-4 gap-2">
+                                    {revealLabels.map((label, index) => (
+                                        <button
+                                            key={label}
+                                            type="button"
+                                            onClick={() => handleRevealLevelRequest(index as 0 | 1 | 2 | 3)}
+                                            className={`min-h-11 border px-2 py-2 text-[10px] font-bold tracking-[0.12em] transition ${revealLevel === index
+                                                ? "border-accent/60 bg-accent/10 text-foreground"
+                                                : "border-border/45 bg-background/40 text-muted-foreground hover:border-accent/45 hover:text-foreground"
+                                                }`}
+                                            aria-pressed={revealLevel === index}
+                                        >
+                                            {index + 1}
+                                            <span className="mt-1 block truncate font-serif text-[11px] font-medium tracking-normal">
+                                                {label}
+                                            </span>
+                                        </button>
+                                    ))}
+                                </div>
                             </section>
 
                             <section>
@@ -183,6 +209,22 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                                     <ArrowUpRight className="ml-3 h-4 w-4 flex-shrink-0 text-accent" />
                                 </Link>
                             )}
+                            <div className="mt-5 grid grid-cols-4 gap-2">
+                                {revealLabels.map((label, index) => (
+                                    <button
+                                        key={label}
+                                        type="button"
+                                        onClick={() => handleRevealLevelRequest(index as 0 | 1 | 2 | 3)}
+                                        className={`min-h-10 border px-2 py-2 text-[10px] font-bold tracking-[0.12em] transition ${revealLevel === index
+                                            ? "border-accent/60 bg-accent/10 text-foreground"
+                                            : "border-border/45 bg-background/40 text-muted-foreground hover:border-accent/45 hover:text-foreground"
+                                            }`}
+                                        aria-pressed={revealLevel === index}
+                                    >
+                                        {index + 1}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-3 border-b border-border/40 text-center">

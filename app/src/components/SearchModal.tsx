@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, FileText, Command } from "lucide-react";
+import { Search, FileText, Command, BookOpen, Tags, Loader2, AlertCircle } from "lucide-react";
 import Fuse from "fuse.js";
 import { useRouter } from "next/navigation";
 
@@ -22,21 +22,48 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
     const [query, setQuery] = React.useState("");
     const [data, setData] = React.useState<SearchResult[]>([]);
     const [results, setResults] = React.useState<SearchResult[]>([]);
+    const [isLoading, setIsLoading] = React.useState(false);
+    const [error, setError] = React.useState<string | null>(null);
+    const [activeIndex, setActiveIndex] = React.useState(0);
     const router = useRouter();
     const inputRef = React.useRef<HTMLInputElement>(null);
+    const termOpenCounterRef = React.useRef(0);
 
     React.useEffect(() => {
+        let isCancelled = false;
+
         if (open) {
+            setIsLoading(true);
+            setError(null);
             fetch("/api/search")
                 .then((res) => res.json())
-                .then((data) => setData(data));
+                .then((data) => {
+                    if (!isCancelled) {
+                        setData(data);
+                    }
+                })
+                .catch(() => {
+                    if (!isCancelled) {
+                        setError("搜索索引暂时无法读取");
+                    }
+                })
+                .finally(() => {
+                    if (!isCancelled) {
+                        setIsLoading(false);
+                    }
+                });
 
             // Focus input after a short delay for animation
             setTimeout(() => inputRef.current?.focus(), 100);
         } else {
             setQuery("");
             setResults([]);
+            setActiveIndex(0);
         }
+
+        return () => {
+            isCancelled = true;
+        };
     }, [open]);
 
     const fuse = React.useMemo(() => {
@@ -45,9 +72,10 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                 { name: "title", weight: 1 },
                 { name: "description", weight: 0.7 },
                 { name: "content", weight: 0.5 },
-                { name: "category", weight: 0.2 }
+                { name: "category", weight: 0.2 },
+                { name: "term", weight: 0.4 },
             ],
-            threshold: 0.2,
+            threshold: 0.28,
             minMatchCharLength: 2,
             ignoreLocation: false, // Matches at start of string are more relevant
             distance: 100,
@@ -57,20 +85,67 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
 
     React.useEffect(() => {
         if (query.trim()) {
-            const filtered = fuse.search(query).map((res) => res.item);
+            const filtered = fuse.search(query).slice(0, 18).map((res) => res.item);
             setResults(filtered);
         } else {
             setResults([]);
         }
+        setActiveIndex(0);
     }, [query, fuse]);
 
     const handleSelect = (result: SearchResult) => {
         onOpenChange(false);
+        if (result.type === "term") {
+            termOpenCounterRef.current += 1;
+            const separator = result.path.includes("?") ? "&" : "?";
+            router.push(`${result.path}${separator}open=${termOpenCounterRef.current}`);
+            return;
+        }
+
         router.push(result.path);
     };
 
-    // Groups
-    const articles = results.filter(r => r.type === 'article');
+    const groups = [
+        {
+            type: "model",
+            label: "模型库",
+            icon: BookOpen,
+            items: results.filter((result) => result.type === "model"),
+        },
+        {
+            type: "term",
+            label: "术语表",
+            icon: Tags,
+            items: results.filter((result) => result.type === "term"),
+        },
+        {
+            type: "article",
+            label: "思维地图文章",
+            icon: FileText,
+            items: results.filter((result) => result.type === "article"),
+        },
+    ];
+
+    const flatResults = groups.flatMap((group) => group.items);
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!flatResults.length) return;
+
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            setActiveIndex((index) => (index + 1) % flatResults.length);
+        }
+
+        if (event.key === "ArrowUp") {
+            event.preventDefault();
+            setActiveIndex((index) => (index - 1 + flatResults.length) % flatResults.length);
+        }
+
+        if (event.key === "Enter") {
+            event.preventDefault();
+            handleSelect(flatResults[activeIndex]);
+        }
+    };
 
     return (
         <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -88,6 +163,9 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                         <Dialog.Content asChild>
                             <div className="fixed left-[50%] top-[15%] z-[101] w-full max-w-2xl translate-x-[-50%] px-4 focus:outline-none">
                                 <Dialog.Title className="sr-only">搜索 100-minds</Dialog.Title>
+                                <Dialog.Description className="sr-only">
+                                    搜索模型库、术语表和思维地图文章，使用上下方向键选择结果。
+                                </Dialog.Description>
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.98, y: -20 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -102,6 +180,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                                             ref={inputRef}
                                             value={query}
                                             onChange={(e) => setQuery(e.target.value)}
+                                            onKeyDown={handleKeyDown}
                                             placeholder="搜索思维模型或术语..."
                                             className="w-full bg-transparent px-16 h-16 text-lg font-serif focus:outline-none placeholder:text-muted-foreground/30"
                                         />
@@ -114,38 +193,58 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
 
                                     {/* Results */}
                                     <div className="max-h-[60vh] overflow-y-auto p-4 custom-scrollbar">
-                                        {query && results.length === 0 ? (
+                                        {isLoading ? (
                                             <div className="py-20 text-center">
-                                                <p className="text-muted-foreground font-serif italic text-lg opacity-40">未找到相关结果</p>
+                                                <Loader2 className="mx-auto mb-5 h-5 w-5 animate-spin text-accent" />
+                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">正在整理索引</p>
+                                            </div>
+                                        ) : error ? (
+                                            <div className="py-20 text-center">
+                                                <AlertCircle className="mx-auto mb-5 h-5 w-5 text-accent" />
+                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">{error}</p>
+                                            </div>
+                                        ) : query && results.length === 0 ? (
+                                            <div className="py-20 text-center">
+                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">没有命中这个模型，换一个角度试试</p>
                                             </div>
                                         ) : !query ? (
                                             <div className="py-20 text-center">
-                                                <p className="text-muted-foreground font-serif italic text-lg opacity-40">输入关键词开始探索</p>
+                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">输入关键词，横跨模型、术语和文章探索</p>
                                             </div>
                                         ) : (
                                             <div className="space-y-8 p-2">
-                                                {articles.length > 0 && (
-                                                    <section>
-                                                        <h3 className="px-4 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase text-muted-foreground/40">思维模型文章</h3>
+                                                {groups.map((group) => group.items.length > 0 && (
+                                                    <section key={group.type}>
+                                                        <h3 className="px-4 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase text-muted-foreground/45">{group.label}</h3>
                                                         <div className="space-y-1">
-                                                            {articles.map((item) => (
+                                                            {group.items.map((item) => {
+                                                                const resultIndex = flatResults.findIndex((result) => result.id === item.id);
+                                                                const Icon = group.icon;
+
+                                                                return (
                                                                 <button
                                                                     key={item.id}
                                                                     onClick={() => handleSelect(item)}
-                                                                    className="w-full group flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary/30 transition-all text-left"
+                                                                    onMouseEnter={() => setActiveIndex(resultIndex)}
+                                                                    className={`w-full group flex items-start gap-4 p-4 rounded-2xl transition-all text-left ${resultIndex === activeIndex ? "bg-secondary/35" : "hover:bg-secondary/30"}`}
                                                                 >
                                                                     <div className="mt-1 p-2 rounded-xl bg-secondary/50 text-muted-foreground group-hover:text-foreground group-hover:bg-background transition-colors">
-                                                                        <FileText className="w-4 h-4" />
+                                                                        <Icon className="w-4 h-4" />
                                                                     </div>
                                                                     <div className="flex-1 min-w-0">
-                                                                        <h4 className="font-serif font-bold text-foreground mb-1 group-hover:text-accent transition-colors">{item.title}</h4>
+                                                                        <div className="mb-1 flex items-center gap-2">
+                                                                            <h4 className="truncate font-serif font-bold text-foreground group-hover:text-accent transition-colors">{item.title}</h4>
+                                                                            <span className="flex-shrink-0 border border-border/60 px-1.5 py-0.5 text-[10px] text-muted-foreground/70">
+                                                                                {item.category}
+                                                                            </span>
+                                                                        </div>
                                                                         <p className="text-sm text-muted-foreground line-clamp-1 italic">{item.description}</p>
                                                                     </div>
                                                                 </button>
-                                                            ))}
+                                                            )})}
                                                         </div>
                                                     </section>
-                                                )}
+                                                ))}
 
                                             </div>
                                         )}

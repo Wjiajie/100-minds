@@ -22,9 +22,24 @@ const frameSignals = [
 ];
 
 const frameMoves = [
-  ["01", "少一点结论", "先留出问题的形状"],
-  ["02", "多一个模型", "把盲点变成假设"],
-  ["03", "快一步验证", "让判断回到现实"],
+  {
+    index: "01",
+    title: "把问题留白",
+    body: "先画出边界，不急着填答案。",
+    label: "observe",
+  },
+  {
+    index: "02",
+    title: "换一片镜头",
+    body: "让不同模型从侧面照见盲点。",
+    label: "reframe",
+  },
+  {
+    index: "03",
+    title: "落回一次行动",
+    body: "用一个小验证，把判断放回现实。",
+    label: "test",
+  },
 ];
 
 function ThinkingField() {
@@ -176,10 +191,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-border/60 px-6 py-24 sm:px-8 lg:py-32">
+      <section className="frame-builder-section relative overflow-hidden border-t border-border/60 px-6 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.84fr_1fr] lg:items-center">
           <motion.div
-            className="relative"
+            className="framework-lens-shell relative"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -189,42 +204,42 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
+            className="framework-copy"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1, delay: 0.15 }}
           >
-            <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-accent">
+            <p className="frame-kicker mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-accent">
               <Compass className="h-4 w-4" />
               build your frame
             </p>
-            <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">
+            <h2 className="frame-heading max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">
               建立你自己的思维框架
             </h2>
-            <p className="mt-8 max-w-2xl text-xl leading-10 text-foreground/70">
+            <p className="frame-lede mt-8 max-w-2xl text-xl leading-10 text-foreground/70">
               思维框架不是答案库，而是一套观察复杂问题的取景器。
               当直觉太快、信息太杂时，它帮你换一个入口。
             </p>
 
-            <div className="mt-12 border-y border-border/70">
-              {frameMoves.map(([index, title, body]) => (
+            <div className="frame-moves mt-12">
+              {frameMoves.map((move) => (
                 <motion.div
-                  key={title}
-                  className="grid gap-3 border-b border-border/50 py-5 last:border-b-0 sm:grid-cols-[3.5rem_1fr_1.2fr] sm:items-baseline"
+                  key={move.title}
+                  className="frame-move"
                   initial={{ opacity: 0, x: 18 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.65, delay: Number(index) * 0.08 }}
+                  transition={{ duration: 0.65, delay: Number(move.index) * 0.08 }}
                 >
-                  <span className="text-xs tracking-[0.28em] text-accent">
-                    {index}
+                  <span className="frame-move-index">
+                    {move.index}
                   </span>
-                  <h3 className="text-xl font-medium text-foreground">
-                    {title}
-                  </h3>
-                  <p className="text-sm leading-7 text-muted-foreground">
-                    {body}
-                  </p>
+                  <div className="frame-move-copy">
+                    <span className="frame-move-label">{move.label}</span>
+                    <h3>{move.title}</h3>
+                    <p>{move.body}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

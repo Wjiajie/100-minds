@@ -18,6 +18,26 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+  const headerStyle = isMobileMenuOpen
+    ? {
+        left: "50%",
+        width: "100vw",
+        maxWidth: "none",
+        transform: "translateX(-50%)",
+        transition: "none",
+      }
+    : isScrolled
+      ? {
+          left: "50%",
+          width: "min(calc(100vw - 3rem), 72rem)",
+          transform: "translateX(-50%)",
+        }
+      : {
+          left: "50%",
+          width: "calc(100vw - 2rem)",
+          transform: "translateX(-50%)",
+        };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -48,6 +68,13 @@ export function Navbar() {
     return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   // Keyboard shortcut for search
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -63,11 +90,14 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-4 right-4 z-50 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
-        isScrolled
-          ? "top-6 bg-background/60 backdrop-blur-xl border border-border/50 py-1 px-4 max-w-5xl mx-auto rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
-          : "top-0 py-6 px-4 bg-transparent border-b border-transparent"
+        "fixed z-50 box-border ease-[cubic-bezier(0.23,1,0.32,1)]",
+        isMobileMenuOpen
+          ? "mobile-nav-open top-0 border-b border-border/70 bg-background px-6 py-5 shadow-none"
+          : isScrolled
+          ? "top-6 bg-background/60 backdrop-blur-xl border border-border/50 py-1 px-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-700"
+          : "top-0 py-6 px-4 bg-transparent border-b border-transparent transition-all duration-700"
       )}
+      style={headerStyle}
     >
       <nav className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between h-14">
@@ -99,7 +129,7 @@ export function Navbar() {
 
           {/* Search & Theme Toggle & Mobile Menu */}
           <div className="flex items-center gap-6">
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               <ThemeToggle />
             </div>
 
@@ -108,7 +138,10 @@ export function Navbar() {
               className={cn(
                 "p-2 transition-colors text-muted-foreground hover:text-foreground"
               )}
-              onClick={() => setIsSearchOpen(true)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsSearchOpen(true);
+              }}
               aria-label="搜索"
             >
               <Search className="w-5 h-5" />
@@ -140,21 +173,21 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div
             id="mobile-navigation"
-            className="md:hidden mt-3 overflow-hidden border border-border/60 bg-background/95 animate-fade-in shadow-xl backdrop-blur-xl"
+            className="md:hidden -mx-6 mt-5 max-h-[calc(100svh-8rem)] overflow-y-auto border-y border-border/70 bg-background animate-fade-in"
           >
-            <div className="flex flex-col gap-2 px-4 mb-6">
+            <div className="flex flex-col gap-1 px-3 py-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-4 rounded-xl text-lg font-serif font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/20 transition-all"
+                  className="px-6 py-5 text-xl font-serif font-medium text-foreground/82 transition-all hover:bg-secondary/35 hover:text-foreground"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-            <div className="px-8 py-4 border-t border-border/50">
+            <div className="border-t border-border/60 bg-secondary/18 px-8 py-5">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-serif text-muted-foreground">主题模式</span>
                 <ThemeToggle />

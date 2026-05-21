@@ -61,7 +61,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-accent"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-background hover:text-accent"
               aria-label="GitHub"
             >
               <Github className="h-4 w-4" />
@@ -70,14 +70,14 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground transition-colors hover:text-accent"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-background hover:text-accent"
               aria-label="Twitter"
             >
               <Twitter className="h-4 w-4" />
             </a>
             <a
               href="mailto:hello@example.com"
-              className="text-muted-foreground transition-colors hover:text-accent"
+              className="flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-background hover:text-accent"
               aria-label="Email"
             >
               <Mail className="h-4 w-4" />

@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, FileText, Command, BookOpen, Tags, Loader2, AlertCircle } from "lucide-react";
+import { Search, FileText, Command, BookOpen, Loader2, AlertCircle } from "lucide-react";
 import Fuse from "fuse.js";
 import { useRouter } from "next/navigation";
 
@@ -15,7 +15,6 @@ interface SearchResult {
     category: string;
     path: string;
     content?: string;
-    term?: string;
 }
 
 export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChange: (open: boolean) => void }) {
@@ -27,7 +26,6 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
     const [activeIndex, setActiveIndex] = React.useState(0);
     const router = useRouter();
     const inputRef = React.useRef<HTMLInputElement>(null);
-    const termOpenCounterRef = React.useRef(0);
 
     React.useEffect(() => {
         let isCancelled = false;
@@ -95,28 +93,15 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
 
     const handleSelect = (result: SearchResult) => {
         onOpenChange(false);
-        if (result.type === "term") {
-            termOpenCounterRef.current += 1;
-            const separator = result.path.includes("?") ? "&" : "?";
-            router.push(`${result.path}${separator}open=${termOpenCounterRef.current}`);
-            return;
-        }
-
         router.push(result.path);
     };
 
     const groups = [
         {
             type: "model",
-            label: "模型库",
+            label: "思维模型",
             icon: BookOpen,
             items: results.filter((result) => result.type === "model"),
-        },
-        {
-            type: "term",
-            label: "术语表",
-            icon: Tags,
-            items: results.filter((result) => result.type === "term"),
         },
         {
             type: "article",
@@ -164,7 +149,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                             <div className="fixed left-[50%] top-[15%] z-[101] w-full max-w-2xl translate-x-[-50%] px-4 focus:outline-none">
                                 <Dialog.Title className="sr-only">搜索 100-minds</Dialog.Title>
                                 <Dialog.Description className="sr-only">
-                                    搜索模型库、术语表和思维地图文章，使用上下方向键选择结果。
+                                    搜索思维模型和思维地图文章，使用上下方向键选择结果。
                                 </Dialog.Description>
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.98, y: -20 }}
@@ -181,7 +166,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                                             value={query}
                                             onChange={(e) => setQuery(e.target.value)}
                                             onKeyDown={handleKeyDown}
-                                            placeholder="搜索思维模型或术语..."
+                                            placeholder="搜索思维模型或文章..."
                                             className="w-full bg-transparent px-16 h-16 text-lg font-serif focus:outline-none placeholder:text-muted-foreground/30"
                                         />
                                         <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -209,7 +194,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                                             </div>
                                         ) : !query ? (
                                             <div className="py-20 text-center">
-                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">输入关键词，横跨模型、术语和文章探索</p>
+                                                <p className="text-muted-foreground font-serif italic text-lg opacity-55">输入关键词，横跨模型和文章探索</p>
                                             </div>
                                         ) : (
                                             <div className="space-y-8 p-2">
@@ -254,7 +239,7 @@ export function SearchModal({ open, onOpenChange }: { open: boolean, onOpenChang
                                     <div className="border-t border-border p-4 flex items-center justify-between text-[10px] text-muted-foreground/40 font-mono tracking-widest uppercase px-8">
                                         <span>100-MINDS UNIFIED SEARCH</span>
                                         <div className="flex items-center gap-4">
-                                            <span className="flex items-center gap-1"><Command className="w-3 h-3" /> + K 呼出</span>
+                                            <span className="flex items-center gap-1"><Command className="w-3 h-3" /> K 或 / 呼出</span>
                                             <span className="flex items-center gap-1">ENTER 选择</span>
                                         </div>
                                     </div>

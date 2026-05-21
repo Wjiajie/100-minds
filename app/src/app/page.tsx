@@ -128,7 +128,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
             >
               <Sparkles className="h-4 w-4" />
-              cognitive atlas
+              start from the map
             </motion.p>
 
             <motion.h1
@@ -137,7 +137,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, ease: [0.23, 1, 0.32, 1] }}
             >
-              探索
+              从地图进入
               <span className="block text-accent">100+</span>
               思维模型
             </motion.h1>
@@ -148,12 +148,9 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.25 }}
             >
-              <blockquote className="text-2xl leading-relaxed text-foreground/72 sm:text-3xl">
-                “良好决策的头号劲敌，是思考问题缺乏充分的视角。”
-              </blockquote>
-              <cite className="mt-5 block text-sm not-italic tracking-[0.28em] text-muted">
-                阿兰·德波顿
-              </cite>
+              <p className="text-2xl leading-relaxed text-foreground/72 sm:text-3xl">
+                先选一个问题，再沿着相关模型、文章和下一组概念继续走。
+              </p>
             </motion.div>
 
             <motion.div
@@ -166,11 +163,11 @@ export default function HomePage() {
                 href="/mind-map"
                 className="inline-flex h-14 w-fit items-center justify-center gap-3 bg-foreground px-8 text-base font-medium text-background transition-colors duration-300 hover:bg-foreground/90 focus:outline-none"
               >
-                进入思维地图
+                打开思维地图
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <p className="max-w-sm text-sm leading-7 text-muted-foreground">
-                用跨学科模型建立认知索引，让复杂问题先呈现结构，再进入判断。
+                首页只保留一条主路径：进入图谱，从核心节点开始探索。
               </p>
             </motion.div>
           </div>

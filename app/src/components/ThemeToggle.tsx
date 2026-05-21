@@ -13,7 +13,7 @@ export function ThemeToggle() {
         setMounted(true);
     }, []);
 
-    if (!mounted) return <div className="w-24 h-9" />;
+    if (!mounted) return <div className="h-12 w-40" />;
 
     const modes = [
         { value: "light", icon: Sun, label: "明亮" },
@@ -22,20 +22,22 @@ export function ThemeToggle() {
     ];
 
     return (
-        <div className="flex items-center gap-1 bg-secondary/30 p-1 rounded-full border border-border/40">
+        <div className="flex min-h-12 items-center gap-1 rounded-full border border-border/40 bg-secondary/30 p-1">
             {modes.map((mode) => {
                 const Icon = mode.icon;
                 const isActive = theme === mode.value;
                 return (
                     <button
+                        type="button"
                         key={mode.value}
                         onClick={() => setTheme(mode.value)}
                         className={cn(
-                            "p-1.5 rounded-full transition-all duration-300 relative group",
+                            "relative flex h-11 w-11 items-center justify-center rounded-full transition-all duration-300 group",
                             isActive
                                 ? "bg-foreground text-background shadow-md scale-110"
                                 : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
                         )}
+                        aria-label={`切换到${mode.label}主题`}
                         title={mode.label}
                     >
                         <Icon className="w-3.5 h-3.5" />

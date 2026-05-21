@@ -1,6 +1,6 @@
 ﻿# 100-minds 模型内容补全进度
 
-更新时间：2026-05-15
+更新时间：2026-05-22
 
 ## 执行规则
 
@@ -26,10 +26,12 @@
 
 | 模型名称 | 文件路径 | 状态 | 正文长度 | 引用状态 | 最后更新时间 | 备注 |
 |---|---|---|---:|---|---|---|
-| 沉没成本 | `src/content/models/沉没成本.mdx` | done | 1574 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Wikipedia、EconPapers URL HTTP 200；Arkes-Blumer 原论文以 DOI 记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 不可逆决策 | `src/content/models/不可逆决策.mdx` | done | 1569 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Wikipedia URL HTTP 200；Amazon 2015 shareholder letter 与 Pindyck 论文以题名/关键词记录；Dixit-Pindyck 与 Annie Duke 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done | 1371 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Britannica、Stanford Encyclopedia、Wikipedia URL HTTP 200；Merriam-Webster 以题名记录；未纳入 Reddit（未找到可靠单篇来源） |
-| 北极星 | `src/content/models/北极星.mdx` | done | 1407 | verified | 2026-05-15 | 本批完成 done-candidate 审计；Amplitude、Wikipedia、Stratrix URL HTTP 200；Hacking Growth 以书名记录；未纳入 Reddit（未找到可靠单篇来源） |
+| 稻草人 | `src/content/models/稻草人.mdx` | done | 1008 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充模型深度解析与应用场景；5 模块完整 |
+| 奥卡姆剃刀 | `src/content/models/奥卡姆剃刀.mdx` | done | 1029 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充证据债务与假设检查；5 模块完整 |
+| 条件概率 | `src/content/models/条件概率.mdx` | done | 1058 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充条件、分母与误差范围说明；5 模块完整 |
+| 动量 | `src/content/models/动量.mdx` | done | 1064 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充负向动量削弱方法；5 模块完整 |
+| 深度工作 | `src/content/models/深度工作.mdx` | done | 1084 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充退出条件与产出边界；5 模块完整 |
+| 侯世达定律 | `src/content/models/侯世达定律.mdx` | done | 1084 | verified | 2026-05-22 | 全库字数审计中低于 1000 有效字符，已补充未知项显式化与缓冲判断；5 模块完整 |
 
 ## 下一批候选
 

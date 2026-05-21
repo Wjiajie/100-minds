@@ -4,7 +4,7 @@ import { getModelBySlug, getAllModels } from "@/lib/models";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx";
-import { ArrowLeft, Calendar, Tag, ShieldCheck } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -38,11 +38,11 @@ export default async function ModelDetailPage({ params }: PageProps) {
                     {/* Back Navigation */}
                     <div className="flex justify-center mb-24">
                         <Link
-                            href="/models"
-                            className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-accent/40 hover:text-accent transition-all duration-700 group"
+                            href={`/mind-map?node=${encodeURIComponent(model.slug)}`}
+                            className="inline-flex min-h-11 items-center gap-3 text-xs tracking-[0.3em] uppercase text-accent/40 hover:text-accent transition-all duration-700 group"
                         >
                             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-3 transition-transform duration-700" />
-                            <span>返回智慧库</span>
+                            <span>在地图中定位</span>
                             <div className="w-12 h-[1px] bg-accent/20 group-hover:w-20 transition-all duration-700" />
                         </Link>
                     </div>
@@ -82,9 +82,13 @@ export default async function ModelDetailPage({ params }: PageProps) {
                             {model.tags && model.tags.length > 0 && (
                                 <div className="flex gap-6">
                                     {model.tags.slice(0, 3).map(tag => (
-                                        <span key={tag} className="hover:text-accent transition-colors cursor-pointer capitalize">
+                                        <Link
+                                            key={tag}
+                                            href={`/mind-map?node=${encodeURIComponent(tag)}`}
+                                            className="min-h-11 inline-flex items-center hover:text-accent transition-colors capitalize"
+                                        >
                                             {tag}
-                                        </span>
+                                        </Link>
                                     ))}
                                 </div>
                             )}

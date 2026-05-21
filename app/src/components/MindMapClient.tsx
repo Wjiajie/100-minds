@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, ExternalLink, Layers3, Network, Sparkles, Tag, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, Compass, ExternalLink, Layers3, Network, Search, Sparkles, Tag, X } from "lucide-react";
 import { MindMapPost, MindMapGraph, GraphNode } from "@/lib/mind-map";
 import { MindMapVisualizer } from "@/components/MindMapVisualizer";
 
@@ -27,6 +27,7 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
     const [revealLevel, setRevealLevel] = useState<0 | 1 | 2 | 3>(0);
     const [requestedRevealLevel, setRequestedRevealLevel] = useState<0 | 1 | 2 | 3>(0);
+    const [nodeQuery, setNodeQuery] = useState("");
 
     const selectedNode = selectedTag
         ? graph.nodes.find((node) => node.id === selectedTag) ?? null
@@ -46,6 +47,20 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
         [graph.nodes, revealLevel]
     );
 
+    const matchingNodes = useMemo(() => {
+        const query = nodeQuery.trim().toLowerCase();
+        if (!query) return [];
+
+        return graph.nodes
+            .filter((node) => `${node.tag} ${node.id}`.toLowerCase().includes(query))
+            .sort((a, b) => b.importanceScore - a.importanceScore)
+            .slice(0, 24);
+    }, [graph.nodes, nodeQuery]);
+
+    const displayedNodes = nodeQuery.trim()
+        ? matchingNodes
+        : layerNodes.slice(0, revealLevel === 0 ? 16 : 56);
+
     const visibleCount = useMemo(
         () => graph.nodes.filter((node) => node.layer <= revealLevel).length,
         [graph.nodes, revealLevel]
@@ -55,6 +70,20 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
         if (!selectedTag) return 0;
         return graph.edges.filter((edge) => edge.source === selectedTag || edge.target === selectedTag).length;
     }, [graph.edges, selectedTag]);
+
+    const relatedNodes = useMemo(() => {
+        if (!selectedTag) return [];
+        const ids = new Set<string>();
+        graph.edges.forEach((edge) => {
+            if (edge.source === selectedTag) ids.add(edge.target);
+            if (edge.target === selectedTag) ids.add(edge.source);
+        });
+
+        return graph.nodes
+            .filter((node) => ids.has(node.id))
+            .sort((a, b) => b.importanceScore - a.importanceScore)
+            .slice(0, 6);
+    }, [graph.edges, graph.nodes, selectedTag]);
 
     const selectedModelHref = selectedNode ? `/models/${encodeURIComponent(selectedNode.id)}` : null;
 
@@ -66,6 +95,30 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
         setRequestedRevealLevel(level);
         setRevealLevel(level);
     };
+
+    const handleSearchSelect = (node: GraphNode) => {
+        if (node.layer > revealLevel) {
+            handleRevealLevelRequest(node.layer);
+        }
+        setSelectedTag(node.id);
+    };
+
+    useEffect(() => {
+        const requestedNodeId = new URLSearchParams(window.location.search).get("node");
+        if (!requestedNodeId) return;
+
+        const requestedNode = graph.nodes.find((node) => node.id === requestedNodeId);
+        if (!requestedNode) return;
+
+        const frame = requestAnimationFrame(() => {
+            setNodeQuery("");
+            setRequestedRevealLevel(requestedNode.layer);
+            setRevealLevel(requestedNode.layer);
+            setSelectedTag(requestedNode.id);
+        });
+
+        return () => cancelAnimationFrame(frame);
+    }, [graph.nodes]);
 
     const layerNodeTitle = revealLevel === 0 ? "核心节点" : "当前圈层节点";
 
@@ -81,7 +134,7 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                 />
             </div>
 
-            <aside className="relative z-10 -mt-5 flex h-[55svh] w-full flex-col overflow-y-auto rounded-t-[28px] border-t border-border/60 bg-card/90 shadow-[0_-20px_60px_rgba(38,34,30,0.08)] backdrop-blur-xl lg:mt-0 lg:h-full lg:w-[38%] lg:rounded-none lg:border-t-0 lg:shadow-none custom-scrollbar">
+            <aside className="relative z-10 -mt-5 flex h-[58svh] w-full flex-col overflow-y-auto rounded-t-[28px] border-t border-border/60 bg-card/90 shadow-[0_-20px_60px_rgba(38,34,30,0.08)] backdrop-blur-xl lg:mt-0 lg:h-full lg:w-[38%] lg:rounded-none lg:border-t-0 lg:shadow-none custom-scrollbar">
                 {!selectedNode ? (
                     <div className="flex min-h-full flex-col">
                         <div className="border-b border-border/40 px-7 py-8">
@@ -95,6 +148,37 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                             <p className="max-w-md font-serif text-sm leading-7 text-muted-foreground">
                                 先从核心模型进入，再通过缩放逐层打开更多概念。图谱会把高频、强连接、跨文章共现的节点优先呈现。
                             </p>
+                        </div>
+
+                        <div className="border-b border-border/40 px-7 py-6">
+                            <label htmlFor="mind-map-node-search" className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-accent">
+                                <Search className="h-4 w-4" />
+                                Find a lens
+                            </label>
+                            <div className="relative">
+                                <input
+                                    id="mind-map-node-search"
+                                    value={nodeQuery}
+                                    onChange={(event) => setNodeQuery(event.target.value)}
+                                    placeholder="搜索模型、偏差、系统..."
+                                    className="min-h-12 w-full border border-border/55 bg-background/55 px-4 pr-10 font-serif text-sm text-foreground outline-none transition placeholder:text-muted-foreground/45 focus:border-accent/65"
+                                />
+                                {nodeQuery && (
+                                    <button
+                                        type="button"
+                                        onClick={() => setNodeQuery("")}
+                                        className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition hover:bg-secondary/60 hover:text-foreground"
+                                        aria-label="清空节点搜索"
+                                    >
+                                        <X className="h-4 w-4" />
+                                    </button>
+                                )}
+                            </div>
+                            <div className="mt-4 grid grid-cols-3 border border-border/35 bg-background/35 text-center text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                                <span className="px-2 py-3">Search</span>
+                                <span className="border-x border-border/35 px-2 py-3">Expand</span>
+                                <span className="px-2 py-3">Select</span>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-3 border-b border-border/40 text-center">
@@ -150,15 +234,20 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                             <section>
                                 <h2 className="mb-4 flex items-center gap-2 font-serif text-lg font-bold text-foreground">
                                     <Network className="h-4 w-4 text-accent" />
-                                    {layerNodeTitle}
-                                    <span className="text-xs font-medium text-muted-foreground">({layerNodes.length})</span>
+                                    {nodeQuery.trim() ? "搜索结果" : layerNodeTitle}
+                                    <span className="text-xs font-medium text-muted-foreground">({nodeQuery.trim() ? matchingNodes.length : layerNodes.length})</span>
                                 </h2>
+                                {nodeQuery.trim() && matchingNodes.length === 0 ? (
+                                    <div className="border border-dashed border-border/60 bg-background/35 px-4 py-6 font-serif text-sm leading-7 text-muted-foreground">
+                                        没有命中。换一个更宽的词，比如“因果”“系统”或“偏差”。
+                                    </div>
+                                ) : (
                                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                                    {layerNodes.map((node) => (
+                                    {displayedNodes.map((node) => (
                                         <button
                                             type="button"
                                             key={node.id}
-                                            onClick={() => handleTagSelect(node.id)}
+                                            onClick={() => handleSearchSelect(node)}
                                             className="group flex min-h-12 items-center justify-between border border-border/40 bg-background/35 px-4 py-3 text-left transition hover:border-accent/50 hover:bg-background/70"
                                         >
                                             <span className="truncate font-serif text-sm font-semibold text-foreground group-hover:text-accent">
@@ -170,6 +259,12 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                                         </button>
                                     ))}
                                 </div>
+                                )}
+                                {!nodeQuery.trim() && layerNodes.length > displayedNodes.length && (
+                                    <p className="mt-3 font-serif text-xs leading-6 text-muted-foreground">
+                                        先显示最有信号的 {displayedNodes.length} 个节点；继续展开层级，或直接搜索具体模型。
+                                    </p>
+                                )}
                             </section>
                         </div>
                     </div>
@@ -184,7 +279,7 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                                 <button
                                     type="button"
                                     onClick={() => setSelectedTag(null)}
-                                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-muted-foreground transition hover:bg-secondary/60 hover:text-foreground"
+                                    className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full text-muted-foreground transition hover:bg-secondary/60 hover:text-foreground"
                                     aria-label="清除筛选"
                                     title="清除筛选"
                                 >
@@ -209,13 +304,33 @@ export function MindMapClient({ initialPosts, graph }: MindMapClientProps) {
                                     <ArrowUpRight className="ml-3 h-4 w-4 flex-shrink-0 text-accent" />
                                 </Link>
                             )}
+                            {relatedNodes.length > 0 && (
+                                <div className="mt-5 border border-border/45 bg-background/35 p-4">
+                                    <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-accent">
+                                        <Compass className="h-4 w-4" />
+                                        Next lenses
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {relatedNodes.map((node) => (
+                                            <button
+                                                key={node.id}
+                                                type="button"
+                                                onClick={() => handleSearchSelect(node)}
+                                                className="min-h-10 border border-border/50 bg-card/55 px-3 py-2 font-serif text-xs text-muted-foreground transition hover:border-accent/50 hover:text-foreground"
+                                            >
+                                                {node.tag}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                             <div className="mt-5 grid grid-cols-4 gap-2">
                                 {revealLabels.map((label, index) => (
                                     <button
                                         key={label}
                                         type="button"
                                         onClick={() => handleRevealLevelRequest(index as 0 | 1 | 2 | 3)}
-                                        className={`min-h-10 border px-2 py-2 text-[10px] font-bold tracking-[0.12em] transition ${revealLevel === index
+                                        className={`min-h-11 border px-2 py-2 text-[10px] font-bold tracking-[0.12em] transition ${revealLevel === index
                                             ? "border-accent/60 bg-accent/10 text-foreground"
                                             : "border-border/45 bg-background/40 text-muted-foreground hover:border-accent/45 hover:text-foreground"
                                             }`}

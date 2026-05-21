@@ -78,9 +78,21 @@ export function Navbar() {
   // Keyboard shortcut for search
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const isTypingTarget =
+        target?.isContentEditable ||
+        target?.tagName === "INPUT" ||
+        target?.tagName === "TEXTAREA" ||
+        target?.tagName === "SELECT";
+
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setIsSearchOpen((open) => !open);
+      }
+
+      if (e.key === "/" && !isTypingTarget) {
+        e.preventDefault();
+        setIsSearchOpen(true);
       }
     };
     document.addEventListener("keydown", down);
@@ -102,7 +114,7 @@ export function Navbar() {
       <nav className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex min-h-11 items-center gap-2 group">
             <div className="w-6 h-6 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-500">
               <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             </div>
@@ -112,13 +124,13 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-base font-serif font-medium transition-all duration-300 nav-link",
+                  "inline-flex min-h-11 min-w-11 items-center justify-center text-base font-serif font-medium transition-all duration-300 nav-link",
                   "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -136,7 +148,7 @@ export function Navbar() {
             <button
               type="button"
               className={cn(
-                "p-2 transition-colors text-muted-foreground hover:text-foreground"
+                "flex h-11 w-11 items-center justify-center rounded-full transition-colors text-muted-foreground hover:bg-secondary/45 hover:text-foreground"
               )}
               onClick={() => {
                 setIsMobileMenuOpen(false);

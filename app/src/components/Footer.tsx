@@ -24,6 +24,18 @@ export function Footer() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:justify-self-end">
             <Link
+              href="/lens"
+              className="group flex min-h-28 flex-col justify-between border border-border bg-background/70 p-5 transition duration-300 hover:border-accent/50 hover:bg-background"
+            >
+              <span className="flex items-center justify-between text-sm uppercase tracking-[0.26em] text-muted-foreground">
+                lens
+                <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-1 group-hover:translate-x-1" />
+              </span>
+              <span className="text-xl font-medium text-foreground">
+                随机镜头
+              </span>
+            </Link>
+            <Link
               href="/mind-map"
               className="group flex min-h-28 flex-col justify-between border border-border bg-background/70 p-5 transition duration-300 hover:border-accent/50 hover:bg-background"
             >

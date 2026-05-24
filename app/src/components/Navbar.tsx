@@ -10,6 +10,7 @@ import { SearchModal } from "./SearchModal";
 
 const navLinks = [
   { href: "/", label: "首页" },
+  { href: "/lens", label: "Lens" },
   { href: "/mind-map", label: "思维地图" },
 ];
 

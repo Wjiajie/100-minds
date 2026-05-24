@@ -24,20 +24,20 @@ const frameSignals = [
 const frameMoves = [
   {
     index: "01",
-    title: "把问题留白",
-    body: "先画出边界，不急着填答案。",
+    title: "抽一张镜头",
+    body: "随机遇见一个模型，让注意力先被打断。",
     label: "observe",
   },
   {
     index: "02",
-    title: "换一片镜头",
-    body: "让不同模型从侧面照见盲点。",
+    title: "标记掌握度",
+    body: "已掌握的少出现，未掌握的多回来。",
     label: "reframe",
   },
   {
     index: "03",
-    title: "落回一次行动",
-    body: "用一个小验证，把判断放回现实。",
+    title: "进入完整文章",
+    body: "从一张卡片，走进模型的深层解释。",
     label: "test",
   },
 ];
@@ -209,14 +209,14 @@ export default function HomePage() {
           >
             <p className="frame-kicker mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-accent">
               <Compass className="h-4 w-4" />
-              build your frame
+              lens system
             </p>
             <h2 className="frame-heading max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">
-              建立你自己的思维框架
+              用一张镜头，重新看一个问题
             </h2>
             <p className="frame-lede mt-8 max-w-2xl text-xl leading-10 text-foreground/70">
-              思维框架不是答案库，而是一套观察复杂问题的取景器。
-              当直觉太快、信息太杂时，它帮你换一个入口。
+              Lens 会随机呈现一个思维模型，并记住你的收藏与掌握度。
+              下一次出现什么，不完全随机，而会被你的学习状态悄悄调校。
             </p>
 
             <div className="frame-moves mt-12">
@@ -241,9 +241,9 @@ export default function HomePage() {
               ))}
             </div>
 
-            <Link href="/mind-map" className="mt-12 inline-flex">
+            <Link href="/lens" className="mt-12 inline-flex">
               <span className="inline-flex h-14 items-center justify-center gap-3 border border-border px-8 text-base font-medium text-foreground transition-colors duration-300 hover:border-accent hover:text-accent">
-                开始探索
+                打开 Lens
                 <ArrowRight className="h-5 w-5" />
               </span>
             </Link>

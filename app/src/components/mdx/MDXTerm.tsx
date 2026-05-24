@@ -20,6 +20,7 @@ export function MDXTerm({ term, children }: TermProps) {
             term={entry.term}
             definition={entry.definition}
             category={entry.category}
+            slug={entry.slug}
             relatedTerms={entry.relatedTerms}
             examples={entry.examples}
         >

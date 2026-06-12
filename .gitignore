@@ -47,3 +47,34 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Python cache (humanizer audit scripts)
+__pycache__/
+*.pyc
+
+# Plan and audit artifacts
+app/DEEP_AUDIT.json
+app/HUMANIZER_BATCHES.json
+app/.codex-devserver.log.err
+app/.goal-loop/
+app/REMAIN.txt
+app/after_co.txt
+app/audit_*.py
+app/check_plan.py
+app/clean_markers.py
+app/diff*.txt
+app/final*.txt
+app/fix_*.py
+app/git_status.txt
+app/gitstatus*.txt
+app/head_tan.txt
+app/humanize-*.md
+app/humanizer_audit.py
+app/inject_batches.py
+app/log.txt
+app/real_audit.py
+app/restore_frontmatter.py
+app/shortstat.txt
+app/spotcheck.txt
+app/upgrade_h2_to_h3.py
+app/deep_audit.py

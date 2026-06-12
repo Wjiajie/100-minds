@@ -5,24 +5,21 @@ description: 如果某件事有可能出错，那么它就一定会出错。
 
 ## 墨菲定律
 
-## 1. 💡 核心定义 (Core Definition)
-
+### 核心定义
 墨菲定律常被说成一句玩笑：凡是可能出错的事，终究会出错。更严肃地看，它是一条工程提醒：如果一个系统允许某种错误发生，就应该假设迟早有人会以那种方式犯错。
 
 它不是宿命论。墨菲定律不是说宇宙专门和你作对，而是说复杂系统里，低概率风险会被时间、规模和重复操作放大。只要接口含糊、流程靠记忆、检查依赖心情，错误就会找到入口。
 
 作为思维模型，它把注意力从“人要更小心”转到“系统要更难被用错”。好的设计不指望人人永远清醒，而是让错误更早暴露、更难扩散、更容易恢复。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
-
+### 起源
 墨菲定律通常被追溯到美国空军 1949 年的火箭雪橇实验。工程师 Edward A. Murphy Jr. 参与人体加速度测试，传感器安装出现问题。据 Nick T. Spark 对这段历史的考证，相关说法后来经由 John Paul Stapp 的公开表达传播开来。
 
 流行版本把它压缩成了“Anything that can go wrong will go wrong”。但更接近工程语境的版本是：如果一件事有多种做法，其中一种会导致灾难，就会有人那样做。这比玩笑版更有价值，因为它直接指向防错设计。
 
 想象一个只能靠标签区分方向的插头。写上“请勿反插”当然有用，但更好的办法是把接口做成非对称，让它根本插不反。墨菲定律真正想说的，就是不要把安全寄托在提醒上。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
-
+### 怎么用
 墨菲定律背后有三个现实因素。
 
 第一，重复会放大概率。某个错误概率只有千分之一，做一次也许没事；每天做一万次，就会变成日常事故。规模越大，侥幸越不可靠。
@@ -33,8 +30,7 @@ description: 如果某件事有可能出错，那么它就一定会出错。
 
 所以，墨菲定律的正确用法不是悲观，而是预防。把最可能的错法列出来，给它们设计约束：强校验、默认安全值、双人复核、灰度发布、自动回滚、清晰日志。让错误被系统接住，而不是等它砸到用户。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
-
+### 用在哪
 在软件发布中，墨菲定律要求你默认“手动步骤会漏”。发布清单、自动化脚本、预发环境、回滚演练，比口头提醒可靠得多。越是周五晚上越不该靠临场发挥。
 
 在产品设计中，它提醒我们减少误操作。删除按钮需要二次确认，危险操作要有撤销，表单要保存草稿，默认选项不能暗藏高风险。用户不是笨，只是系统给了他犯错空间。
@@ -43,8 +39,7 @@ description: 如果某件事有可能出错，那么它就一定会出错。
 
 在个人生活中，它也很实用。出门前把钥匙放固定位置，重要文件多备份，旅行证件提前拍照，会议前检查设备。不是因为你悲观，而是因为你知道人会在普通日子里犯普通错误。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
-
+### 延伸阅读
 - Britannica Dictionary 的 [Murphy's Law](https://www.britannica.com/dictionary/Murphy%27s-Law) 条目给出通行定义。
 - Smithsonian Libraries 记录了 Nick T. Spark 的书 [Whatever can go wrong, will go wrong: a history of Murphy's Law](https://www.si.edu/object/whatever-can-go-wrong-will-go-wrong-history-murphys-law-nick-t-spark-foreword-marc-abrahams%3Asiris_sil_1113465)。
 - Improbable Research 的 [The Fastest Man on Earth](https://improbable.com/classics/the-fastest-man-on-earth/) 汇总了 Spark 对墨菲定律起源的系列文章。

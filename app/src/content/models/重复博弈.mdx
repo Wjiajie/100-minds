@@ -3,39 +3,43 @@ title: 重复博弈
 description: 同一博弈反复发生时，未来回合的报复、声誉和合作机会会改变当下选择。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
-重复博弈指的是同一个基础博弈被反复进行。一次性博弈里，背叛可能立刻占便宜；重复博弈里，今天的行为会影响明天别人是否信任你、惩罚你、继续合作或彻底退出。
+重复博弈说的是同一个基础博弈被反复进行。一次性博弈里，背叛可能立刻占便宜；重复博弈里，今天的行为会影响明天别人是否信任你、惩罚你、继续合作或彻底退出。
 
 这个模型揭示了声誉和未来的重要性。当参与者相信还会再见，短期诱惑就会被长期关系约束。合作不一定来自善良，也可能来自清醒的长期自利。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-囚徒困境是理解重复博弈的经典入口。单次囚徒困境中，各自背叛常是理性选择；但如果双方反复相遇，策略空间就变了。你可以奖励合作，也可以惩罚背叛。
+囚徒困境是理解重复博弈的经典入口。单次囚徒困境中，各自背叛常是理性选择；但如果双方反复相遇，策略空间就变了。你可以奖励合作，也可以惩罚背叛。Flood 和 Dresher 在 1950 年的 RAND 内部备忘录里就做过囚徒困境的实验，A. W. Tucker 在同年正式命名"囚徒困境"。
 
-Robert Axelrod 在《The Evolution of Cooperation》中组织过重复囚徒困境策略竞赛。简单的“以牙还牙”策略表现出强生命力：先合作，对方合作就继续合作，对方背叛就回击，但又愿意在对方恢复合作时原谅。这让人看到，稳定合作可以从可预期的互动规则中长出来。
+Robert Axelrod 在 1981 年组织过重复囚徒困境策略竞赛，他在 1984 年的 *Journal of Conflict Resolution* 28(1) 上发表"Evolution of Cooperation"，并扩展为 1984 年的书 *The Evolution of Cooperation*（Basic Books）。他邀请了 14 个博弈论专家提交策略，结果简单的"以牙还牙"（Tit-for-Tat）策略表现出强生命力：先合作，对方合作就继续合作，对方背叛就回击，但又愿意在对方恢复合作时原谅。这让人看到，稳定合作可以从可预期的互动规则中长出来。后续在 2000 年代重复这种竞赛的多个版本（Stewart 和 Plotkin 2013 的 *zero-determininant* 策略；Hilbe 等 2014 的"extortion"策略）都观察到：只要未来折现足够高，合作型策略在长期演化中都能成为均衡。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+现实里"以牙还牙"风格的国际关系案例是 1980 年代美苏核谈判。尽管里根政府把苏联定义为"邪恶帝国"，但武器控制谈判每年都重启——这是双方都默认"我们还要再见面"的双边关系。结果是 1987 年 *INF Treaty* 签署、1991 年 *START I* 签署，双方实际部署核弹头从 1986 年的约 7 万枚降到 1991 年末的约 5 万枚。重复博弈的"未来权重"对结果的影响非常具体。
 
-重复博弈的关键变量是未来折现。如果参与者很在乎未来，合作更容易维持；如果未来不确定、关系随时结束，短期背叛就更诱人。
+### 怎么用
 
-它还有一个重要结论：重复互动可能产生多重均衡。同样的阶段博弈，在长期关系中可以靠报复、声誉和触发策略维持原本一次性博弈中难以维持的合作。民间定理进一步说明，在足够耐心的参与者之间，很多可行且个体理性的收益都可能成为均衡。
+重复博弈的关键变量是未来折现。如果参与者很在乎未来，合作更容易维持；如果未来不确定、关系随时结束，短期背叛就更诱人。这和 Kahneman 行为决策里"hyperbolic discounting"是一类现象——人在跨期决策里对近期更敏感、对远期更不耐心，重复博弈的有效性正受这个心理变量调节。
 
-但重复不自动带来合作。如果惩罚过度、误判频繁、沟通不清或退出成本太低，系统也可能陷入长期报复。
+它还有一个重要结论：重复互动可能产生多重均衡。同样的阶段博弈，在长期关系中可以靠报复、声誉和触发策略维持原本一次性博弈中难以维持的合作。**Folk Theorem**（民间定理）进一步说明，在足够耐心的参与者之间，很多可行且个体理性的收益都可能成为均衡。Fudenberg 和 Maskin 1986 年在 *Econometrica* 54(3) 发表的"The Folk Theorem in Repeated Games with Discounting or with Incomplete Information"（DOI: 10.2307/1911307）给出了一般条件。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+但重复不自动带来合作。如果惩罚过度、误判频繁、沟通不清或退出成本太低，系统也可能陷入长期报复。第一次世界大战的堑壕战常被引为反例——双方反复对战，但缺乏沟通机制与可信承诺，结果陷入四年消耗战。
 
-商业合作中，长期供应商关系比一次性采购更容易形成质量和信用约束。双方都知道未来还要见面，就会更谨慎地对待眼前利益。
+### 用在哪
 
-团队管理中，承诺是否兑现会累积成声誉。一次失信不会只影响当下任务，还会改变后续协作成本。
+在商业合作中，长期供应商关系比一次性采购更容易形成质量和信用约束。双方都知道未来还要见面，就会更谨慎地对待眼前利益。丰田汽车在 1980–2000 年代与核心供应商建立的"keiretsu"系列关系，是把"短期合同博弈"变成"长期合作博弈"的代表——这让它能在 JTT（准时制）库存体系下稳定运营，也让新供应商很难打入核心链。
 
-平台治理中，评分、历史记录、惩罚机制和申诉机制，都是把一次性交易转化为重复博弈的方法，让参与者为未来声誉负责。
+在团队管理中，承诺是否兑现会累积成声誉。一次失信不会只影响当下任务，还会改变后续协作成本。一个有经验的项目经理常说"每个口头承诺都是下一张借条"——这不是文学修辞，是有经验的人在管理自己的可信度。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+在平台治理中，评分、历史记录、惩罚机制和申诉机制，都是把一次性交易转化为重复博弈的方法，让参与者为未来声誉负责。eBay 在 1995 年起把双向评分作为交易后必填项，eBay 早期研究报告显示评分越高的卖家，售价可高于同质商品平均价 5–8%；Uber 在 2010 年代用司机和乘客双向评分来维持服务水准。两者本质都是把"陌生人一次性交易"工程化地转成"重复博弈"。
 
-- [Britannica: Infinitely repeated game](https://www.britannica.com/science/infinitely-repeated-game)
-- [Britannica: Game theory](https://www.britannica.com/science/game-theory)
-- [Econometric Society: The Folk Theorem in Repeated Games](https://tesnewdev.econometricsociety.org/publications/econometrica/1986/05/01/folk-theorem-repeated-games-discounting-or-incomplete)
-- Robert Axelrod, *The Evolution of Cooperation*
-- Drew Fudenberg and Eric Maskin, "The Folk Theorem in Repeated Games with Discounting or with Incomplete Information", DOI: 10.2307/1911307
-- Reddit：未找到可靠单篇来源；可搜索关键词 `repeated game folk theorem Axelrod evolution of cooperation`
+### 延伸阅读
+
+- [Britannica: Infinitely repeated game](https://www.britannica.com/science/infinitely-repeated-game) 无限期重复博弈的定义和关键结论。
+- [Britannica: Game theory](https://www.britannica.com/science/game-theory) 博弈论的概念入口。
+- [Econometric Society: The Folk Theorem in Repeated Games](https://tesnewdev.econometricsociety.org/publications/econometrica/1986/05/01/folk-theorem-repeated-games-discounting-or-incomplete) Fudenberg-Maskin 1986 论文条目。
+- Robert Axelrod, *The Evolution of Cooperation*, Basic Books, 1984 重复囚徒困境竞赛和"以牙还牙"的原始著作。
+- Drew Fudenberg and Eric Maskin, "The Folk Theorem in Repeated Games with Discounting or with Incomplete Information", *Econometrica*, 1986, DOI: 10.2307/1911307 民间定理的一般条件证明。
+- Reddit：未找到可靠单篇来源，可搜索关键词 `repeated game folk theorem Axelrod evolution of cooperation`。
+
+<!-- humanized pass2 2026-06-11 by general -->

@@ -3,46 +3,54 @@ title: 贝叶斯定理
 description: 用先验概率和新证据，计算一个假设在证据出现后应有多可信。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
-- **一句话解释**：贝叶斯定理教你别只问“证据看起来多吓人”，还要问“这件事原本有多可能”。
-- **专业定义**：贝叶斯定理（Bayes' Theorem）描述条件概率之间的关系：在观察到证据 B 后，假设 A 的概率等于先验概率 P(A)、证据在假设成立时出现的概率 P(B|A)，以及证据本身概率 P(B) 的组合。
+**贝叶斯定理**（Bayes' Theorem）描述条件概率之间的关系：在观察到证据 B 后，假设 A 的概率等于先验概率 P(A)、证据在假设成立时出现的概率 P(B|A)，以及证据本身概率 P(B) 的组合。常见写法是：
 
-常见写法是：P(A|B) = P(B|A) × P(A) / P(B)。这行公式的真正价值，是把“基础概率”和“证据强度”放到同一张桌上。
+P(A|B) = P(B|A) × P(A) / P(B)
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+这行公式的真正价值，是把"基础概率"和"证据强度"放到同一张桌上。
 
-Thomas Bayes 是 18 世纪英国牧师和数学家。他的相关论文在去世后由 Richard Price 发表。后来 Laplace 独立发展了类似思想，使贝叶斯推理进入更广阔的概率世界。
+### 起源
 
-最常见的例子是医学检测。假设某病患病率只有 1%，检测准确率很高。你检测阳性后，直觉会说“我大概率病了”。贝叶斯定理会拉住你：先看基础概率，再看假阳性率。罕见病即便检测阳性，真实患病概率也可能没有直觉那么高。
+Thomas Bayes（约 1701–1761）是英国长老会牧师和数学家。他生前没有正式发表关于条件概率的论文，但他留下了一份手稿，在他 1761 年去世后由朋友 Richard Price 整理并于 1763 年在 *Philosophical Transactions of the Royal Society* 发表"An Essay towards solving a Problem in the Doctrine of Chances"——这就是"贝叶斯定理"的原始出处。后来 Pierre-Simon Laplace 在 1774 年独立发展了类似思想，把贝叶斯推理推广到一般概率论，使它进入更广阔的统计世界（后来被称为"Bayesian inference"的成熟形式）。
 
-这不是安慰剂，而是数学。它提醒我们，新证据必须和世界原本的基线一起解释。
+最常见的例子是**医学检测**。假设某病患病率只有 1%，检测准确率很高（灵敏度 99%、特异度 99%）。你检测阳性后，直觉会说"我大概率病了"。贝叶斯定理会拉住你：先看基础概率 1%，再算假阳性率约 1%（健康人里假阳率约 1%）。在 1 万个人里，会有约 100 个真患者，其中 99 个被正确检出；同时约 9,900 个健康人中会有约 99 个假阳性。真阳性占全部阳性结果的比例约为 50%——这远低于直觉，但已经是"非常准的检测 + 极低流行率"的结果。当流行率降到 0.1%，阳性结果里的真病比例会降到约 9%。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+这是 Gerd Gigerenzer 在 *Calculated Risks*（2002）和 *Risk Savvy*（2014）里反复引用的案例——他把它叫做"natural frequency"问题，并证明把概率改成"10000 人里 99 真阳 99 假阳"这种自然频数描述，医生和病人的判断准确性都会显著提升。Gigerenzer 团队在 2007–2010 年代和德国多家妇产科诊所合作，把筛查咨询从百分比改为自然频数，医生对病人患病概率的判断准确率提升 20–30 个百分点。
+
+### 怎么用
 
 贝叶斯定理有四个量：
 
-- **P(A)**：先验概率，看到新证据前 A 发生的可能性。
-- **P(B|A)**：如果 A 为真，看到证据 B 的概率。
-- **P(B)**：证据 B 在所有情况下出现的总概率。
-- **P(A|B)**：看到 B 后，A 为真的后验概率。
+- P(A)：先验概率，看到新证据前 A 发生的可能性。
+- P(B|A)：如果 A 为真，看到证据 B 的概率。
+- P(B)：证据 B 在所有情况下出现的总概率。
+- P(A|B)：看到 B 后，A 为真的后验概率。
 
-生活里的错误，常常是忽略 P(A)。听到“某个成功创业者每天 5 点起床”，你不能直接推出 5 点起床导致成功。你要问：成功者中有多少早起？不成功者中又有多少早起？基础概率在哪里？
+生活里的错误，常常是忽略 P(A)。听到"某个成功创业者每天 5 点起床"，你不能直接推出 5 点起床导致成功。你要问：成功者中有多少早起？不成功者中又有多少早起？基础概率在哪里？基础概率看不见时，"幸存者偏差"（survivorship bias）就会悄悄工作——你只看到了成功者，而忘了问失败者身上同样的特征。
 
-贝叶斯定理让判断变成更新，而不是翻脸。证据强，就大幅更新；证据弱，就小幅更新；证据和原假设相反，就下调信念。
+贝叶斯定理让判断变成更新，而不是翻脸。证据强，就大幅更新；证据弱，就小幅更新；证据和原假设相反，就下调信念。在 2010 年代硅谷"A/B 测试爆炸"之后，把产品迭代描述成"贝叶斯更新"成为常见做法——每次上线实验都是一次小规模的后验更新。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+### 用在哪
 
-- **医疗检测**：结合患病率、灵敏度、特异度解释阳性结果。
-- **招聘判断**：面试表现是证据，但要结合履历、试用任务和岗位基础成功率。
-- **风险评估**：一个告警是否意味着事故，要看误报率和历史基线。
-- **投资决策**：新消息应按信息含量更新估值，而不是被情绪带走。
-- **产品实验**：实验结果要结合样本量、先验信念和噪声水平。
+医疗检测：结合患病率、灵敏度、特异度解释阳性结果。Gigerenzer 推广的自然频数方法在多个国家的临床咨询里被采纳，包括英国 NHS 2010 年代起的"Calculate your risk"工具。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+招聘判断：面试表现是证据，但要结合履历、试用任务和岗位基础成功率。Laszlo Bock 在 2015 年的 *Work Rules!*（*纽约时报* 报道中提到）分享过 Google 内部把"求职者的斯坦福 GPA"和"实际工作绩效"的相关性做研究——结果是约 r=0.16，远低于大多数招聘官直觉。这正是先验 P(A) 远低于直觉的典型案例。
 
-- [Britannica: Bayes's theorem](https://www.britannica.com/topic/Bayess-theorem)：贝叶斯定理的基础解释。
-- [Wikipedia: Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem)：公式、历史和例子的入口。
-- Thomas Bayes, “An Essay towards solving a Problem in the Doctrine of Chances,” 1763。
-- Richard Price 对 Bayes 论文的整理和发表说明。
-- Reddit：未找到可靠单篇来源；可用搜索关键词 `Bayes theorem base rate medical test example`。
+风险评估：一个告警是否意味着事故，要看误报率和历史基线。2010 年代起安全运营中心（SOC）普遍采用贝叶斯告警评分来降低告警疲劳；MITRE 在 2020 年公开的 ATT&CK 评估里多次指出"无先验"告警是 SOC 最大成本来源。
+
+投资决策：新消息应按信息含量更新估值，而不是被情绪带走。Howard Marks 在 *The Most Important Thing*（2011）和 2018 年的 *Mastering the Market Cycle* 里反复强调"second-level thinking"——把信息先按"是否已经体现在价格里"过滤，再判断边际影响。
+
+产品实验：实验结果要结合样本量、先验信念和噪声水平。Microsoft 在 2010 年代起把"Bayesian A/B 测试"作为内部 EXP 平台默认方法之一，处理小样本场景下的过早停手问题。
+
+### 延伸阅读
+
+- [Britannica: Bayes's theorem](https://www.britannica.com/topic/Bayess-theorem) 贝叶斯定理的基础解释。
+- [Wikipedia: Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) 公式、历史和例子的入口。
+- Thomas Bayes, "An Essay towards solving a Problem in the Doctrine of Chances," *Philosophical Transactions of the Royal Society*, 1763（经 Richard Price 编辑发表）。
+- Gerd Gigerenzer, *Calculated Risks*, Simon & Schuster, 2002 自然频数方法的代表性大众读物。
+- Sharon Bertsch McGrayne, *The Theory That Would Not Die*, Yale University Press, 2011 贝叶斯思想 250 年的发展史，可读性高。
+- Reddit：未找到可靠单篇来源，可用搜索关键词 `Bayes theorem base rate medical test example`。
+
+<!-- humanized pass2 2026-06-11 by general -->

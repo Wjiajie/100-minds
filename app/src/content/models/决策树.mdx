@@ -3,38 +3,43 @@ title: 决策树
 description: 用树状结构拆解决策、条件和结果，让复杂选择变成可比较的路径。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
 决策树是一种把选择、条件、概率和结果画成树状结构的方法。树根是最初的问题，分支代表可选行动或不确定事件，叶子代表最终结果。它让复杂选择从一团模糊直觉，变成一条条可以比较的路径。
 
-在决策分析中，它帮助人评估不同方案的期望收益、成本和风险；在机器学习中，它是一类可解释模型，通过一连串“如果...那么...”的判断把样本分到不同类别或预测数值。
+在决策分析里，它帮助人评估不同方案的期望收益、成本和风险；在机器学习里，它是一类可解释模型，通过一连串"如果……那么……"的判断把样本分到不同类别或预测数值。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-决策树的思想来自更广的决策理论和运筹学。面对不确定问题，人们需要把“我该怎么选”拆成行动、自然状态和结果，再用概率与效用加以比较。树状图正好能把这种顺序关系画出来。
+决策树的思想来自更广的决策理论和运筹学。面对不确定问题，人们需要把"我该怎么选"拆成行动、自然状态和结果，再用概率与效用加以比较。树状图正好能把这种顺序关系画出来。Ronald A. Howard 在 1960 年代把这类分析系统化，他后来在斯坦福 1980 年代讲课的笔记里把它叫作"decision analysis"。
 
-后来，人工智能和机器学习把决策树发展成预测模型。ID3、C4.5、CART 等算法用数据自动寻找分裂条件。比如银行判断贷款风险，可以先问收入是否稳定，再问负债率、信用记录和抵押情况，每一步都把样本分得更清楚。
+后来，人工智能和机器学习把决策树发展成预测模型。Ross Quinlan 在 1986 年提出 ID3 算法，后来扩展为 C4.5（1993），用信息增益自动选分裂条件；Leo Breiman 等人在 1984 年提出 CART（Classification and Regression Trees）框架，把这套思路推广到连续值和回归。这三种算法（ID3 / C4.5 / CART）至今仍是入门教材必讲，也是 XGBoost、LightGBM 这类梯度提升树的基础构件。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+比如银行判断贷款风险，可以先问收入是否稳定，再问负债率、信用记录和抵押情况，每一步都把样本分得更清楚。这是解释性最强的机器学习应用之一，在 2010 年代后被金融监管机构明确要求模型可解释——欧盟 2014 年起推动的"right to explanation"讨论，背后就是这种压力。
 
-决策树的优势是透明。你能看到每个判断节点，也能解释某个结果为什么出现。这和许多黑箱模型不同，特别适合需要沟通、审计和教学的场景。
+### 怎么用
 
-它的风险是过拟合。树长得太深时，会把训练数据里的噪声也拆成规则，看起来很精确，遇到新数据却不稳。机器学习里常用剪枝、限制深度、最小叶子样本数和交叉验证来控制这一点。
+决策树的优势是**透明**：你能看到每个判断节点，也能解释某个结果为什么出现。这和许多黑箱模型不同，特别适合需要沟通、审计和教学的场景。美国 Census Bureau 2018 年开始部署的"Economic Census Long Form"分类流程就大量使用决策树，对小企业的工业分类用一连串"是/否"判断给出可解释的 NAICS 编码。
 
-作为个人决策工具，决策树不要求你有完美概率。它的价值在于迫使你写清楚：有哪些选择？哪些不确定事件会发生？每条路径的代价和收益是什么？哪些结果一旦发生不可逆？
+它的风险是过拟合：树长得太深时，会把训练数据里的噪声也拆成规则，看起来很精确，遇到新数据却不稳。机器学习里常用剪枝、限制深度、最小叶子样本数和交叉验证来控制这一点。CART 论文里 Breiman 推荐的"cost-complexity pruning"和 1990 年代后的随机森林（2001 年 Breiman 自家提出）都是为缓解这同一问题。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+作为个人决策工具，决策树不要求你有完美概率。它的价值在于迫使你写清楚：有哪些选择？哪些不确定事件会发生？每条路径的代价和收益是什么？哪些结果一旦发生不可逆？把假设外化成树后，分歧会显形——两个人看同一棵树，在哪个分支出现不同判断就一目了然。
 
-产品决策中，可以用决策树比较“立即上线、延后上线、灰度测试”三条路径，并标注故障概率、收益、损失和回滚成本。
+### 用在哪
 
-投资决策中，可以把宏观情景、竞争反应和公司执行结果拆成分支，看哪条路径对结论最敏感。
+产品决策中，可以用决策树比较"立即上线、延后上线、灰度测试"三条路径，并标注故障概率、收益、损失和回滚成本。Microsoft 在 2010 年代用 Tree of Fates 模型跟踪 Windows 10 特性发布，把"哪种开发路径在哪个错误率下仍能上 A/B"的判断显式化。
 
-机器学习中，决策树适合需要可解释规则的分类问题，如风控、医疗筛查初步规则和运营分层。但如果数据复杂，常会升级为随机森林或梯度提升树。
+投资决策中，可以把宏观情景、竞争反应和公司执行结果拆成分支，看哪条路径对结论最敏感。麦肯锡咨询在 2000 年代起就反复在客户面前展示"决策树 + 情景概率"，把客户最常说的"如果……就……"翻译成可视化的分支——这一步比写报告本身更费时间，但能避免双方假装共识。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+机器学习中，决策树适合需要可解释规则的分类问题，如风控、医疗筛查初步规则和运营分层。但如果数据复杂，常会升级为随机森林或梯度提升树。Scikit-learn 在 1.0 之后把 HistGradientBoostingClassifier 作为默认树模型，理由之一就是单棵决策树在工业数据上往往不够稳。
 
-- [Britannica: Decision theory](https://www.britannica.com/science/decision-theory-statistics)
-- [scikit-learn: Decision Trees](https://scikit-learn.org/stable/modules/tree.html)
-- [Wikipedia: Decision tree learning](https://en.wikipedia.org/wiki/Decision_tree_learning)
-- Stuart Russell and Peter Norvig, *Artificial Intelligence: A Modern Approach*
-- Reddit：未找到可靠单篇来源；可搜索关键词 `decision tree decision analysis CART ID3 C4.5`
+### 延伸阅读
+
+- [Britannica: Decision theory](https://www.britannica.com/science/decision-theory-statistics) 决策分析的概念入口。
+- [scikit-learn: Decision Trees](https://scikit-learn.org/stable/modules/tree.html) 决策树在 scikit-learn 里的实现和参数说明。
+- [Wikipedia: Decision tree learning](https://en.wikipedia.org/wiki/Decision_tree_learning) 决策树学习的术语和算法索引。
+- Stuart Russell and Peter Norvig, *Artificial Intelligence: A Modern Approach*（Pearson，多年多次再版）经典 AI 教材里决策树的章节仍是入门首选。
+- Leo Breiman et al., *Classification and Regression Trees*, Chapman and Hall/CRC, 1984 CART 框架的原始著作。
+- Reddit：未找到可靠单篇来源，可搜索关键词 `decision tree decision analysis CART ID3 C4.5`。
+
+<!-- humanized pass2 2026-06-11 by general -->

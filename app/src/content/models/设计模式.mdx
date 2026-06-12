@@ -3,21 +3,21 @@ title: 设计模式
 description: 设计模式是对反复出现的设计问题及其可复用解决办法的命名和沉淀。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
-**设计模式**（design pattern）是一种可复用的解法说明：在某类情境中，反复出现的问题是什么，约束是什么，怎样安排结构更稳妥。
+设计模式（design pattern）是一种可复用的解法说明：在某类情境中，反复出现的问题是什么，约束是什么，怎样安排结构更稳妥。
 
 它不是模板代码，也不是万能标准答案。一个真正有用的模式，通常包含问题背景、冲突力量、解决思路和适用边界。名字只是入口，背后的经验才值钱。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-这个概念最早来自建筑师 Christopher Alexander。他在 *A Pattern Language* 中把城市、街道、房间和人的生活经验写成一组模式，希望普通人也能参与建造更适合生活的空间。
+这个概念最早来自建筑师 Christopher Alexander。他在 1977 年出版的 *A Pattern Language: Towns, Buildings, Construction* 中把城市、街道、房间和人的生活经验写成一组模式，希望普通人也能参与建造更适合生活的空间。这本书最初由 Oxford University Press 出版，到 2000 年代仍在加印，是建筑师、城市规划师和软件工程师的共同读物。
 
-后来软件工程师借走了这个想法。1994 年，Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides 出版 *Design Patterns: Elements of Reusable Object-Oriented Software*。这本书把 23 个面向对象设计模式系统化，工厂、观察者、策略、装饰器这些名字也由此进入程序员的日常语言。
+后来软件工程师借走了这个想法。1994 年，Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides 出版 *Design Patterns: Elements of Reusable Object-Oriented Software*。这本书把 23 个面向对象设计模式系统化，工厂、观察者、策略、装饰器这些名字也由此进入程序员的日常语言。这四位作者后来被叫做"Gang of Four"（GoF），他们的书至今是 OOP 入门绕不开的参照。
 
 好模式像老工匠的一句提醒：这里以前很多人摔过跤，你可以不照抄他们的做法，但最好先知道坑在哪里。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+### 怎么用
 
 设计模式的价值有两层。第一层是复用经验。遇到对象创建复杂、接口不兼容、行为需要可替换这类问题时，模式给你一个经过讨论的起点。
 
@@ -27,17 +27,25 @@ description: 设计模式是对反复出现的设计问题及其可复用解决�
 
 好的模式不是炫技，而是把变化隔离在最可能变化的地方。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+### 用在哪
 
-- 软件架构：用策略模式处理可替换算法，用适配器模式连接不一致接口。
-- 产品设计：沉淀 onboarding、搜索、筛选、错误提示等常见交互模式。
-- 组织管理：把会议节奏、评审流程、事故复盘写成可重复执行的工作模式。
-- 个人知识库：把反复有效的写作、研究、决策流程记录为自己的模式语言。
+软件架构：用策略模式处理可替换算法，用适配器模式连接不一致接口。Java 的 Collections 框架里 Comparator 接口就是一个典型策略模式应用：把"怎么比"和"比什么"解耦，让同一个 sort 逻辑能跑在不同排序标准上。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+产品设计：把 onboarding、搜索、筛选、错误提示等常见交互做法整理成模式。Jakob Nielsen 1994 年提出的"10 Usability Heuristics for User Interface Design"经过近 30 年仍在可用性工作中被引用；这些 heuristic 本身就是产品交互层的设计模式集。
+
+组织管理：把会议节奏、评审流程、事故回顾写成可重复执行的工作模式。Google 的"post-incident review"模板、Atlassian 的"incident command structure"做法都类似；它们把组织经验从"老员工知道"变成"新员工能照着做"。
+
+个人知识库：把反复有效的写作、研究、决策流程记录为自己的模式语言。Ray Dalio 在 *Principles*（2017）里也用了类似思路：把生活和工作中的可复用解法写下来，让新人能继承自己的判断而不用重走一遍。
+
+软件之外的延伸还包括产品写作（"问题 → 约束 → 解决思路 → 适用边界"的结构）和教学设计（"先讲动机，再讲定义，再讲应用"），这些都可看成各自领域的"模式"沉淀。
+
+### 延伸阅读
 
 - Hillside Group: [Design Patterns Library](https://hillside.net/patterns/)
 - Hillside Group: [Patterns Information](https://hillside.net/46-patterns-library/patterns-information?fontstyle=f-larger&start=16)
 - Christopher Alexander, Sara Ishikawa, Murray Silverstein, *A Pattern Language: Towns, Buildings, Construction*, Oxford University Press, 1977.
 - Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, *Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley, 1994.
+- Jakob Nielsen, "10 Usability Heuristics for User Interface Design", Nielsen Norman Group, 1994.
 - Reddit：未找到可靠单篇来源。可用搜索关键词："Christopher Alexander pattern language software design patterns Gang of Four"。
+
+<!-- humanized pass2 2026-06-11 by general -->

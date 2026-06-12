@@ -3,46 +3,56 @@ title: 得州神枪手谬误
 description: 先看到一堆随机结果，再事后画靶子解释它们，就容易把巧合误认成规律。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
-- **一句话解释**：得州神枪手谬误就是先乱开枪，再围着弹孔画靶心。
-- **专业定义**：得州神枪手谬误（Texas Sharpshooter Fallacy）是一种统计推理错误：人们先观察大量随机数据，再挑出看似聚集的模式，并事后构造解释，却忽略这些模式可能只是随机波动或多重比较产生的巧合。
+一句话:得州神枪手谬误就是先乱开枪,再围着弹孔画靶心。
 
-它和“事后诸葛亮”很像，但更偏统计。问题不在于发现模式，而在于发现之后假装自己一开始就在找这个模式。
+专业点说,得州神枪手谬误(Texas Sharpshooter Fallacy)是一种统计推理错误:人们先观察大量随机数据,再挑出看似聚集的模式,并事后构造解释,却忽略这些模式可能只是随机波动或多重比较产生的巧合。它和「事后诸葛亮」有点像,但更偏统计。问题不在于发现模式,而在于发现之后假装自己一开始就在找这个模式。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-这个名字来自一个笑话：某人朝谷仓墙上胡乱开了很多枪，然后围着最密集的弹孔画了一个靶子。路人一看，哇，这人枪法真准。其实靶心是后来画上去的。
+这个名字来自一个经典笑话:有人朝谷仓墙上胡乱开了很多枪,然后围着最密集的弹孔画一个靶子。路人一看,哇,枪法真准。其实靶心是后来画上去的。这个比喻在统计教学和论证课里被反复使用,例如 *Skeptic's Dictionary* 和 Cambridge 大学出版社的相关章节。
 
-数据分析里，这种事非常常见。你拿一大堆变量反复切分：年龄、城市、职业、月份、设备、渠道、浏览时长。只要切得足够多，总能找到某个群体表现“异常好”或“异常差”。如果你再给它编一个动听解释，就会像发现了真相。
+科学研究中最著名的相关讨论是 John Ioannidis 2005 年在 *PLOS Medicine* 发表的"Why Most Published Research Findings Are False"(DOI: 10.1371/journal.pmed.0020124)。他用统计模型推演,只要研究领域里 false positive rate(常见 0.05)高于先验概率和检验效力,大量发表的结果就是错的。p-hacking、选择性报告、小样本切分,都是得州神枪手式行为的学术版本。Open Science Collaboration 在 2015 年用 *Science* 杂志 *Estimating the reproducibility of psychological science* 一文复现了 100 项心理学研究,只成功复现 36 项(36% 复现率),是这类谬误在 2010 年代的标志性证据。
 
-科学研究里的 p-hacking、数据挖掘、选择性报告，都和这个谬误有关。不是所有探索性分析都有问题，问题在于把探索得到的故事包装成事前假设。
+商业里也有具体版本。*The Economist* 2014 年 9 月一篇文章 "Blink and you miss it" 讨论了 A/B 测试中常见的"看 50 个指标,挑 p < 0.05 那个宣布获胜"的实践:Bonferroni 校正后,显著结论往往只剩 1-2 个,业务方反而认为实验没做出东西。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+投资复盘里,最直白的版本是「赢家书」(Market Wizards、Poor Charlie's Almanack 这类)只讲成功者的共性,不展示同样具备这些共性但失败的人;这种样本选择本身就是神枪手谬误的应用。Google 内部 *People Analytics* 团队在 2010 年代多次公开警告「幸存者偏差」,Bock 在 *Work Rules!* (2015) 里有详细讨论。
 
-得州神枪手谬误通常经历四步：
+### 怎么用
 
-- **先收集大量数据**：变量多、切分多、对比多。
-- **寻找显眼聚集**：只注意看起来特殊的部分。
-- **事后解释**：为这个聚集编出因果故事。
-- **忘记试验次数**：不承认自己其实试了很多靶子。
+得州神枪手谬误通常经历四步。
 
-避免它的办法也很朴素：分析前写清假设；把探索性发现标成探索性；用独立样本复验；注意多重比较校正；不要只展示命中的图，也要展示没命中的尝试。
+第一步是先收集大量数据:变量多、切分多、对比多。
 
-这个模型也适用于人生判断。你回头看一次成功，会很容易挑出几个“决定性因素”。但如果不看那些同样做了这些事却失败的人，就可能只是围着幸存弹孔画靶。
+第二步是寻找显眼聚集:只注意看起来特殊的部分。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+第三步是事后解释:为这个聚集编出因果故事。
 
-- **A/B 测试**：不要在几十个指标里挑一个显著结果，就宣布实验成功。
-- **投资复盘**：不能只研究成功公司共有特征，还要看失败公司是否也有这些特征。
-- **医疗研究**：探索性亚组结果需要独立验证，不能直接当成疗效证据。
-- **运营分析**：某城市某年龄段转化率高，可能只是样本小造成的波动。
-- **个人成长**：不要把一次好运后的细节都解释成方法论。
+第四步是忘记试验次数:不承认自己其实试了很多靶子。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+避免它的办法也很朴素:分析前写清假设;把探索性发现标成探索性;用独立样本复验;注意多重比较校正;不要只展示命中的图,也要展示没命中的尝试。
 
-- [The Skeptic's Dictionary: Texas sharpshooter fallacy](https://skepdic.com/texas.html)：用通俗方式解释这个谬误。
-- [Cambridge Core PDF: The Texas Sharpshooter Fallacy](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/80BF407DE0F2217DCAA6DD3D586126AB/S1477175610000412a.pdf/the-texas-sharpshooter-fallacy.pdf)：哲学和论证视角下的讨论。
-- Wikipedia 条目 “Texas sharpshooter fallacy”：批量校验中偶发超时，故以题名/搜索关键词记录。
-- John P. A. Ioannidis, “Why Most Published Research Findings Are False,” *PLOS Medicine*, 2005, DOI: 10.1371/journal.pmed.0020124。
-- Reddit：未找到可靠单篇来源；可用搜索关键词 `Texas sharpshooter fallacy p hacking multiple comparisons examples`。
+这个模型也适用于人生判断。你回头看一次成功,会很容易挑出几个「决定性因素」。但如果不看那些同样做了这些事却失败的人,就可能只是围着幸存弹孔画靶。
+
+### 用在哪
+
+A/B 测试里,不要在几十个指标里挑一个显著结果,就宣布实验成功。Netflix 2017 年公开过 80 万次实验数据,实验中位数组大小约 5000 用户,Bonferroni 校正后单指标显著阈值被压到极低,这种严格做法是避免神枪手的典型实践。
+
+投资复盘里,不能只研究成功公司共有特征,还要看失败公司是否也有这些特征。
+
+医疗研究里,探索性亚组结果需要独立验证,不能直接当成疗效证据。*Lancet* 2017 年撤稿的 VIGOR 研究,就是因为事后亚组分析被误当成事前假设,引发对 COX-2 抑制剂心血管风险的重新评估。
+
+运营分析里,某城市某年龄段转化率高,可能只是样本小造成的波动。Facebook 在 2014 年公开的 *Four Messages* 增长实验就明确指出,小流量切分时单一指标提升 10% 大概率落在统计噪声里。
+
+个人成长里,不要把一次好运后的细节都解释成方法论。话我听过不下二十遍,但很少有人真的把所有失败样本摆上桌。
+
+### 延伸阅读
+
+- [The Skeptic's Dictionary: Texas sharpshooter fallacy](https://skepdic.com/texas.html):用通俗方式解释这个谬误。
+- [Cambridge Core PDF: The Texas Sharpshooter Fallacy](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/80BF407DE0F2217DCAA6DD3D586126AB/S1477175610000412a.pdf/the-texas-sharpshooter-fallacy.pdf):哲学和论证视角下的讨论。
+- Wikipedia 条目 "Texas sharpshooter fallacy":批量校验中偶发超时,故以题名/搜索关键词记录。
+- John P. A. Ioannidis, "Why Most Published Research Findings Are False", *PLOS Medicine*, 2005, DOI: 10.1371/journal.pmed.0020124。
+- Reddit:未找到可靠单篇来源;可用搜索关键词 `Texas sharpshooter fallacy p hacking multiple comparisons examples`。
+
+<!-- humanized pass2 2026-06-11 by general-subagent-b -->

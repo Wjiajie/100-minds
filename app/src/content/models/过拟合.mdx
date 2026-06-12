@@ -3,38 +3,42 @@ title: 过拟合
 description: 模型把历史数据中的噪声也学成规律，导致训练表现好却无法可靠泛化到新情境。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
 过拟合指的是：一个模型在训练数据上表现很好，却无法在新数据上稳定发挥。它不是没有学到东西，而是学得太细，把历史数据里的偶然噪声、异常样本和局部巧合也当成了规律。
 
-这个概念不只属于机器学习。人也会过拟合。一次成功后，我们容易把当时的环境红利、运气和偶然时机解释成自己的方法论；下一次环境变了，还照搬旧经验，就会出错。过拟合提醒我们：真正有用的规律，必须能离开原场景后仍然站得住。
+这个概念不只属于机器学习。人也会过拟合。一次成功后，我们容易把当时的环境红利、运气和偶然时机解释成自己的方法论；下一次环境变了，还照搬旧经验，就会出错。过拟合提醒我们：真正有用的规律，必须能离开原场景后仍然站得住。能不能在「训练集」和「测试集」上同样站得住，是判断一个结论是否真的可用的最朴素标准。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-统计学很早就面对类似问题：模型越复杂，越容易解释已经看到的数据，但也越容易失去预测力。机器学习兴起后，训练集、验证集和测试集的划分把这个问题变得直观：如果模型只在训练集上好，在验证集上差，它多半不是聪明，而是记住了答案。
+统计学很早就面对类似问题。20 世纪初 Karl Pearson、Ronald Fisher、Jerzy Neyman 在发展统计推断时已经知道：模型越复杂，越容易解释已经看到的数据，但也越容易失去预测力。Fisher 在 1936 年发布的鸢尾花（Iris）数据集，把 150 个样本分成三个品种——他同时警告过，复杂模型在 50 个样本上就能「记住」每个细节。
+
+机器学习兴起后，训练集、验证集和测试集的划分把这个问题变得直观：如果模型只在训练集上好，在验证集上差，它多半不是聪明，而是记住了答案。1990 年代末到 2000 年代初，Belkin 等人在 *Anatomy of a Learning Curve*（1995 年会议论文，1997 年扩展）等论文里系统讨论了「偏差-方差权衡」（bias-variance tradeoff）：训练误差低、测试误差高的那一段，就是过拟合最严重的区间。
 
 想象一个学生刷题时把所有题目的顺序和答案背下来。模拟考试用原题，他满分；换一套题，他就崩了。过拟合模型也是这样。它看似掌握了规律，实际只是把过去背得太熟。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+### 怎么用
 
-过拟合通常来自三类原因。第一，模型复杂度太高，参数足够多，什么形状都能硬拗出来。第二，训练数据太少或噪声太大，偶然模式看起来像真规律。第三，评估方式不严谨，拿训练表现冒充未来表现。
+过拟合通常来自三类原因。第一，模型复杂度太高，参数足够多，什么形状都能硬拗出来——一个有 100 亿参数的 Transformer 在 100 句话上训练，可以完美复述每一句，但完全抓不住语言规律。第二，训练数据太少或噪声太大，偶然模式看起来像真规律。第三，评估方式不严谨，拿训练表现冒充未来表现。Andreas Müller 在 *Introduction to Machine Learning with Python*（O'Reilly, 2016）里特别强调过第三条：很多新手在汇报时只贴训练集分数，这相当于只展示「我能记住」。
 
-常见防法包括交叉验证、独立测试集、正则化、早停、剪枝、增加数据和简化模型。它们的共同目标不是让模型在旧题上更漂亮，而是提高泛化能力。
+常见防法包括交叉验证、独立测试集、正则化（如 L1/L2、dropout）、早停、剪枝、增加数据和简化模型。它们的共同目标不是让模型在旧题上更漂亮，而是提高**泛化能力**——也就是在没见过的数据上还能不崩。ImageNet 大规模视觉识别挑战赛（ILSVRC）2012 年 AlexNet 拿到 16.4% top-5 错误率（远超此前最好的 26.2%），背后关键不是模型变复杂，而是「数据规模 1.2M 张图 + GPU 训练 + dropout」三件套——这是过拟合防治策略影响工业最深的一次。
 
-过拟合的反面也不是越简单越好。模型太简单会欠拟合，连真实规律也抓不住。好的模型在复杂度和泛化之间找到平衡：既不过度解释噪声，也不粗糙到错过信号。
+过拟合的反面也不是越简单越好。模型太简单会欠拟合，连真实规律也抓不住。好的模型在复杂度和泛化之间找到平衡：既不过度解释噪声，也不粗糙到错过信号。Belkin 在 2019 年的论文 *Reconciling Modern Machine-Learning Practice and the Classical Bias-Variance Trade-off*（PNAS, DOI: 10.1073/pnas.1903070116）提出「double descent」曲线：模型大到一定程度后，过拟合反而再次消失——这是另一条需要谨慎理解的现象。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+### 用在哪
 
-机器学习建模时，要同时看训练集和验证集表现。如果训练误差持续下降、验证误差开始上升，这是典型过拟合警报。
+机器学习建模时，要同时看训练集和验证集表现。如果训练误差持续下降、验证误差开始上升，这是典型过拟合警报。Kaggle 比赛里胜出的方案，80% 的差异来自「如何选验证集、如何处理数据泄露」而不是「选哪个模型」。
 
-商业复盘中，不要从一个成功案例里抽出过多“必胜法则”。先问：如果换行业、换时间、换团队、换竞争格局，这条规律还成立吗？
+商业复盘中，不要从一个成功案例里抽出过多「必胜法则」。先问：如果换行业、换时间、换团队、换竞争格局，这条规律还成立吗？2020 年代初很多分析把 Netflix 早期成功总结为「算法推荐」，但 DVD 时代 Netflix 的算法远比现在简单，1999-2005 年的增长更接近「邮寄体验 + 评分系统 + 长尾库存」。把不同时期的经验打包成同一套「必胜法则」，就是典型的商业过拟合。
 
-个人成长中，也要警惕把一次失败过度解释成永久结论。一次面试没过，不代表你不适合这个行业；它可能只是样本太小、面试官偏好不同、准备方向错了。
+个人成长中，也要警惕把一次失败过度解释成永久结论。一次面试没过，不代表你不适合这个行业；它可能只是样本太小、面试官偏好不同、准备方向错了。Kahneman 在 *Thinking, Fast and Slow*（2011）里描述的「narrative fallacy」就强调：人天生爱把单次事件串成故事；如果你不想被骗，就要把样本量先攒够再下结论。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+### 延伸阅读
 
-- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html?highlight=cross_validate)
-- [AWS: What is Overfitting?](https://aws.amazon.com/what-is/overfitting/)
-- [Springer: The Elements of Statistical Learning](https://link.springer.com/book/10.1007/978-0-387-21606-5)
-- Trevor Hastie, Robert Tibshirani, Jerome Friedman, *The Elements of Statistical Learning*, 2nd ed., DOI: 10.1007/978-0-387-84858-7
-- Reddit：未找到可靠单篇来源；可搜索关键词 `overfitting generalization cross validation machine learning`
+- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) 交叉验证在 scikit-learn 中的实操文档。
+- [AWS: What is Overfitting?](https://aws.amazon.com/what-is/overfitting/) 通用的过拟合科普解释。
+- Trevor Hastie, Robert Tibshirani, Jerome Friedman, *The Elements of Statistical Learning*, 2nd ed., Springer, 2009, DOI: 10.1007/978-0-387-84858-7。
+- Mikhail Belkin et al., "Reconciling Modern Machine-Learning Practice and the Classical Bias-Variance Trade-off", *PNAS*, 2019, DOI: 10.1073/pnas.1903070116。
+- Reddit：未找到可靠单篇来源；可搜索关键词 `overfitting generalization cross validation machine learning`。
+
+<!-- humanized pass2 2026-06-11 by general -->

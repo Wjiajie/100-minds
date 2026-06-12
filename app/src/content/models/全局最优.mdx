@@ -3,39 +3,44 @@ title: 全局最优
 description: 在所有可行方案中真正最好的解，而不是附近看起来不错的局部答案。
 ---
 
-## 全局最优
+### 核心定义
 
-## 1. 💡 核心定义 (Core Definition)
-
-全局最优（global optimum）是在整个可行空间里最好的解。它和局部最优的差别很朴素：局部最优只是“附近没有更好”，全局最优是“放眼所有选择，没有更好”。
+全局最优是在整个可行空间里最好的解。它和局部最优的差别很朴素：局部最优只是「附近没有更好」，全局最优是「放眼所有选择，没有更好」。
 
 这听起来像数学概念，其实每天都在发生。一个团队把某个按钮颜色反复调到转化率最高，可能只是局部最优；如果真正的问题是用户根本不信任这个流程，那么重做承诺、价格和退款机制，才可能接近全局最优。山谷里的人只能看到最近的山头，系统思考的第一步是承认地图比脚下这条路更大。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-在数学优化里，最大值、最小值和极值问题推动了微积分、运筹学、线性规划的发展。Britannica 对 optimization 的解释很直接：许多学科里的问题都可以写成“最大化或最小化某个目标函数”。
+在数学优化里，最大值、最小值和极值问题推动了微积分、运筹学、线性规划的发展。Britannica 对 optimization 的解释很直接：许多学科里的问题都可以写成「最大化或最小化某个目标函数」。
 
-但现实里的麻烦是，很多目标函数不平滑、不透明，还会互相打架。工程师调一个参数，眼前性能提高了，系统稳定性却变差；公司把一个部门 KPI 做漂亮，客户体验却被牺牲。NIST 的算法词典提醒得很短：某些搜索方法会困在局部最优，错过全局最优。很多组织问题也是这样，不是没人努力，而是大家都在各自的小坡上往上爬。
+但现实里的麻烦是，很多目标函数不平滑、不透明，还会互相打架。工程师调一个参数，眼前性能提高了，系统稳定性却变差；公司把一个部门 KPI 做漂亮，客户体验却被牺牲。NIST 算法词典提醒得很短：某些搜索方法会困在局部最优，错过全局最优。很多组织问题也是这样——不是没人努力，而是大家都在各自的小坡上往上爬。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+这条思路在计算机科学里被研究得最透。1981 年 Kirkpatrick、Vecchi 等人在《Science》上发表的「Optimization by Simulated Annealing」是经典论文，模拟退火就是为了逃离局部最优而设计的元启发式算法——这个词后来被各种优化算法反复借用，至今仍在工业排程和芯片布局里使用。
 
-全局最优有三个要件：目标函数、约束条件、搜索空间。目标函数回答“什么叫好”，约束条件回答“哪些方案可行”，搜索空间回答“我们到底看了多少可能性”。这三件事任何一件被定义错，最后得到的“最优”都可能只是漂亮误会。
+### 怎么用
+
+全局最优有三个要件：目标函数、约束条件、搜索空间。目标函数回答「什么叫好」，约束条件回答「哪些方案可行」，搜索空间回答「我们到底看了多少可能性」。这三件事任何一件被定义错，最后得到的「最优」都可能只是漂亮误会。
 
 局部最优最常见的陷阱是把手边可调的东西误认为全部世界。你优化会议流程，却没有问这场会是否该存在；你优化广告点击，却没有问成交后的留存；你优化个人效率，却没有问当前目标是否值得做。
 
 追求全局最优不等于永远等待完美答案。现实里成本很高，所以更务实的做法是：先画出更完整的系统边界，再用几次有意识的跳跃离开局部山峰。换一个约束、换一个目标、换一个时间尺度，常常比继续微调当前方案更有用。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+### 用在哪
 
-- 产品决策：别只优化单个页面指标，要看获客、激活、留存、退款和口碑的整体结果。
-- 组织管理：一个部门的高效率可能制造另一个部门的返工，跨部门目标要一起算。
-- 投资选择：局部看收益率，全局还要看风险、流动性、税负和机会成本。
-- 个人规划：别把“把今天排满”当成最优，先确认这周、今年、三年后真正要什么。
+产品决策：别只优化单个页面指标，要看获客、激活、留存、退款和口碑的整体结果。组织管理：一个部门的高效率可能制造另一个部门的返工，跨部门目标要一起算。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+投资选择：局部看收益率，全局还要看风险、流动性、税负和机会成本。一个可考的案例是 Long-Term Capital Management（LTCM）——这家 1994 年由 John Meriwether 创立的对冲基金，靠诺贝尔奖得主 Myron Scholes 和 Robert Merton 的模型在 1994–1997 年平均年回报约 40%，但在 1998 年俄罗斯国债违约引发的连锁反应里几乎爆掉，最后由美联储协调的 14 家机构注资 36.25 亿美元救场。LTCM 的模型没有错，但搜索空间只覆盖了「过去 5 年的相关性结构」这一个局部假设。
 
-- [NIST Dictionary of Algorithms and Data Structures: global optimum](https://xlinux.nist.gov/dads/HTML/globalOptimum.html)
-- [NIST Dictionary of Algorithms and Data Structures: local optimum](https://xlinux.nist.gov/dads/HTML/localoptimum.html)
-- [Britannica: optimization](https://www.britannica.com/science/optimization)
-- [MathWorld: Global Maximum](https://mathworld.wolfram.com/GlobalMaximum.html)
-- Reddit 未纳入：未找到可靠单篇来源；可用搜索关键词 “global optimum local optimum optimization trapped discussion” 继续查找案例。
+个人规划：别把「把今天排满」当成最优，先确认这周、今年、三年后真正要什么。
+
+### 延伸阅读
+
+- [NIST Dictionary of Algorithms and Data Structures: global optimum](https://xlinux.nist.gov/dads/HTML/globalOptimum.html) 算法词典定义入口。
+- [NIST Dictionary of Algorithms and Data Structures: local optimum](https://xlinux.nist.gov/dads/HTML/localoptimum.html) 与上文配对阅读。
+- [Britannica: optimization](https://www.britannica.com/science/optimization) 优化理论总览。
+- [MathWorld: Global Maximum](https://mathworld.wolfram.com/GlobalMaximum.html) Wolfram 的数学词条。
+- Kirkpatrick, S., Gelatt, C. D., & Vecchi, M. P. (1983). Optimization by Simulated Annealing. *Science*, 220(4598), 671–680。模拟退火算法原始论文（1981 年研究，1983 年正式发表）。
+- Lowenstein, R. (2000). *When Genius Failed: The Rise and Fall of Long-Term Capital Management*。LTCM 案例的标准非虚构读物。
+- Reddit 未纳入：未找到可靠单篇来源；可用搜索关键词 "global optimum local optimum optimization trapped discussion"。
+
+<!-- humanized pass2 2026-06-11 by general-subagent-a -->

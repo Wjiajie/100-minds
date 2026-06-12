@@ -3,41 +3,43 @@ title: 不可逆决策
 description: 不可逆决策是一类一旦执行就很难撤销、回滚成本极高的选择，需要比可逆决策更慢更谨慎。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
 不可逆决策是指一旦执行，就很难撤销、回滚成本极高，甚至会永久改变约束条件的选择。它和可逆决策最大的区别，不是重要程度，而是错误后的回头成本。
 
 一个好用的比喻是门：双向门可以进去再退出来，单向门进去后就很难返回。可逆决策要快，不可逆决策要慢。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-经济学中的实物期权理论长期研究不可逆投资和不确定性。Dixit、Pindyck 等人的工作指出，当投资不可逆且未来不确定时，等待本身具有期权价值。
+经济学中的实物期权理论长期研究不可逆投资和不确定性。Dixit 和 Pindyck 在 1994 年出版的 *Investment Under Uncertainty*（Princeton University Press）里把"等待的期权价值"做了系统化：在投资不可逆且未来不确定时，今天按下按钮和按下后被迫承担全部后果，决策的期望值是不一样的。Pindyck 1991 年在 *Journal of Economic Literature* 发表的"Irreversibility, Uncertainty, and Investment"（DOI: 10.1257/jel.29.3.1110）给了更完整的经济学综述。
 
-商业语境中，Jeff Bezos 在亚马逊 2015 年致股东信中把决策分为 Type 1 和 Type 2。Type 1 像单向门，后果重大且难以回滚；Type 2 像双向门，做错了可以退回来。这个框架的价值，是避免大公司把所有小事都按单向门流程审批，也避免把真正单向门当作小实验乱闯。
+商业语境中，Jeff Bezos 在亚马逊 2015 年致股东信中把决策分为 Type 1 和 Type 2。Type 1 像单向门，后果重大且难以回滚；Type 2 像双向门，做错了可以退回来。这个框架的价值，是避免大公司把所有小事都按单向门流程审批，也避免把真正单向门当作小实验乱闯。他在 2015 年信里给了一个数字目标：希望 70% 的决策是 Type 2，30% 是 Type 1。亚马逊后来的 Prime、AWS 启动都按这套标准挑选——一旦判断是单向门（资本密集、品牌承诺长期），会要求更高信息密度和反方审查。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+在职业选择里，Annie Duke 2018 年的 *Thinking in Bets*（Portfolio）和 2020 年的 *How to Decide*（Portfolio）把单向门/双向门框架推广到日常决策。她给出的具体建议是：决策前先问"我能否承受这件事完全失败"，能就当作双向门，不能就当作单向门——这把抽象分类转换成可执行的判断动作。
+
+### 怎么用
 
 不可逆决策要求更高的信息质量、更强反方审查和更明确的止损边界。它们常涉及资本结构、品牌信任、法律责任、健康、安全、声誉或战略路径，一旦做错，代价会持续复利。
 
-可逆决策则适合快速试错。按钮颜色、文案、低成本原型、短期实验，过度分析反而比犯错更贵。很多组织的问题不是决策太快，而是不区分门的类型。
+可逆决策则适合快速试错。按钮颜色、文案、低成本原型、短期实验，过度分析反而比犯错更贵。很多组织的问题不是决策太快，而是不区分门的类型。Google 2010 年代起在产品岗位把"decision velocity"作为工程师绩效指标，本质就是鼓励把更多决策默认按双向门处理——除非有充分理由按单向门升级评审。
 
-还要警惕“微小可逆决策叠加成不可逆结果”。每天熬夜、持续透支信用、长期忽略安全隐患，单次看都能补救，长期却会把人推向很难回头的状态。
+还要警惕"微小可逆决策叠加成不可逆结果"。每天熬夜、持续透支信用、长期忽略安全隐患，单次看都能补救，长期却会把人推向很难回头的状态。这种"温水青蛙"型不可逆——每一步都可逆、整体不可逆——是单向门/双向门框架里最难处理的部分，因为它要求你想象未来而不是只评估当前动作。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+### 用在哪
 
-在创业中，产品实验多是双向门，股权结构、品牌定位和重大并购则更接近单向门。前者要快，后者要慢。
+在创业中，产品实验多是双向门，股权结构、品牌定位和重大并购则更接近单向门。前者要快，后者要慢。WeWork 2019 年招股书里那种把"高度专一的文化叙事"写进 S-1 的做法，本质上把品牌承诺单向门化——一旦上市后不达预期，叙事很难在不被嘲笑的前提下收回。Airbnb 在 2020 年上市时改用更克制的话语空间，给后面调整叙事留出余地——这种"在单向门位置保留一定双向余地"的设计，是高风险决策的隐性工艺。
 
-在投资中，加高杠杆是典型单向门。一次强平可能永久剥夺继续参与的资本。
+在投资中，加高杠杆是典型单向门。一次强平可能永久剥夺继续参与的资本。Archegos Capital 2021 年用高杠杆集中持仓中概股，Bill Hwang 在几周内从 36 亿美元个人资产归零，5 月清盘时 Archegos 一家就给相关银行带来约 100 亿美元的损失。复盘里几乎所有评论都把"加杠杆"作为单向门来评估。
 
-在职业选择中，普通跳槽通常可逆，违法违规、严重损害声誉或长期健康透支则不可逆。
+在职业选择中，普通跳槽通常可逆，违法违规、严重损害声誉或长期健康透支则不可逆。在团队管理中，领导者应明确哪些决策可由一线快速试错，哪些必须升级评审，减少无意义审批。
 
-在团队管理中，领导者应明确哪些决策可由一线快速试错，哪些必须升级评审，减少无意义审批。
+### 延伸阅读
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+- Jeff Bezos, ["2015 Letter to Shareholders"](https://www.aboutamazon.com/news/company-news/2015-letter-to-shareowners) Type 1 / Type 2 决策框架的原始出处。
+- Robert S. Pindyck, "Irreversibility, Uncertainty, and Investment", *Journal of Economic Literature*, 1991, DOI: 10.1257/jel.29.3.1110 不可逆投资的代表性综述。
+- [Real options valuation - Wikipedia](https://en.wikipedia.org/wiki/Real_options_valuation) 实物期权方法的术语入口。
+- Avinash K. Dixit and Robert S. Pindyck, *Investment Under Uncertainty*, Princeton University Press, 1994 不可逆投资的标准教材。
+- Annie Duke, *How to Decide*, Portfolio, 2020 单向门/双向门在日常决策中的实用化版本。
+- Reddit 单篇讨论未纳入：未找到可靠单篇来源，可用搜索关键词 `irreversible decisions one way door Bezos real options`。
 
-- Jeff Bezos, "2015 Letter to Shareholders", Amazon.com, search keyword: `Amazon 2015 Letter to Shareholders Type 1 Type 2 Decisions`
-- Robert S. Pindyck, "Irreversibility, Uncertainty, and Investment", Journal of Economic Literature, 1991, DOI/search keyword: `Pindyck Irreversibility Uncertainty and Investment`
-- [Real options valuation - Wikipedia](https://en.wikipedia.org/wiki/Real_options_valuation)
-- Avinash K. Dixit and Robert S. Pindyck, Investment Under Uncertainty, Princeton University Press, 1994
-- Annie Duke, How to Decide, Portfolio, 2020
-- Reddit 单篇讨论未纳入：未找到可靠单篇来源；可用搜索关键词 `irreversible decisions one way door Bezos real options`
+<!-- humanized pass2 2026-06-11 by general -->

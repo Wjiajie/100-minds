@@ -3,38 +3,44 @@ title: 预测市场
 description: 让人们交易未来事件合约，用价格聚合分散信息并形成可更新的概率预测。
 ---
 
-## 1. 💡 核心定义 (Core Definition)
+### 核心定义
 
 预测市场是一种围绕未来事件交易合约的市场。如果某合约在事件发生时支付 1 美元，它当前的交易价格就常被理解为市场给出的概率估计。例如价格是 0.63 美元，大致表示市场认为事件有 63% 的机会发生。
 
 它的威力来自信息聚合。每个参与者都只知道一点点：民调、行业消息、天气、政策、供应链、直觉。市场价格把这些零散判断压缩成一个会随新信息更新的数字。预测市场不是水晶球，它只是让有信息的人有动力把信息押进价格里。
 
-## 2. 📖 历史渊源与生动故事 (Origin & Story)
+### 起源
 
-现代预测市场的经典案例之一是爱荷华电子市场。它由爱荷华大学运营，用小额真实资金交易政治选举合约，长期被研究者用来观察市场价格与选举结果之间的关系。
+现代预测市场的经典案例之一是爱荷华电子市场（Iowa Electronic Markets, IEM）。它由爱荷华大学在 1988 年创办，用小额真实资金交易美国政治选举合约。Berg、Hjalmarsson 和 Servans-Krumbiegel 等学者长期跟踪 IEM 表现，发现它在多次美国总统选举中的价格区间与最终结果显著相关，常常在主流民调里被认为"五五开"的选区给出更早的偏向信号。
 
-经济学家也从更广的角度研究这类市场。Wolfers 和 Zitzewitz 将其称为信息市场或事件期货，强调合约价格可以被解释为市场聚合预测。近年 Kalshi、Polymarket 等平台让预测市场重新进入公众视野，同时也带来了监管、赌博边界、操纵和内幕交易等争议。
+经济学家也从更广的角度研究这类市场。Wolfers 和 Zitzewitz 在 2004 年 *Journal of Economic Perspectives* 上发表 Prediction Markets in Theory and Practice，将其称为信息市场（information markets）或事件期货（event futures），强调合约价格可以被解释为市场聚合预测。Arrow 等人在 2008 年 *Science* 上发表 "The Promise of Prediction Markets"，更系统地讨论了市场作为预测机构的理论基础。Kalshi、Polymarket 等平台在 2020 年代让预测市场重新进入公众视野，同时也带来了监管、赌博边界、操纵和内幕交易等争议。
 
-## 3. 🔍 模型深度解析 (Deep Dive)
+### 怎么用
 
-预测市场有效，需要几个条件。第一，有清晰可结算的事件定义，否则参与者交易的不是概率，而是对规则的猜测。第二，有足够流动性，价格才能吸收信息而不是被少数订单扭曲。第三，参与者要有激励纠正错误价格。第四，市场要能防止操纵和明显的利益冲突。
+预测市场有效，需要几个条件。
 
-它的优点是更新快、抗官僚过滤、能把分散信息压缩成可比较的概率。它的弱点也明显：薄市场容易失真，热门话题容易被情绪和叙事推动，法律限制可能影响参与者结构，价格也不等于道德判断。
+第一是有清晰可结算的事件定义，否则参与者交易的不是概率，而是对规则的猜测。IEM 的合约条款写得极其具体（"X 在 Y 日期前当选"），就是为了减少这种"规则套利"。第二是有足够流动性，价格才能吸收信息而不是被少数订单扭曲。第三是参与者要有激励纠正错误价格——如果错了的代价太小，市场就懒得拉回。最后是市场要能防止操纵和明显的利益冲突。
 
-作为思维模型，预测市场教人用“概率价格”看未来。不要只问某专家怎么说，要问愿意承担盈亏的人在什么价格上下注。
+它的优点是更新快、抗官僚过滤、能把分散信息压缩成可比较的概率。它的弱点也明显：薄市场容易失真，热门话题容易被情绪和叙事推动，法律限制可能影响参与者结构，价格也不等于道德判断。2024 年美国大选期间，Polymarket 上某位候选人的胜率在最后一周内多次与主流民调出现 5-10 个百分点的差距，引发"流动性是否集中在少数大户"的讨论。
 
-## 4. 🛠️ 典型应用场景 (Application Scenarios)
+作为思维模型，预测市场教人用"概率价格"看未来。不要只问某专家怎么说，要问愿意承担盈亏的人在什么价格上下注。这条反过来也成立：当自己拿不出"愿意在什么价格上下注"的具体数字时，多半是还没真正想清楚。
 
-公司内部可以用预测市场估计项目是否按期上线、销售目标是否达成、某个风险是否会发生。它能让基层分散信息绕过层级过滤。
+### 用在哪
 
-公共事件预测中，市场价格可以补充民调和专家判断。它尤其适合持续更新的信息环境，但不能替代制度分析和情景推演。
+公司内部可以用预测市场估计项目是否按期上线、销售目标是否达成、某个风险是否会发生。它能让基层分散信息绕过层级过滤。Google 在 2010 年代内部使用过预测市场来预测产品发布日期、产品 bug 数量等；多份研究（包括 Cowgill、Wolfers 和 Zitzewitz 在 2014 年的工作论文）都指出，Google 内部市场在很多指标上击败了官方预测。
 
-个人决策也可以借用这个模型。即便没有真实市场，你也可以把判断写成概率，并在新信息出现时更新。长期记录后，你会发现自己在哪些主题上过度自信，在哪些主题上低估变化。
+公共事件预测中，市场价格可以补充民调和专家判断。它尤其适合持续更新的信息环境，但不能替代制度分析和情景推演。COVID-19 期间，Kalshi、Hypermind 等平台出现过关于疫苗获批时间、病例峰值等合约，给公共卫生研究者提供了一份实时的"群体信念曲线"。
 
-## 5. 🔗 权威引用与延伸阅读 (Authoritative References)
+个人决策也可以借用这个模型。即便没有真实市场，你也可以把判断写成概率，并在新信息出现时更新。长期记录后，你会发现自己在哪些主题上过度自信，在哪些主题上低估变化。Philip Tetlock 在 *Superforecasting*（2015）里给出的训练方法，几乎就是个人版的预测市场：先写下基准概率，再随证据更新，最后 Brier 分数对账。
+
+### 延伸阅读
 
 - [NBER: Prediction Markets in Theory and Practice](https://www.nber.org/papers/w12083)
 - [Britannica Money: Prediction Markets](https://www.britannica.com/money/prediction-markets)
 - [American Economic Association: Prediction Markets](https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321)
 - Kenneth J. Arrow et al., "The Promise of Prediction Markets", *Science*, 2008, DOI: 10.1126/science.1157679
+- Justin Wolfers and Eric Zitzewitz, "Prediction Markets in Theory and Practice", *Journal of Economic Perspectives*, 2004
+- Cowgill, B., Wolfers, J., Zitzewitz, E., "Using Prediction Markets to Track Information Flows: Evidence from Google", working paper, 2014
 - Reddit：未找到可靠单篇来源；可搜索关键词 `prediction markets Wolfers Zitzewitz Iowa Electronic Markets`
+
+<!-- humanized pass2 2026-06-11 by general -->

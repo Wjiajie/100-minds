@@ -1,0 +1,8482 @@
+{
+  "total_files": 269,
+  "high_priority": 0,
+  "medium_priority": 0,
+  "low_priority": 269,
+  "avg_final_score": 93.0,
+  "avg_rule_score": 94.1,
+  "top_20_to_rewrite": [
+    {
+      "file": "贝叶斯学派.mdx",
+      "final": 80.9,
+      "rule": 70
+    },
+    {
+      "file": "转换成本.mdx",
+      "final": 82.7,
+      "rule": 73
+    },
+    {
+      "file": "直接原因.mdx",
+      "final": 83.2,
+      "rule": 79
+    },
+    {
+      "file": "得州神枪手谬误.mdx",
+      "final": 83.3,
+      "rule": 74
+    },
+    {
+      "file": "2×2矩阵.mdx",
+      "final": 83.7,
+      "rule": 75
+    },
+    {
+      "file": "幸运表面积.mdx",
+      "final": 84.0,
+      "rule": 76
+    },
+    {
+      "file": "溢出效应.mdx",
+      "final": 84.1,
+      "rule": 76
+    },
+    {
+      "file": "皮格马利翁效应.mdx",
+      "final": 84.1,
+      "rule": 80
+    },
+    {
+      "file": "旁观者效应.mdx",
+      "final": 84.2,
+      "rule": 76
+    },
+    {
+      "file": "不可逆决策.mdx",
+      "final": 85.1,
+      "rule": 78
+    },
+    {
+      "file": "反事实思维.mdx",
+      "final": 85.1,
+      "rule": 79
+    },
+    {
+      "file": "范式转换.mdx",
+      "final": 85.3,
+      "rule": 79
+    },
+    {
+      "file": "事后分析.mdx",
+      "final": 85.4,
+      "rule": 79
+    },
+    {
+      "file": "刻意练习.mdx",
+      "final": 85.4,
+      "rule": 79
+    },
+    {
+      "file": "固定型思维vs.成长型思维.mdx",
+      "final": 85.8,
+      "rule": 80
+    },
+    {
+      "file": "将军总在打上一场仗.mdx",
+      "final": 85.8,
+      "rule": 79
+    },
+    {
+      "file": "飞轮效应.mdx",
+      "final": 85.8,
+      "rule": 79
+    },
+    {
+      "file": "发表偏倚.mdx",
+      "final": 86.4,
+      "rule": 81
+    },
+    {
+      "file": "指数级增长.mdx",
+      "final": 86.8,
+      "rule": 81
+    },
+    {
+      "file": "根本原因.mdx",
+      "final": 86.8,
+      "rule": 81
+    }
+  ],
+  "results": [
+    {
+      "file": "贝叶斯学派.mdx",
+      "char_count": 1361,
+      "rule_score": 70,
+      "rule_hits": [
+        [
+          "内容-废词",
+          2,
+          8
+        ],
+        [
+          "风格-高深词",
+          2,
+          7
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 1581.9,
+        "sent_length_cv": 0.636,
+        "section_variance": 1.231,
+        "section_count": 20,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.776
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.14
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 80.9,
+      "priority": "low"
+    },
+    {
+      "file": "转换成本.mdx",
+      "char_count": 880,
+      "rule_score": 73,
+      "rule_hits": [
+        [
+          "语法-全称命题",
+          1,
+          6
+        ],
+        [
+          "风格-高深词",
+          3,
+          7
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 5486.6,
+        "sent_length_cv": 1.827,
+        "section_variance": 1.419,
+        "section_count": 21,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.858
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 82.7,
+      "priority": "low"
+    },
+    {
+      "file": "直接原因.mdx",
+      "char_count": 1313,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          3,
+          7
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1087.3,
+        "sent_length_cv": 0.926,
+        "section_variance": 1.881,
+        "section_count": 31,
+        "sent_count": 65
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.784
+      },
+      "bold": {
+        "bold_count": 23,
+        "bold_density": 1.63
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 83.2,
+      "priority": "low"
+    },
+    {
+      "file": "得州神枪手谬误.mdx",
+      "char_count": 1097,
+      "rule_score": 74,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ],
+        [
+          "学术-虚词",
+          3,
+          4
+        ]
+      ],
+      "rule_hit_total": 5,
+      "para_entropy": {
+        "sent_length_variance": 2378.8,
+        "sent_length_cv": 0.842,
+        "section_variance": 1.406,
+        "section_count": 25,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.816
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 83.3,
+      "priority": "low"
+    },
+    {
+      "file": "2×2矩阵.mdx",
+      "char_count": 1324,
+      "rule_score": 75,
+      "rule_hits": [
+        [
+          "内容-虚词",
+          3,
+          6
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 4401.2,
+        "sent_length_cv": 1.245,
+        "section_variance": 0.962,
+        "section_count": 20,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.794
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 12,
+      "final_score": 83.7,
+      "priority": "low"
+    },
+    {
+      "file": "幸运表面积.mdx",
+      "char_count": 1060,
+      "rule_score": 76,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          6,
+          7
+        ]
+      ],
+      "rule_hit_total": 7,
+      "para_entropy": {
+        "sent_length_variance": 2215.0,
+        "sent_length_cv": 0.808,
+        "section_variance": 1.118,
+        "section_count": 20,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.834
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 84.0,
+      "priority": "low"
+    },
+    {
+      "file": "溢出效应.mdx",
+      "char_count": 1099,
+      "rule_score": 76,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 1070.7,
+        "sent_length_cv": 0.73,
+        "section_variance": 1.139,
+        "section_count": 21,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.785
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 84.1,
+      "priority": "low"
+    },
+    {
+      "file": "皮格马利翁效应.mdx",
+      "char_count": 820,
+      "rule_score": 80,
+      "rule_hits": [
+        [
+          "内容-废词",
+          1,
+          8
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 2612.3,
+        "sent_length_cv": 0.931,
+        "section_variance": 1.458,
+        "section_count": 16,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.832
+      },
+      "bold": {
+        "bold_count": 11,
+        "bold_density": 1.2
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 84.1,
+      "priority": "low"
+    },
+    {
+      "file": "旁观者效应.mdx",
+      "char_count": 1075,
+      "rule_score": 76,
+      "rule_hits": [
+        [
+          "语法-模糊归因",
+          1,
+          6
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ],
+        [
+          "学术-虚词",
+          2,
+          4
+        ]
+      ],
+      "rule_hit_total": 5,
+      "para_entropy": {
+        "sent_length_variance": 3262.8,
+        "sent_length_cv": 0.974,
+        "section_variance": 1.234,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 84.2,
+      "priority": "low"
+    },
+    {
+      "file": "不可逆决策.mdx",
+      "char_count": 1174,
+      "rule_score": 78,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          2,
+          6
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 1576.9,
+        "sent_length_cv": 0.675,
+        "section_variance": 1.177,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.799
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 85.1,
+      "priority": "low"
+    },
+    {
+      "file": "反事实思维.mdx",
+      "char_count": 1048,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          5,
+          7
+        ]
+      ],
+      "rule_hit_total": 5,
+      "para_entropy": {
+        "sent_length_variance": 1821.2,
+        "sent_length_cv": 0.881,
+        "section_variance": 1.455,
+        "section_count": 22,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.8,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.1,
+      "priority": "low"
+    },
+    {
+      "file": "范式转换.mdx",
+      "char_count": 902,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          8,
+          7
+        ]
+      ],
+      "rule_hit_total": 8,
+      "para_entropy": {
+        "sent_length_variance": 1429.1,
+        "sent_length_cv": 0.914,
+        "section_variance": 1.307,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.92,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.3,
+      "priority": "low"
+    },
+    {
+      "file": "事后分析.mdx",
+      "char_count": 987,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          16,
+          7
+        ]
+      ],
+      "rule_hit_total": 16,
+      "para_entropy": {
+        "sent_length_variance": 1523.0,
+        "sent_length_cv": 0.85,
+        "section_variance": 1.556,
+        "section_count": 21,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 7.95,
+        "bigram_ttr": 0.803
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.4,
+      "priority": "low"
+    },
+    {
+      "file": "刻意练习.mdx",
+      "char_count": 835,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          4,
+          7
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 4415.9,
+        "sent_length_cv": 1.256,
+        "section_variance": 1.38,
+        "section_count": 16,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.857
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.4,
+      "priority": "low"
+    },
+    {
+      "file": "固定型思维vs.成长型思维.mdx",
+      "char_count": 921,
+      "rule_score": 80,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 15668.0,
+        "sent_length_cv": 2.317,
+        "section_variance": 1.354,
+        "section_count": 16,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 7.92,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.8,
+      "priority": "low"
+    },
+    {
+      "file": "将军总在打上一场仗.mdx",
+      "char_count": 940,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          3,
+          7
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 3396.8,
+        "sent_length_cv": 1.436,
+        "section_variance": 1.098,
+        "section_count": 19,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.8,
+      "priority": "low"
+    },
+    {
+      "file": "飞轮效应.mdx",
+      "char_count": 1128,
+      "rule_score": 79,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          3,
+          7
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 780.9,
+        "sent_length_cv": 0.847,
+        "section_variance": 1.007,
+        "section_count": 21,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.828
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 85.8,
+      "priority": "low"
+    },
+    {
+      "file": "发表偏倚.mdx",
+      "char_count": 902,
+      "rule_score": 81,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "学术-虚词",
+          5,
+          4
+        ]
+      ],
+      "rule_hit_total": 6,
+      "para_entropy": {
+        "sent_length_variance": 10901.3,
+        "sent_length_cv": 1.566,
+        "section_variance": 1.342,
+        "section_count": 15,
+        "sent_count": 30
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 86.4,
+      "priority": "low"
+    },
+    {
+      "file": "指数级增长.mdx",
+      "char_count": 1395,
+      "rule_score": 81,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1512.4,
+        "sent_length_cv": 0.911,
+        "section_variance": 1.29,
+        "section_count": 23,
+        "sent_count": 53
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.795
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 86.8,
+      "priority": "low"
+    },
+    {
+      "file": "根本原因.mdx",
+      "char_count": 1185,
+      "rule_score": 81,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 891.9,
+        "sent_length_cv": 0.778,
+        "section_variance": 1.194,
+        "section_count": 22,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.814
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 86.8,
+      "priority": "low"
+    },
+    {
+      "file": "引爆点.mdx",
+      "char_count": 920,
+      "rule_score": 84,
+      "rule_hits": [
+        [
+          "内容-夸张",
+          1,
+          6
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1265.0,
+        "sent_length_cv": 0.884,
+        "section_variance": 1.401,
+        "section_count": 20,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 8,
+        "bold_density": 0.78
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 86.9,
+      "priority": "low"
+    },
+    {
+      "file": "承诺.mdx",
+      "char_count": 1004,
+      "rule_score": 82,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          4,
+          5
+        ]
+      ],
+      "rule_hit_total": 5,
+      "para_entropy": {
+        "sent_length_variance": 1603.0,
+        "sent_length_cv": 0.729,
+        "section_variance": 1.389,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.827
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 87.0,
+      "priority": "low"
+    },
+    {
+      "file": "公正世界假说.mdx",
+      "char_count": 1099,
+      "rule_score": 82,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1397.8,
+        "sent_length_cv": 0.784,
+        "section_variance": 1.436,
+        "section_count": 20,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 12,
+      "final_score": 87.3,
+      "priority": "low"
+    },
+    {
+      "file": "现时偏好.mdx",
+      "char_count": 1429,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 888.4,
+        "sent_length_cv": 0.755,
+        "section_variance": 1.714,
+        "section_count": 31,
+        "sent_count": 63
+      },
+      "perplexity": {
+        "char_entropy": 8.41,
+        "bigram_ttr": 0.805
+      },
+      "bold": {
+        "bold_count": 24,
+        "bold_density": 1.57
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 87.5,
+      "priority": "low"
+    },
+    {
+      "file": "亏本销售策略.mdx",
+      "char_count": 1390,
+      "rule_score": 83,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          2,
+          6
+        ],
+        [
+          "交流-截止日",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1650.8,
+        "sent_length_cv": 0.716,
+        "section_variance": 0.922,
+        "section_count": 18,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.2,
+        "bigram_ttr": 0.782
+      },
+      "bold": {
+        "bold_count": 3,
+        "bold_density": 0.2
+      },
+      "emoji": 0,
+      "dashes": 24,
+      "final_score": 87.6,
+      "priority": "low"
+    },
+    {
+      "file": "效用值.mdx",
+      "char_count": 1259,
+      "rule_score": 85,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          3,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 2194.7,
+        "sent_length_cv": 0.795,
+        "section_variance": 1.023,
+        "section_count": 18,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.78
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 88.5,
+      "priority": "low"
+    },
+    {
+      "file": "反脆弱.mdx",
+      "char_count": 1000,
+      "rule_score": 85,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1387.6,
+        "sent_length_cv": 0.985,
+        "section_variance": 1.362,
+        "section_count": 22,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 88.6,
+      "priority": "low"
+    },
+    {
+      "file": "勒夏特列原理.mdx",
+      "char_count": 1346,
+      "rule_score": 85,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          2,
+          6
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 6227.1,
+        "sent_length_cv": 1.354,
+        "section_variance": 1.188,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.27,
+        "bigram_ttr": 0.82
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 24,
+      "final_score": 88.9,
+      "priority": "low"
+    },
+    {
+      "file": "复利.mdx",
+      "char_count": 943,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1196.7,
+        "sent_length_cv": 1.0,
+        "section_variance": 1.284,
+        "section_count": 18,
+        "sent_count": 50
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.0,
+      "priority": "low"
+    },
+    {
+      "file": "正外部性.mdx",
+      "char_count": 1097,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          3,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 4,
+      "para_entropy": {
+        "sent_length_variance": 1002.3,
+        "sent_length_cv": 0.789,
+        "section_variance": 1.134,
+        "section_count": 20,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.0,
+      "priority": "low"
+    },
+    {
+      "file": "马斯洛需求层次.mdx",
+      "char_count": 1052,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "语法-空动",
+          1,
+          5
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 19931.5,
+        "sent_length_cv": 1.967,
+        "section_variance": 1.422,
+        "section_count": 18,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 89.2,
+      "priority": "low"
+    },
+    {
+      "file": "功利主义.mdx",
+      "char_count": 853,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "语法-套话",
+          1,
+          5
+        ],
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 5763.8,
+        "sent_length_cv": 1.465,
+        "section_variance": 1.177,
+        "section_count": 18,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.3,
+      "priority": "low"
+    },
+    {
+      "file": "林迪效应.mdx",
+      "char_count": 1028,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ],
+        [
+          "学术-句式套话",
+          1,
+          4
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 4370.7,
+        "sent_length_cv": 1.024,
+        "section_variance": 0.911,
+        "section_count": 18,
+        "sent_count": 28
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.846
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 89.3,
+      "priority": "low"
+    },
+    {
+      "file": "沉没成本.mdx",
+      "char_count": 1265,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "语法-模糊归因",
+          1,
+          6
+        ],
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 4249.3,
+        "sent_length_cv": 1.007,
+        "section_variance": 0.929,
+        "section_count": 19,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.781
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.15
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 89.3,
+      "priority": "low"
+    },
+    {
+      "file": "黑天鹅.mdx",
+      "char_count": 1605,
+      "rule_score": 85,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          2,
+          6
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 809.0,
+        "sent_length_cv": 0.688,
+        "section_variance": 1.127,
+        "section_count": 22,
+        "sent_count": 59
+      },
+      "perplexity": {
+        "char_entropy": 8.39,
+        "bigram_ttr": 0.81
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 89.3,
+      "priority": "low"
+    },
+    {
+      "file": "系统思考.mdx",
+      "char_count": 1328,
+      "rule_score": 86,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          2,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1730.1,
+        "sent_length_cv": 0.767,
+        "section_variance": 1.138,
+        "section_count": 20,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.26,
+        "bigram_ttr": 0.813
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 23,
+      "final_score": 89.4,
+      "priority": "low"
+    },
+    {
+      "file": "滑坡论.mdx",
+      "char_count": 1171,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2252.0,
+        "sent_length_cv": 0.98,
+        "section_variance": 1.074,
+        "section_count": 21,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.827
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.16
+      },
+      "emoji": 0,
+      "dashes": 24,
+      "final_score": 89.5,
+      "priority": "low"
+    },
+    {
+      "file": "搭便车现象.mdx",
+      "char_count": 893,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1301.1,
+        "sent_length_cv": 0.883,
+        "section_variance": 1.426,
+        "section_count": 20,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.826
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.6,
+      "priority": "low"
+    },
+    {
+      "file": "过拟合.mdx",
+      "char_count": 1247,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2200.0,
+        "sent_length_cv": 0.825,
+        "section_variance": 0.988,
+        "section_count": 18,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 89.6,
+      "priority": "low"
+    },
+    {
+      "file": "稀缺.mdx",
+      "char_count": 757,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2559.1,
+        "sent_length_cv": 0.941,
+        "section_variance": 1.407,
+        "section_count": 16,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.878
+      },
+      "bold": {
+        "bold_count": 9,
+        "bold_density": 1.05
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.9,
+      "priority": "low"
+    },
+    {
+      "file": "附带损害.mdx",
+      "char_count": 1064,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1293.3,
+        "sent_length_cv": 0.898,
+        "section_variance": 1.486,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.828
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 89.9,
+      "priority": "low"
+    },
+    {
+      "file": "均值回归.mdx",
+      "char_count": 861,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1535.3,
+        "sent_length_cv": 0.846,
+        "section_variance": 1.049,
+        "section_count": 14,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.863
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.0,
+      "priority": "low"
+    },
+    {
+      "file": "遏制.mdx",
+      "char_count": 1130,
+      "rule_score": 87,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 6858.3,
+        "sent_length_cv": 1.868,
+        "section_variance": 1.148,
+        "section_count": 19,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.26,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.0,
+      "priority": "low"
+    },
+    {
+      "file": "五问法.mdx",
+      "char_count": 1152,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 822.6,
+        "sent_length_cv": 0.9,
+        "section_variance": 0.845,
+        "section_count": 17,
+        "sent_count": 53
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.819
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "先发优势.mdx",
+      "char_count": 956,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1546.3,
+        "sent_length_cv": 0.964,
+        "section_variance": 1.467,
+        "section_count": 18,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.812
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "公地悲剧.mdx",
+      "char_count": 1224,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          2,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 1757.2,
+        "sent_length_cv": 0.744,
+        "section_variance": 1.05,
+        "section_count": 18,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.27,
+        "bigram_ttr": 0.82
+      },
+      "bold": {
+        "bold_count": 4,
+        "bold_density": 0.3
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "可重复性危机.mdx",
+      "char_count": 874,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          5,
+          4
+        ]
+      ],
+      "rule_hit_total": 5,
+      "para_entropy": {
+        "sent_length_variance": 12601.7,
+        "sent_length_cv": 1.962,
+        "section_variance": 1.469,
+        "section_count": 16,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.844
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "群外偏见.mdx",
+      "char_count": 895,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 4573.3,
+        "sent_length_cv": 1.678,
+        "section_variance": 1.251,
+        "section_count": 19,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.849
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "能力圈.mdx",
+      "char_count": 1224,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 853.7,
+        "sent_length_cv": 0.835,
+        "section_variance": 1.063,
+        "section_count": 22,
+        "sent_count": 52
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.787
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.1,
+      "priority": "low"
+    },
+    {
+      "file": "可逆决策.mdx",
+      "char_count": 908,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 6715.1,
+        "sent_length_cv": 1.595,
+        "section_variance": 1.308,
+        "section_count": 18,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.854
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 90.2,
+      "priority": "low"
+    },
+    {
+      "file": "彼得原理.mdx",
+      "char_count": 1259,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "语法-同义反复",
+          1,
+          4
+        ],
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 3,
+      "para_entropy": {
+        "sent_length_variance": 5760.9,
+        "sent_length_cv": 1.184,
+        "section_variance": 1.016,
+        "section_count": 19,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.2,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.15
+      },
+      "emoji": 0,
+      "dashes": 16,
+      "final_score": 90.2,
+      "priority": "low"
+    },
+    {
+      "file": "第一性原理.mdx",
+      "char_count": 1520,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          2,
+          6
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 612.3,
+        "sent_length_cv": 0.619,
+        "section_variance": 1.285,
+        "section_count": 24,
+        "sent_count": 57
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.779
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 24,
+      "final_score": 90.2,
+      "priority": "low"
+    },
+    {
+      "file": "启发式.mdx",
+      "char_count": 975,
+      "rule_score": 88,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 15392.7,
+        "sent_length_cv": 1.84,
+        "section_variance": 1.392,
+        "section_count": 19,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.859
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 90.3,
+      "priority": "low"
+    },
+    {
+      "file": "包以德循环.mdx",
+      "char_count": 903,
+      "rule_score": 89,
+      "rule_hits": [
+        [
+          "语法-同义反复",
+          1,
+          4
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2142.0,
+        "sent_length_cv": 1.011,
+        "section_variance": 1.137,
+        "section_count": 16,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.86
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.5,
+      "priority": "low"
+    },
+    {
+      "file": "聚合思维.mdx",
+      "char_count": 862,
+      "rule_score": 89,
+      "rule_hits": [
+        [
+          "语法-模糊归因",
+          1,
+          6
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 4644.8,
+        "sent_length_cv": 1.498,
+        "section_variance": 1.156,
+        "section_count": 19,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.858
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 90.5,
+      "priority": "low"
+    },
+    {
+      "file": "邓宁-克鲁格效应.mdx",
+      "char_count": 1218,
+      "rule_score": 89,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 5074.8,
+        "sent_length_cv": 1.018,
+        "section_variance": 0.936,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.15
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 90.5,
+      "priority": "low"
+    },
+    {
+      "file": "黑匣子.mdx",
+      "char_count": 1373,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "内容-空话",
+          1,
+          8
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 688.4,
+        "sent_length_cv": 0.685,
+        "section_variance": 1.644,
+        "section_count": 29,
+        "sent_count": 58
+      },
+      "perplexity": {
+        "char_entropy": 8.26,
+        "bigram_ttr": 0.786
+      },
+      "bold": {
+        "bold_count": 20,
+        "bold_density": 1.36
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.5,
+      "priority": "low"
+    },
+    {
+      "file": "连锁故障.mdx",
+      "char_count": 899,
+      "rule_score": 89,
+      "rule_hits": [
+        [
+          "语法-同义反复",
+          1,
+          4
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 6665.3,
+        "sent_length_cv": 1.801,
+        "section_variance": 1.302,
+        "section_count": 20,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.834
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.6,
+      "priority": "low"
+    },
+    {
+      "file": "势能.mdx",
+      "char_count": 1424,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 908.4,
+        "sent_length_cv": 0.806,
+        "section_variance": 1.788,
+        "section_count": 32,
+        "sent_count": 63
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.785
+      },
+      "bold": {
+        "bold_count": 21,
+        "bold_density": 1.38
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 90.7,
+      "priority": "low"
+    },
+    {
+      "file": "魔像效应.mdx",
+      "char_count": 1026,
+      "rule_score": 89,
+      "rule_hits": [
+        [
+          "内容-废词",
+          1,
+          8
+        ],
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2861.6,
+        "sent_length_cv": 0.915,
+        "section_variance": 1.229,
+        "section_count": 15,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.829
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 90.7,
+      "priority": "low"
+    },
+    {
+      "file": "群内偏爱.mdx",
+      "char_count": 1234,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2282.3,
+        "sent_length_cv": 0.823,
+        "section_variance": 1.118,
+        "section_count": 19,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 3,
+        "bold_density": 0.22
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 90.9,
+      "priority": "low"
+    },
+    {
+      "file": "观察者期望偏差.mdx",
+      "char_count": 1037,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 17165.2,
+        "sent_length_cv": 1.733,
+        "section_variance": 1.34,
+        "section_count": 18,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.81
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 91.0,
+      "priority": "low"
+    },
+    {
+      "file": "锚定.mdx",
+      "char_count": 998,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 953.8,
+        "sent_length_cv": 0.816,
+        "section_variance": 0.855,
+        "section_count": 17,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.853
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.0,
+      "priority": "low"
+    },
+    {
+      "file": "默认效应.mdx",
+      "char_count": 1017,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1445.9,
+        "sent_length_cv": 0.902,
+        "section_variance": 1.711,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.815
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.0,
+      "priority": "low"
+    },
+    {
+      "file": "外部性.mdx",
+      "char_count": 1102,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 885.1,
+        "sent_length_cv": 0.685,
+        "section_variance": 1.385,
+        "section_count": 21,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.78
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.1,
+      "priority": "low"
+    },
+    {
+      "file": "权威.mdx",
+      "char_count": 923,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 6289.9,
+        "sent_length_cv": 1.957,
+        "section_variance": 1.291,
+        "section_count": 21,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.875
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.2,
+      "priority": "low"
+    },
+    {
+      "file": "群体免疫效应.mdx",
+      "char_count": 1338,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          2,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1718.6,
+        "sent_length_cv": 0.719,
+        "section_variance": 0.865,
+        "section_count": 19,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.791
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 91.2,
+      "priority": "low"
+    },
+    {
+      "file": "九九定律.mdx",
+      "char_count": 913,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 8789.9,
+        "sent_length_cv": 1.491,
+        "section_variance": 1.071,
+        "section_count": 17,
+        "sent_count": 28
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.862
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.3,
+      "priority": "low"
+    },
+    {
+      "file": "公共物品.mdx",
+      "char_count": 915,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "语法-机械双重",
+          1,
+          4
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1290.7,
+        "sent_length_cv": 0.852,
+        "section_variance": 1.231,
+        "section_count": 16,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.3,
+      "priority": "low"
+    },
+    {
+      "file": "机会成本.mdx",
+      "char_count": 1239,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1193.5,
+        "sent_length_cv": 0.746,
+        "section_variance": 1.078,
+        "section_count": 19,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 7.93,
+        "bigram_ttr": 0.792
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 18,
+      "final_score": 91.3,
+      "priority": "low"
+    },
+    {
+      "file": "互惠.mdx",
+      "char_count": 968,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 4512.8,
+        "sent_length_cv": 1.21,
+        "section_variance": 1.744,
+        "section_count": 19,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 7.97,
+        "bigram_ttr": 0.834
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 91.4,
+      "priority": "low"
+    },
+    {
+      "file": "算法.mdx",
+      "char_count": 1014,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 715.0,
+        "sent_length_cv": 0.622,
+        "section_variance": 1.017,
+        "section_count": 19,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.846
+      },
+      "bold": {
+        "bold_count": 10,
+        "bold_density": 0.9
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.4,
+      "priority": "low"
+    },
+    {
+      "file": "邓巴数.mdx",
+      "char_count": 1017,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1692.1,
+        "sent_length_cv": 0.884,
+        "section_variance": 1.248,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 5,
+        "bold_density": 0.45
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.4,
+      "priority": "low"
+    },
+    {
+      "file": "黑天鹅事件.mdx",
+      "char_count": 1054,
+      "rule_score": 90,
+      "rule_hits": [
+        [
+          "语法-提醒",
+          1,
+          5
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 4033.8,
+        "sent_length_cv": 1.238,
+        "section_variance": 1.0,
+        "section_count": 18,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.26,
+        "bigram_ttr": 0.87
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 91.5,
+      "priority": "low"
+    },
+    {
+      "file": "预测市场.mdx",
+      "char_count": 1134,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 6051.8,
+        "sent_length_cv": 1.241,
+        "section_variance": 1.249,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.815
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 91.7,
+      "priority": "low"
+    },
+    {
+      "file": "战略税.mdx",
+      "char_count": 993,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2163.4,
+        "sent_length_cv": 0.996,
+        "section_variance": 1.375,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.812
+      },
+      "bold": {
+        "bold_count": 5,
+        "bold_density": 0.46
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.8,
+      "priority": "low"
+    },
+    {
+      "file": "汉隆剃刀.mdx",
+      "char_count": 863,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 776.6,
+        "sent_length_cv": 0.879,
+        "section_variance": 1.224,
+        "section_count": 20,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.868
+      },
+      "bold": {
+        "bold_count": 6,
+        "bold_density": 0.62
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.8,
+      "priority": "low"
+    },
+    {
+      "file": "风险预防原则.mdx",
+      "char_count": 1287,
+      "rule_score": 91,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2804.3,
+        "sent_length_cv": 0.9,
+        "section_variance": 0.983,
+        "section_count": 19,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.24,
+        "bigram_ttr": 0.806
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.14
+      },
+      "emoji": 0,
+      "dashes": 27,
+      "final_score": 91.8,
+      "priority": "low"
+    },
+    {
+      "file": "净现值.mdx",
+      "char_count": 1056,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "内容-空话",
+          1,
+          8
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1248.6,
+        "sent_length_cv": 0.81,
+        "section_variance": 0.995,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.802
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.9,
+      "priority": "low"
+    },
+    {
+      "file": "现金流折现法.mdx",
+      "char_count": 1043,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "内容-空话",
+          1,
+          8
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1267.2,
+        "sent_length_cv": 0.874,
+        "section_variance": 1.218,
+        "section_count": 23,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 7.94,
+        "bigram_ttr": 0.821
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 91.9,
+      "priority": "low"
+    },
+    {
+      "file": "早期采纳者.mdx",
+      "char_count": 1091,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2190.2,
+        "sent_length_cv": 1.101,
+        "section_variance": 1.473,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.797
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.0,
+      "priority": "low"
+    },
+    {
+      "file": "寒蝉效应.mdx",
+      "char_count": 1068,
+      "rule_score": 92,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 2066.7,
+        "sent_length_cv": 0.79,
+        "section_variance": 1.351,
+        "section_count": 17,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.842
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.09
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 92.1,
+      "priority": "low"
+    },
+    {
+      "file": "乐观偏差概率.mdx",
+      "char_count": 1406,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "语法-同义反复",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1209.1,
+        "sent_length_cv": 0.843,
+        "section_variance": 1.851,
+        "section_count": 30,
+        "sent_count": 62
+      },
+      "perplexity": {
+        "char_entropy": 8.3,
+        "bigram_ttr": 0.821
+      },
+      "bold": {
+        "bold_count": 24,
+        "bold_density": 1.59
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.2,
+      "priority": "low"
+    },
+    {
+      "file": "催化剂.mdx",
+      "char_count": 1009,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1070.9,
+        "sent_length_cv": 0.875,
+        "section_variance": 1.513,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 7.87,
+        "bigram_ttr": 0.81
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.2,
+      "priority": "low"
+    },
+    {
+      "file": "有名无实的胜利.mdx",
+      "char_count": 1561,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 679.2,
+        "sent_length_cv": 0.689,
+        "section_variance": 1.46,
+        "section_count": 33,
+        "sent_count": 61
+      },
+      "perplexity": {
+        "char_entropy": 8.32,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 22,
+        "bold_density": 1.32
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.2,
+      "priority": "low"
+    },
+    {
+      "file": "第三方故事.mdx",
+      "char_count": 955,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1591.1,
+        "sent_length_cv": 0.9,
+        "section_variance": 1.329,
+        "section_count": 19,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 7.88,
+        "bigram_ttr": 0.816
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.3,
+      "priority": "low"
+    },
+    {
+      "file": "设计模式.mdx",
+      "char_count": 909,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 5527.7,
+        "sent_length_cv": 1.216,
+        "section_variance": 1.364,
+        "section_count": 21,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 7.9,
+        "bigram_ttr": 0.824
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 92.3,
+      "priority": "low"
+    },
+    {
+      "file": "人月神话.mdx",
+      "char_count": 818,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 8989.2,
+        "sent_length_cv": 1.79,
+        "section_variance": 1.174,
+        "section_count": 14,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.843
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.4,
+      "priority": "low"
+    },
+    {
+      "file": "北极星.mdx",
+      "char_count": 1128,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1056.6,
+        "sent_length_cv": 0.664,
+        "section_variance": 1.055,
+        "section_count": 19,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.801
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.16
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 92.4,
+      "priority": "low"
+    },
+    {
+      "file": "客户开发.mdx",
+      "char_count": 1018,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1599.9,
+        "sent_length_cv": 0.856,
+        "section_variance": 1.183,
+        "section_count": 17,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.797
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.5,
+      "priority": "low"
+    },
+    {
+      "file": "收益递减.mdx",
+      "char_count": 884,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1086.7,
+        "sent_length_cv": 0.729,
+        "section_variance": 1.158,
+        "section_count": 16,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.826
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.5,
+      "priority": "low"
+    },
+    {
+      "file": "超级预测家.mdx",
+      "char_count": 860,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2781.2,
+        "sent_length_cv": 0.955,
+        "section_variance": 1.531,
+        "section_count": 17,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.872
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.5,
+      "priority": "low"
+    },
+    {
+      "file": "可得性偏差.mdx",
+      "char_count": 942,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1893.2,
+        "sent_length_cv": 0.971,
+        "section_variance": 1.328,
+        "section_count": 17,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.861
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.6,
+      "priority": "low"
+    },
+    {
+      "file": "强制函数.mdx",
+      "char_count": 811,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1771.4,
+        "sent_length_cv": 0.971,
+        "section_variance": 1.481,
+        "section_count": 20,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.858
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.6,
+      "priority": "low"
+    },
+    {
+      "file": "短视主义.mdx",
+      "char_count": 946,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2031.8,
+        "sent_length_cv": 0.818,
+        "section_variance": 1.575,
+        "section_count": 19,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.854
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 92.6,
+      "priority": "low"
+    },
+    {
+      "file": "威慑.mdx",
+      "char_count": 1104,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1038.5,
+        "sent_length_cv": 0.882,
+        "section_variance": 1.381,
+        "section_count": 22,
+        "sent_count": 52
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.839
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "帕金森定律.mdx",
+      "char_count": 946,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 687.6,
+        "sent_length_cv": 0.816,
+        "section_variance": 0.904,
+        "section_count": 17,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.852
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "延迟满足.mdx",
+      "char_count": 1159,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1112.7,
+        "sent_length_cv": 0.876,
+        "section_variance": 1.34,
+        "section_count": 23,
+        "sent_count": 50
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "损失规避.mdx",
+      "char_count": 1021,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 7616.9,
+        "sent_length_cv": 1.967,
+        "section_variance": 1.268,
+        "section_count": 20,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.856
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "确认偏误.mdx",
+      "char_count": 1102,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1550.5,
+        "sent_length_cv": 0.968,
+        "section_variance": 1.358,
+        "section_count": 22,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.813
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "逆向思维.mdx",
+      "char_count": 949,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 797.9,
+        "sent_length_cv": 0.806,
+        "section_variance": 1.381,
+        "section_count": 21,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "重心.mdx",
+      "char_count": 1165,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 904.9,
+        "sent_length_cv": 0.793,
+        "section_variance": 1.252,
+        "section_count": 22,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.7,
+      "priority": "low"
+    },
+    {
+      "file": "共振频率.mdx",
+      "char_count": 1041,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1021.2,
+        "sent_length_cv": 0.875,
+        "section_variance": 1.081,
+        "section_count": 17,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.8,
+      "priority": "low"
+    },
+    {
+      "file": "多任务处理.mdx",
+      "char_count": 999,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "内容-虚词",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1285.8,
+        "sent_length_cv": 0.962,
+        "section_variance": 1.166,
+        "section_count": 21,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 7.92,
+        "bigram_ttr": 0.813
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.8,
+      "priority": "low"
+    },
+    {
+      "file": "深度工作.mdx",
+      "char_count": 1217,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1731.5,
+        "sent_length_cv": 0.699,
+        "section_variance": 1.052,
+        "section_count": 19,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.808
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.15
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 92.8,
+      "priority": "low"
+    },
+    {
+      "file": "科学方法.mdx",
+      "char_count": 1122,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ],
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 2,
+      "para_entropy": {
+        "sent_length_variance": 1503.8,
+        "sent_length_cv": 0.699,
+        "section_variance": 1.265,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 92.8,
+      "priority": "low"
+    },
+    {
+      "file": "帕累托法则.mdx",
+      "char_count": 1303,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 3520.2,
+        "sent_length_cv": 1.024,
+        "section_variance": 1.014,
+        "section_count": 19,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 4,
+        "bold_density": 0.29
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 92.9,
+      "priority": "low"
+    },
+    {
+      "file": "规模经济.mdx",
+      "char_count": 1307,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1501.1,
+        "sent_length_cv": 0.971,
+        "section_variance": 1.287,
+        "section_count": 22,
+        "sent_count": 52
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.793
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 92.9,
+      "priority": "low"
+    },
+    {
+      "file": "先发劣势.mdx",
+      "char_count": 1281,
+      "rule_score": 93,
+      "rule_hits": [
+        [
+          "风格-高深词",
+          1,
+          7
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1574.7,
+        "sent_length_cv": 0.794,
+        "section_variance": 1.193,
+        "section_count": 24,
+        "sent_count": 51
+      },
+      "perplexity": {
+        "char_entropy": 8.23,
+        "bigram_ttr": 0.814
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 93.0,
+      "priority": "low"
+    },
+    {
+      "file": "普朗克原理.mdx",
+      "char_count": 1066,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "语法-模糊归因",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1699.2,
+        "sent_length_cv": 0.705,
+        "section_variance": 1.146,
+        "section_count": 19,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.837
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 93.0,
+      "priority": "low"
+    },
+    {
+      "file": "最善意的解释.mdx",
+      "char_count": 854,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1815.0,
+        "sent_length_cv": 0.848,
+        "section_variance": 1.47,
+        "section_count": 17,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 7.84,
+        "bigram_ttr": 0.866
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 93.2,
+      "priority": "low"
+    },
+    {
+      "file": "不证实偏差.mdx",
+      "char_count": 1019,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 7534.9,
+        "sent_length_cv": 1.404,
+        "section_variance": 1.348,
+        "section_count": 16,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.801
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.09
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 93.3,
+      "priority": "low"
+    },
+    {
+      "file": "波将金村.mdx",
+      "char_count": 1065,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "语法-模糊归因",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 893.6,
+        "sent_length_cv": 0.836,
+        "section_variance": 0.984,
+        "section_count": 17,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.82
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.3,
+      "priority": "low"
+    },
+    {
+      "file": "纳什均衡.mdx",
+      "char_count": 1324,
+      "rule_score": 94,
+      "rule_hits": [
+        [
+          "风格-破折号过度",
+          1,
+          6
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2103.9,
+        "sent_length_cv": 0.813,
+        "section_variance": 1.206,
+        "section_count": 22,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.803
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 18,
+      "final_score": 93.3,
+      "priority": "low"
+    },
+    {
+      "file": "产品-市场匹配.mdx",
+      "char_count": 908,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1147.1,
+        "sent_length_cv": 0.683,
+        "section_variance": 1.067,
+        "section_count": 16,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.93,
+        "bigram_ttr": 0.831
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.4,
+      "priority": "low"
+    },
+    {
+      "file": "早期大多数.mdx",
+      "char_count": 1164,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1229.4,
+        "sent_length_cv": 0.94,
+        "section_variance": 1.252,
+        "section_count": 23,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.772
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.4,
+      "priority": "low"
+    },
+    {
+      "file": "社会认同.mdx",
+      "char_count": 808,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2097.6,
+        "sent_length_cv": 1.069,
+        "section_variance": 1.715,
+        "section_count": 19,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.95,
+        "bigram_ttr": 0.871
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.4,
+      "priority": "low"
+    },
+    {
+      "file": "习得性无助.mdx",
+      "char_count": 982,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2782.7,
+        "sent_length_cv": 0.91,
+        "section_variance": 1.284,
+        "section_count": 19,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.82
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "分析瘫痪.mdx",
+      "char_count": 893,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 4328.8,
+        "sent_length_cv": 1.485,
+        "section_variance": 1.246,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.887
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "汉隆的剃刀.mdx",
+      "char_count": 928,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1004.5,
+        "sent_length_cv": 0.756,
+        "section_variance": 1.102,
+        "section_count": 17,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.865
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "沉没成本谬误.mdx",
+      "char_count": 949,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1467.6,
+        "sent_length_cv": 0.819,
+        "section_variance": 1.644,
+        "section_count": 21,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.844
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "重复博弈.mdx",
+      "char_count": 1255,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2464.0,
+        "sent_length_cv": 0.805,
+        "section_variance": 1.221,
+        "section_count": 18,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.777
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "间隔效应.mdx",
+      "char_count": 863,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2087.9,
+        "sent_length_cv": 1.147,
+        "section_variance": 1.641,
+        "section_count": 19,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.864
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "颠覆性创新.mdx",
+      "char_count": 1148,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 6476.3,
+        "sent_length_cv": 1.283,
+        "section_variance": 1.275,
+        "section_count": 17,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.78
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 93.5,
+      "priority": "low"
+    },
+    {
+      "file": "全局最优.mdx",
+      "char_count": 1037,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1802.0,
+        "sent_length_cv": 0.725,
+        "section_variance": 1.479,
+        "section_count": 18,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.831
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "基础比率谬误.mdx",
+      "char_count": 1052,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1851.1,
+        "sent_length_cv": 0.827,
+        "section_variance": 1.251,
+        "section_count": 18,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.807
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "灰度思考.mdx",
+      "char_count": 961,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1318.6,
+        "sent_length_cv": 0.902,
+        "section_variance": 1.509,
+        "section_count": 20,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "组织文化.mdx",
+      "char_count": 990,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1834.1,
+        "sent_length_cv": 0.827,
+        "section_variance": 1.421,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "路径依赖.mdx",
+      "char_count": 1138,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1742.6,
+        "sent_length_cv": 0.814,
+        "section_variance": 1.1,
+        "section_count": 19,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.843
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.16
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "锚定效应.mdx",
+      "char_count": 900,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1072.2,
+        "sent_length_cv": 0.83,
+        "section_variance": 1.569,
+        "section_count": 21,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.853
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "飞轮.mdx",
+      "char_count": 1090,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "风格-空洞宏大",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 3149.8,
+        "sent_length_cv": 1.21,
+        "section_variance": 0.991,
+        "section_count": 17,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.805
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 93.6,
+      "priority": "low"
+    },
+    {
+      "file": "代表性启发式.mdx",
+      "char_count": 1044,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1739.8,
+        "sent_length_cv": 1.017,
+        "section_variance": 1.384,
+        "section_count": 21,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.7,
+      "priority": "low"
+    },
+    {
+      "file": "回音室效应.mdx",
+      "char_count": 914,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2197.2,
+        "sent_length_cv": 1.013,
+        "section_variance": 1.156,
+        "section_count": 16,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.857
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.7,
+      "priority": "low"
+    },
+    {
+      "file": "基本归因错误.mdx",
+      "char_count": 1211,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1764.1,
+        "sent_length_cv": 0.962,
+        "section_variance": 1.343,
+        "section_count": 22,
+        "sent_count": 51
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.84
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.7,
+      "priority": "low"
+    },
+    {
+      "file": "条件概率.mdx",
+      "char_count": 1005,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 8527.4,
+        "sent_length_cv": 1.72,
+        "section_variance": 1.306,
+        "section_count": 20,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 7.85,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 93.7,
+      "priority": "low"
+    },
+    {
+      "file": "落后者.mdx",
+      "char_count": 1315,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 936.9,
+        "sent_length_cv": 0.73,
+        "section_variance": 1.714,
+        "section_count": 28,
+        "sent_count": 52
+      },
+      "perplexity": {
+        "char_entropy": 8.2,
+        "bigram_ttr": 0.779
+      },
+      "bold": {
+        "bold_count": 25,
+        "bold_density": 1.77
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.7,
+      "priority": "low"
+    },
+    {
+      "file": "反应偏差.mdx",
+      "char_count": 849,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-句式套话",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 13232.9,
+        "sent_length_cv": 1.678,
+        "section_variance": 1.689,
+        "section_count": 17,
+        "sent_count": 26
+      },
+      "perplexity": {
+        "char_entropy": 7.91,
+        "bigram_ttr": 0.808
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.8,
+      "priority": "low"
+    },
+    {
+      "file": "肥尾分布.mdx",
+      "char_count": 1020,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "语法-提醒",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 6232.1,
+        "sent_length_cv": 1.288,
+        "section_variance": 1.067,
+        "section_count": 19,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.814
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 12,
+      "final_score": 93.8,
+      "priority": "low"
+    },
+    {
+      "file": "认知失调.mdx",
+      "char_count": 939,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 3959.6,
+        "sent_length_cv": 1.243,
+        "section_variance": 1.293,
+        "section_count": 17,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.85
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 93.8,
+      "priority": "low"
+    },
+    {
+      "file": "贝叶斯定理.mdx",
+      "char_count": 1185,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1945.3,
+        "sent_length_cv": 0.755,
+        "section_variance": 1.104,
+        "section_count": 22,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.785
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.16
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 93.8,
+      "priority": "low"
+    },
+    {
+      "file": "负外部性.mdx",
+      "char_count": 1225,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 924.5,
+        "sent_length_cv": 0.835,
+        "section_variance": 1.183,
+        "section_count": 23,
+        "sent_count": 51
+      },
+      "perplexity": {
+        "char_entropy": 8.23,
+        "bigram_ttr": 0.806
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.8,
+      "priority": "low"
+    },
+    {
+      "file": "助推.mdx",
+      "char_count": 794,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 5494.9,
+        "sent_length_cv": 1.138,
+        "section_variance": 1.472,
+        "section_count": 15,
+        "sent_count": 27
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.859
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.9,
+      "priority": "low"
+    },
+    {
+      "file": "协和谬误.mdx",
+      "char_count": 1097,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "语法-同义反复",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1232.2,
+        "sent_length_cv": 0.651,
+        "section_variance": 1.304,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.842
+      },
+      "bold": {
+        "bold_count": 3,
+        "bold_density": 0.25
+      },
+      "emoji": 0,
+      "dashes": 12,
+      "final_score": 93.9,
+      "priority": "low"
+    },
+    {
+      "file": "席克定律.mdx",
+      "char_count": 1039,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1400.4,
+        "sent_length_cv": 0.816,
+        "section_variance": 1.466,
+        "section_count": 18,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.832
+      },
+      "bold": {
+        "bold_count": 6,
+        "bold_density": 0.53
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.9,
+      "priority": "low"
+    },
+    {
+      "file": "拐点.mdx",
+      "char_count": 1306,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 837.9,
+        "sent_length_cv": 0.775,
+        "section_variance": 1.755,
+        "section_count": 31,
+        "sent_count": 58
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.813
+      },
+      "bold": {
+        "bold_count": 23,
+        "bold_density": 1.64
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 93.9,
+      "priority": "low"
+    },
+    {
+      "file": "承诺机制.mdx",
+      "char_count": 1199,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "交流-签名档",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1238.6,
+        "sent_length_cv": 0.765,
+        "section_variance": 1.544,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.23,
+        "bigram_ttr": 0.819
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.0,
+      "priority": "low"
+    },
+    {
+      "file": "群体思维.mdx",
+      "char_count": 943,
+      "rule_score": 95,
+      "rule_hits": [
+        [
+          "语法-提醒",
+          1,
+          5
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1437.0,
+        "sent_length_cv": 0.761,
+        "section_variance": 1.132,
+        "section_count": 16,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.27,
+        "bigram_ttr": 0.877
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.0,
+      "priority": "low"
+    },
+    {
+      "file": "艾森豪威尔决策矩阵.mdx",
+      "char_count": 1061,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 6918.8,
+        "sent_length_cv": 1.258,
+        "section_variance": 1.053,
+        "section_count": 18,
+        "sent_count": 33
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.814
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 12,
+      "final_score": 94.0,
+      "priority": "low"
+    },
+    {
+      "file": "框架效应.mdx",
+      "char_count": 1109,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1856.2,
+        "sent_length_cv": 0.703,
+        "section_variance": 1.089,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 15,
+      "final_score": 94.1,
+      "priority": "low"
+    },
+    {
+      "file": "混淆因素.mdx",
+      "char_count": 834,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1895.9,
+        "sent_length_cv": 0.891,
+        "section_variance": 1.39,
+        "section_count": 16,
+        "sent_count": 33
+      },
+      "perplexity": {
+        "char_entropy": 7.89,
+        "bigram_ttr": 0.79
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.1,
+      "priority": "low"
+    },
+    {
+      "file": "观察者效应.mdx",
+      "char_count": 1116,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1796.4,
+        "sent_length_cv": 0.76,
+        "section_variance": 1.19,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.85,
+        "bigram_ttr": 0.769
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 94.1,
+      "priority": "low"
+    },
+    {
+      "file": "反弹.mdx",
+      "char_count": 1385,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 934.4,
+        "sent_length_cv": 0.726,
+        "section_variance": 1.833,
+        "section_count": 30,
+        "sent_count": 55
+      },
+      "perplexity": {
+        "char_entropy": 8.35,
+        "bigram_ttr": 0.819
+      },
+      "bold": {
+        "bold_count": 25,
+        "bold_density": 1.68
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "合取谬误.mdx",
+      "char_count": 903,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1406.8,
+        "sent_length_cv": 0.997,
+        "section_variance": 1.374,
+        "section_count": 22,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 7.85,
+        "bigram_ttr": 0.799
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "效用递减.mdx",
+      "char_count": 823,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1266.6,
+        "sent_length_cv": 0.678,
+        "section_variance": 1.161,
+        "section_count": 16,
+        "sent_count": 30
+      },
+      "perplexity": {
+        "char_entropy": 7.9,
+        "bigram_ttr": 0.824
+      },
+      "bold": {
+        "bold_count": 10,
+        "bold_density": 1.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "梅特卡夫定律.mdx",
+      "char_count": 1029,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 5248.9,
+        "sent_length_cv": 1.716,
+        "section_variance": 1.068,
+        "section_count": 19,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.84,
+        "bigram_ttr": 0.794
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "网络效应.mdx",
+      "char_count": 903,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 5848.8,
+        "sent_length_cv": 1.299,
+        "section_variance": 1.315,
+        "section_count": 17,
+        "sent_count": 29
+      },
+      "perplexity": {
+        "char_entropy": 7.85,
+        "bigram_ttr": 0.786
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "聚集性幻觉.mdx",
+      "char_count": 1041,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2089.0,
+        "sent_length_cv": 0.878,
+        "section_variance": 1.288,
+        "section_count": 18,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.83
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "证实偏差.mdx",
+      "char_count": 1404,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1442.5,
+        "sent_length_cv": 0.918,
+        "section_variance": 2.037,
+        "section_count": 32,
+        "sent_count": 65
+      },
+      "perplexity": {
+        "char_entropy": 8.3,
+        "bigram_ttr": 0.808
+      },
+      "bold": {
+        "bold_count": 24,
+        "bold_density": 1.6
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "道德风险.mdx",
+      "char_count": 873,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1130.8,
+        "sent_length_cv": 0.725,
+        "section_variance": 1.25,
+        "section_count": 16,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 7.97,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 11,
+        "bold_density": 1.13
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.2,
+      "priority": "low"
+    },
+    {
+      "file": "A-B测试.mdx",
+      "char_count": 994,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1775.7,
+        "sent_length_cv": 0.799,
+        "section_variance": 1.303,
+        "section_count": 17,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.824
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 94.3,
+      "priority": "low"
+    },
+    {
+      "file": "侯世达定律.mdx",
+      "char_count": 1291,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 3045.2,
+        "sent_length_cv": 0.934,
+        "section_variance": 0.924,
+        "section_count": 19,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.31,
+        "bigram_ttr": 0.828
+      },
+      "bold": {
+        "bold_count": 3,
+        "bold_density": 0.22
+      },
+      "emoji": 0,
+      "dashes": 24,
+      "final_score": 94.3,
+      "priority": "low"
+    },
+    {
+      "file": "反馈循环.mdx",
+      "char_count": 888,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 792.0,
+        "sent_length_cv": 0.791,
+        "section_variance": 1.291,
+        "section_count": 21,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 7.97,
+        "bigram_ttr": 0.826
+      },
+      "bold": {
+        "bold_count": 11,
+        "bold_density": 1.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.3,
+      "priority": "low"
+    },
+    {
+      "file": "蝴蝶效应.mdx",
+      "char_count": 966,
+      "rule_score": 96,
+      "rule_hits": [
+        [
+          "学术-虚词",
+          1,
+          4
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 990.6,
+        "sent_length_cv": 0.592,
+        "section_variance": 1.392,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.828
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 94.3,
+      "priority": "low"
+    },
+    {
+      "file": "赢家通吃市场.mdx",
+      "char_count": 812,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1868.9,
+        "sent_length_cv": 0.919,
+        "section_variance": 1.425,
+        "section_count": 18,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.3,
+      "priority": "low"
+    },
+    {
+      "file": "熵.mdx",
+      "char_count": 1099,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 992.1,
+        "sent_length_cv": 0.801,
+        "section_variance": 1.252,
+        "section_count": 21,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 7.95,
+        "bigram_ttr": 0.811
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.4,
+      "priority": "low"
+    },
+    {
+      "file": "零和.mdx",
+      "char_count": 1273,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1719.8,
+        "sent_length_cv": 0.812,
+        "section_variance": 1.126,
+        "section_count": 20,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.789
+      },
+      "bold": {
+        "bold_count": 2,
+        "bold_density": 0.15
+      },
+      "emoji": 0,
+      "dashes": 21,
+      "final_score": 94.4,
+      "priority": "low"
+    },
+    {
+      "file": "无知之幕.mdx",
+      "char_count": 889,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1272.5,
+        "sent_length_cv": 0.721,
+        "section_variance": 1.15,
+        "section_count": 16,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.831
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.5,
+      "priority": "low"
+    },
+    {
+      "file": "科斯定理.mdx",
+      "char_count": 834,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1080.9,
+        "sent_length_cv": 0.756,
+        "section_variance": 1.078,
+        "section_count": 16,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.843
+      },
+      "bold": {
+        "bold_count": 10,
+        "bold_density": 1.07
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.5,
+      "priority": "low"
+    },
+    {
+      "file": "委托代理问题.mdx",
+      "char_count": 964,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1735.1,
+        "sent_length_cv": 0.882,
+        "section_variance": 1.097,
+        "section_count": 17,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.6,
+      "priority": "low"
+    },
+    {
+      "file": "顺势-逆势矩阵.mdx",
+      "char_count": 925,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1796.2,
+        "sent_length_cv": 0.856,
+        "section_variance": 1.287,
+        "section_count": 16,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.821
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.6,
+      "priority": "low"
+    },
+    {
+      "file": "并行处理.mdx",
+      "char_count": 1126,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 11342.0,
+        "sent_length_cv": 1.703,
+        "section_variance": 1.375,
+        "section_count": 16,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 94.7,
+      "priority": "low"
+    },
+    {
+      "file": "横向思维.mdx",
+      "char_count": 888,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 941.6,
+        "sent_length_cv": 0.721,
+        "section_variance": 1.142,
+        "section_count": 17,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.873
+      },
+      "bold": {
+        "bold_count": 11,
+        "bold_density": 1.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.7,
+      "priority": "low"
+    },
+    {
+      "file": "管制俘获.mdx",
+      "char_count": 991,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2267.9,
+        "sent_length_cv": 0.99,
+        "section_variance": 1.331,
+        "section_count": 17,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.827
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.7,
+      "priority": "low"
+    },
+    {
+      "file": "过滤气泡.mdx",
+      "char_count": 879,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1222.8,
+        "sent_length_cv": 0.695,
+        "section_variance": 1.493,
+        "section_count": 19,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 94.7,
+      "priority": "low"
+    },
+    {
+      "file": "史翠珊效应.mdx",
+      "char_count": 894,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1389.6,
+        "sent_length_cv": 0.82,
+        "section_variance": 1.219,
+        "section_count": 16,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.22,
+        "bigram_ttr": 0.854
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.9,
+      "priority": "low"
+    },
+    {
+      "file": "多米诺骨牌效应.mdx",
+      "char_count": 1215,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 957.9,
+        "sent_length_cv": 0.694,
+        "section_variance": 0.987,
+        "section_count": 17,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.9,
+      "priority": "low"
+    },
+    {
+      "file": "小决定泛滥.mdx",
+      "char_count": 1099,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2666.7,
+        "sent_length_cv": 0.926,
+        "section_variance": 1.21,
+        "section_count": 17,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.22,
+        "bigram_ttr": 0.848
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 94.9,
+      "priority": "low"
+    },
+    {
+      "file": "极性.mdx",
+      "char_count": 999,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1508.8,
+        "sent_length_cv": 0.938,
+        "section_variance": 1.526,
+        "section_count": 22,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 7.44,
+        "bigram_ttr": 0.744
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 94.9,
+      "priority": "low"
+    },
+    {
+      "file": "舍基原则.mdx",
+      "char_count": 1122,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 2540.4,
+        "sent_length_cv": 0.927,
+        "section_variance": 1.535,
+        "section_count": 24,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.22,
+        "bigram_ttr": 0.81
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 94.9,
+      "priority": "low"
+    },
+    {
+      "file": "以牙还牙.mdx",
+      "char_count": 882,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1793.9,
+        "sent_length_cv": 1.032,
+        "section_variance": 1.263,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 7.87,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 5,
+        "bold_density": 0.51
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.0,
+      "priority": "low"
+    },
+    {
+      "file": "终局.mdx",
+      "char_count": 1156,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 1139.3,
+        "sent_length_cv": 0.791,
+        "section_variance": 1.094,
+        "section_count": 23,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.23,
+        "bigram_ttr": 0.842
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 95.0,
+      "priority": "low"
+    },
+    {
+      "file": "魔鬼辩护人.mdx",
+      "char_count": 1153,
+      "rule_score": 97,
+      "rule_hits": [
+        [
+          "语法-被字滥用",
+          1,
+          3
+        ]
+      ],
+      "rule_hit_total": 1,
+      "para_entropy": {
+        "sent_length_variance": 5657.4,
+        "sent_length_cv": 1.289,
+        "section_variance": 1.195,
+        "section_count": 17,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.31,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 95.1,
+      "priority": "low"
+    },
+    {
+      "file": "折现率.mdx",
+      "char_count": 927,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 783.7,
+        "sent_length_cv": 0.73,
+        "section_variance": 1.42,
+        "section_count": 20,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.59,
+        "bigram_ttr": 0.768
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.2,
+      "priority": "low"
+    },
+    {
+      "file": "S形曲线.mdx",
+      "char_count": 1028,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1039.0,
+        "sent_length_cv": 0.839,
+        "section_variance": 1.23,
+        "section_count": 20,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.837
+      },
+      "bold": {
+        "bold_count": 8,
+        "bold_density": 0.71
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.3,
+      "priority": "low"
+    },
+    {
+      "file": "从众效应.mdx",
+      "char_count": 908,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2141.8,
+        "sent_length_cv": 0.914,
+        "section_variance": 1.386,
+        "section_count": 18,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.85
+      },
+      "bold": {
+        "bold_count": 5,
+        "bold_density": 0.5
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.4,
+      "priority": "low"
+    },
+    {
+      "file": "后果-信心矩阵.mdx",
+      "char_count": 837,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1564.0,
+        "sent_length_cv": 0.884,
+        "section_variance": 1.375,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 7.89,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.6,
+      "priority": "low"
+    },
+    {
+      "file": "线流图.mdx",
+      "char_count": 940,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 494.3,
+        "sent_length_cv": 0.516,
+        "section_variance": 1.256,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.79,
+        "bigram_ttr": 0.796
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 95.6,
+      "priority": "low"
+    },
+    {
+      "file": "时间价值.mdx",
+      "char_count": 1024,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1289.1,
+        "sent_length_cv": 0.951,
+        "section_variance": 1.392,
+        "section_count": 22,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 7.84,
+        "bigram_ttr": 0.788
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.7,
+      "priority": "low"
+    },
+    {
+      "file": "自动化.mdx",
+      "char_count": 1108,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 884.3,
+        "sent_length_cv": 0.819,
+        "section_variance": 1.204,
+        "section_count": 23,
+        "sent_count": 50
+      },
+      "perplexity": {
+        "char_entropy": 7.9,
+        "bigram_ttr": 0.775
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.7,
+      "priority": "low"
+    },
+    {
+      "file": "预期值.mdx",
+      "char_count": 908,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 4063.3,
+        "sent_length_cv": 1.295,
+        "section_variance": 0.902,
+        "section_count": 16,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 7.85,
+        "bigram_ttr": 0.835
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.7,
+      "priority": "low"
+    },
+    {
+      "file": "信息不对称.mdx",
+      "char_count": 1356,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1684.6,
+        "sent_length_cv": 0.787,
+        "section_variance": 1.064,
+        "section_count": 20,
+        "sent_count": 49
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.776
+      },
+      "bold": {
+        "bold_count": 5,
+        "bold_density": 0.34
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "反面模式.mdx",
+      "char_count": 952,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 6617.0,
+        "sent_length_cv": 1.332,
+        "section_variance": 1.206,
+        "section_count": 19,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 7.89,
+        "bigram_ttr": 0.818
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "发散思维.mdx",
+      "char_count": 892,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1156.0,
+        "sent_length_cv": 0.983,
+        "section_variance": 1.465,
+        "section_count": 19,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 7.91,
+        "bigram_ttr": 0.819
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "收益矩阵.mdx",
+      "char_count": 841,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1240.1,
+        "sent_length_cv": 0.838,
+        "section_variance": 1.186,
+        "section_count": 16,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 7.89,
+        "bigram_ttr": 0.807
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "敏感性分析.mdx",
+      "char_count": 859,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 12933.3,
+        "sent_length_cv": 1.904,
+        "section_variance": 1.385,
+        "section_count": 17,
+        "sent_count": 28
+      },
+      "perplexity": {
+        "char_entropy": 7.9,
+        "bigram_ttr": 0.807
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "相关性不代表因果性.mdx",
+      "char_count": 787,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 14534.1,
+        "sent_length_cv": 1.884,
+        "section_variance": 1.436,
+        "section_count": 14,
+        "sent_count": 30
+      },
+      "perplexity": {
+        "char_entropy": 7.96,
+        "bigram_ttr": 0.86
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "磁滞现象.mdx",
+      "char_count": 823,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 15032.1,
+        "sent_length_cv": 2.012,
+        "section_variance": 1.47,
+        "section_count": 17,
+        "sent_count": 27
+      },
+      "perplexity": {
+        "char_entropy": 7.89,
+        "bigram_ttr": 0.831
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "逆向选择.mdx",
+      "char_count": 979,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 7250.4,
+        "sent_length_cv": 1.324,
+        "section_variance": 1.098,
+        "section_count": 18,
+        "sent_count": 29
+      },
+      "perplexity": {
+        "char_entropy": 7.92,
+        "bigram_ttr": 0.774
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "逆火效应.mdx",
+      "char_count": 895,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 8048.1,
+        "sent_length_cv": 1.513,
+        "section_variance": 1.191,
+        "section_count": 18,
+        "sent_count": 33
+      },
+      "perplexity": {
+        "char_entropy": 7.9,
+        "bigram_ttr": 0.843
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 95.8,
+      "priority": "low"
+    },
+    {
+      "file": "创新者.mdx",
+      "char_count": 982,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 12811.8,
+        "sent_length_cv": 1.743,
+        "section_variance": 1.318,
+        "section_count": 18,
+        "sent_count": 32
+      },
+      "perplexity": {
+        "char_entropy": 7.94,
+        "bigram_ttr": 0.801
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "动量.mdx",
+      "char_count": 1015,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 9584.4,
+        "sent_length_cv": 1.806,
+        "section_variance": 1.297,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 7.95,
+        "bigram_ttr": 0.825
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "后期大多数.mdx",
+      "char_count": 1124,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1862.3,
+        "sent_length_cv": 0.966,
+        "section_variance": 1.506,
+        "section_count": 23,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.784
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "喜好.mdx",
+      "char_count": 803,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 3985.4,
+        "sent_length_cv": 1.326,
+        "section_variance": 1.599,
+        "section_count": 18,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.94,
+        "bigram_ttr": 0.863
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "杠杆作用.mdx",
+      "char_count": 1031,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1097.2,
+        "sent_length_cv": 0.816,
+        "section_variance": 1.312,
+        "section_count": 22,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 7.94,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "直接负责人.mdx",
+      "char_count": 815,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 10540.6,
+        "sent_length_cv": 1.672,
+        "section_variance": 1.206,
+        "section_count": 18,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 7.97,
+        "bigram_ttr": 0.857
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 95.9,
+      "priority": "low"
+    },
+    {
+      "file": "中心极限定理.mdx",
+      "char_count": 1181,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1123.2,
+        "sent_length_cv": 0.708,
+        "section_variance": 1.257,
+        "section_count": 22,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.78
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "乐观偏差.mdx",
+      "char_count": 907,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 8013.6,
+        "sent_length_cv": 1.428,
+        "section_variance": 1.388,
+        "section_count": 17,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.832
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "入门毒品理论.mdx",
+      "char_count": 808,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 16438.1,
+        "sent_length_cv": 1.97,
+        "section_variance": 1.262,
+        "section_count": 15,
+        "sent_count": 28
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.834
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "决策树.mdx",
+      "char_count": 1136,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1259.9,
+        "sent_length_cv": 0.624,
+        "section_variance": 1.082,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.809
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "决策疲劳.mdx",
+      "char_count": 804,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 6902.1,
+        "sent_length_cv": 1.513,
+        "section_variance": 1.472,
+        "section_count": 17,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.875
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.11
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "动态平衡.mdx",
+      "char_count": 868,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 24577.9,
+        "sent_length_cv": 2.151,
+        "section_variance": 1.607,
+        "section_count": 19,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.875
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "双曲折现.mdx",
+      "char_count": 975,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1263.5,
+        "sent_length_cv": 0.842,
+        "section_variance": 1.287,
+        "section_count": 18,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.835
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "后见之明偏差.mdx",
+      "char_count": 1042,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 5033.2,
+        "sent_length_cv": 1.283,
+        "section_variance": 1.184,
+        "section_count": 17,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.835
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "奥卡姆剃刀.mdx",
+      "char_count": 1247,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1307.4,
+        "sent_length_cv": 0.682,
+        "section_variance": 1.088,
+        "section_count": 20,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 18,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "安慰剂效应.mdx",
+      "char_count": 1068,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1244.6,
+        "sent_length_cv": 0.828,
+        "section_variance": 1.123,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "惯性.mdx",
+      "char_count": 1012,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 9972.6,
+        "sent_length_cv": 1.677,
+        "section_variance": 1.368,
+        "section_count": 19,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.826
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "成本收益分析.mdx",
+      "char_count": 1130,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1490.6,
+        "sent_length_cv": 0.896,
+        "section_variance": 1.355,
+        "section_count": 22,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.02,
+        "bigram_ttr": 0.784
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "时间框.mdx",
+      "char_count": 821,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 931.0,
+        "sent_length_cv": 0.722,
+        "section_variance": 1.227,
+        "section_count": 18,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.01,
+        "bigram_ttr": 0.848
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "最后通牒博弈.mdx",
+      "char_count": 934,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 7271.1,
+        "sent_length_cv": 1.441,
+        "section_variance": 1.183,
+        "section_count": 18,
+        "sent_count": 29
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "最简可行产品.mdx",
+      "char_count": 963,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1205.6,
+        "sent_length_cv": 0.724,
+        "section_variance": 1.324,
+        "section_count": 18,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.838
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "权力真空.mdx",
+      "char_count": 874,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 11287.1,
+        "sent_length_cv": 1.833,
+        "section_variance": 1.319,
+        "section_count": 17,
+        "sent_count": 28
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.845
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "活化能.mdx",
+      "char_count": 1021,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1039.1,
+        "sent_length_cv": 0.8,
+        "section_variance": 1.248,
+        "section_count": 21,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "自然选择.mdx",
+      "char_count": 895,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1723.3,
+        "sent_length_cv": 0.859,
+        "section_variance": 1.543,
+        "section_count": 17,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.0,
+        "bigram_ttr": 0.845
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "选择的悖论.mdx",
+      "char_count": 925,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2603.0,
+        "sent_length_cv": 0.875,
+        "section_variance": 1.286,
+        "section_count": 16,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 7.98,
+        "bigram_ttr": 0.855
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "随机对照实验.mdx",
+      "char_count": 987,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1460.6,
+        "sent_length_cv": 0.817,
+        "section_variance": 1.374,
+        "section_count": 21,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 7.99,
+        "bigram_ttr": 0.804
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.0,
+      "priority": "low"
+    },
+    {
+      "file": "临界量.mdx",
+      "char_count": 871,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2538.1,
+        "sent_length_cv": 0.993,
+        "section_variance": 1.186,
+        "section_count": 13,
+        "sent_count": 31
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.86
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "九头蛇效应.mdx",
+      "char_count": 842,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1448.2,
+        "sent_length_cv": 0.763,
+        "section_variance": 1.444,
+        "section_count": 21,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.844
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "峰值.mdx",
+      "char_count": 1104,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 856.4,
+        "sent_length_cv": 0.813,
+        "section_variance": 1.21,
+        "section_count": 21,
+        "sent_count": 48
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.82
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "市场失灵.mdx",
+      "char_count": 894,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1406.7,
+        "sent_length_cv": 0.85,
+        "section_variance": 1.406,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.844
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.1
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "幂律分布.mdx",
+      "char_count": 1261,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 3009.8,
+        "sent_length_cv": 0.81,
+        "section_variance": 1.062,
+        "section_count": 19,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.07
+      },
+      "emoji": 0,
+      "dashes": 18,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "思维实验.mdx",
+      "char_count": 1061,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1250.0,
+        "sent_length_cv": 0.933,
+        "section_variance": 1.12,
+        "section_count": 22,
+        "sent_count": 42
+      },
+      "perplexity": {
+        "char_entropy": 8.07,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "技术采纳生命周期.mdx",
+      "char_count": 1204,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1458.8,
+        "sent_length_cv": 0.953,
+        "section_variance": 1.469,
+        "section_count": 23,
+        "sent_count": 52
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.749
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "用户角色模型.mdx",
+      "char_count": 935,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1306.7,
+        "sent_length_cv": 0.917,
+        "section_variance": 1.333,
+        "section_count": 20,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.06,
+        "bigram_ttr": 0.839
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "相互确保毁灭.mdx",
+      "char_count": 1385,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1670.1,
+        "sent_length_cv": 0.712,
+        "section_variance": 1.026,
+        "section_count": 20,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.26,
+        "bigram_ttr": 0.811
+      },
+      "bold": {
+        "bold_count": 4,
+        "bold_density": 0.27
+      },
+      "emoji": 0,
+      "dashes": 18,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "稻草人.mdx",
+      "char_count": 997,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 5682.6,
+        "sent_length_cv": 1.396,
+        "section_variance": 1.1,
+        "section_count": 20,
+        "sent_count": 35
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.841
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "穷举搜索.mdx",
+      "char_count": 1044,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1187.3,
+        "sent_length_cv": 0.886,
+        "section_variance": 1.298,
+        "section_count": 22,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.04,
+        "bigram_ttr": 0.817
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "自利性偏差.mdx",
+      "char_count": 995,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1936.2,
+        "sent_length_cv": 0.857,
+        "section_variance": 1.221,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.03,
+        "bigram_ttr": 0.829
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "重新定义问题.mdx",
+      "char_count": 1016,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 795.0,
+        "sent_length_cv": 0.76,
+        "section_variance": 1.55,
+        "section_count": 22,
+        "sent_count": 53
+      },
+      "perplexity": {
+        "char_entropy": 8.05,
+        "bigram_ttr": 0.816
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.1,
+      "priority": "low"
+    },
+    {
+      "file": "二八定律.mdx",
+      "char_count": 1004,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1501.8,
+        "sent_length_cv": 1.017,
+        "section_variance": 1.105,
+        "section_count": 18,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.83
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "二阶思维.mdx",
+      "char_count": 1079,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1328.3,
+        "sent_length_cv": 1.087,
+        "section_variance": 1.448,
+        "section_count": 22,
+        "sent_count": 58
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "内部化.mdx",
+      "char_count": 1115,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1381.2,
+        "sent_length_cv": 0.913,
+        "section_variance": 1.317,
+        "section_count": 21,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.792
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "古德哈特定律.mdx",
+      "char_count": 1099,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2418.1,
+        "sent_length_cv": 0.964,
+        "section_variance": 1.212,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.16,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 1,
+        "bold_density": 0.08
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "塞尔定律.mdx",
+      "char_count": 1008,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 901.7,
+        "sent_length_cv": 0.754,
+        "section_variance": 1.316,
+        "section_count": 18,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.855
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "大数定律.mdx",
+      "char_count": 1020,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 4364.6,
+        "sent_length_cv": 1.511,
+        "section_variance": 1.049,
+        "section_count": 21,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.836
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "完美乃优秀之敌.mdx",
+      "char_count": 977,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 6244.9,
+        "sent_length_cv": 1.337,
+        "section_variance": 0.971,
+        "section_count": 19,
+        "sent_count": 34
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.872
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "暴力解决方案.mdx",
+      "char_count": 1039,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 7481.2,
+        "sent_length_cv": 1.634,
+        "section_variance": 1.278,
+        "section_count": 19,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.12,
+        "bigram_ttr": 0.822
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "破窗理论.mdx",
+      "char_count": 876,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1432.8,
+        "sent_length_cv": 0.693,
+        "section_variance": 1.536,
+        "section_count": 18,
+        "sent_count": 38
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.855
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "粘蝇纸理论.mdx",
+      "char_count": 1045,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1158.0,
+        "sent_length_cv": 0.844,
+        "section_variance": 1.308,
+        "section_count": 22,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.1,
+        "bigram_ttr": 0.804
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "自行车棚效应.mdx",
+      "char_count": 826,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 944.6,
+        "sent_length_cv": 0.788,
+        "section_variance": 1.223,
+        "section_count": 20,
+        "sent_count": 41
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.864
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "蒙特卡洛模拟.mdx",
+      "char_count": 1205,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 7636.3,
+        "sent_length_cv": 1.42,
+        "section_variance": 1.31,
+        "section_count": 17,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.798
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "赌徒谬误.mdx",
+      "char_count": 1075,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1101.9,
+        "sent_length_cv": 0.774,
+        "section_variance": 1.229,
+        "section_count": 20,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.09,
+        "bigram_ttr": 0.816
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "锁定效应.mdx",
+      "char_count": 881,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1576.6,
+        "sent_length_cv": 0.858,
+        "section_variance": 1.324,
+        "section_count": 18,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.11,
+        "bigram_ttr": 0.858
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "黑白谬误.mdx",
+      "char_count": 978,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2397.3,
+        "sent_length_cv": 1.028,
+        "section_variance": 0.968,
+        "section_count": 18,
+        "sent_count": 36
+      },
+      "perplexity": {
+        "char_entropy": 8.08,
+        "bigram_ttr": 0.86
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.2,
+      "priority": "low"
+    },
+    {
+      "file": "冒名顶替综合征.mdx",
+      "char_count": 1035,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 8230.2,
+        "sent_length_cv": 1.368,
+        "section_variance": 1.456,
+        "section_count": 20,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.845
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 6,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "去风险化.mdx",
+      "char_count": 955,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1377.1,
+        "sent_length_cv": 0.853,
+        "section_variance": 1.306,
+        "section_count": 18,
+        "sent_count": 40
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.847
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "因果循环图.mdx",
+      "char_count": 1123,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 959.7,
+        "sent_length_cv": 0.634,
+        "section_variance": 1.337,
+        "section_count": 19,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.13,
+        "bigram_ttr": 0.801
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 3,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "帕金森琐碎定律.mdx",
+      "char_count": 910,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 900.2,
+        "sent_length_cv": 0.619,
+        "section_variance": 1.246,
+        "section_count": 17,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.17,
+        "bigram_ttr": 0.859
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "技术负债.mdx",
+      "char_count": 1150,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1325.4,
+        "sent_length_cv": 0.809,
+        "section_variance": 1.301,
+        "section_count": 21,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.811
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "策略税.mdx",
+      "char_count": 1136,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 8637.7,
+        "sent_length_cv": 1.502,
+        "section_variance": 1.254,
+        "section_count": 17,
+        "sent_count": 39
+      },
+      "perplexity": {
+        "char_entropy": 8.14,
+        "bigram_ttr": 0.819
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 9,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "跨越鸿沟.mdx",
+      "char_count": 1036,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1278.8,
+        "sent_length_cv": 0.763,
+        "section_variance": 1.111,
+        "section_count": 18,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.15,
+        "bigram_ttr": 0.816
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.3,
+      "priority": "low"
+    },
+    {
+      "file": "博弈论.mdx",
+      "char_count": 1105,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1101.7,
+        "sent_length_cv": 0.717,
+        "section_variance": 1.3,
+        "section_count": 16,
+        "sent_count": 50
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.845
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "即时满足.mdx",
+      "char_count": 1064,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1639.5,
+        "sent_length_cv": 0.944,
+        "section_variance": 1.369,
+        "section_count": 21,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.2,
+        "bigram_ttr": 0.832
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "双赢.mdx",
+      "char_count": 1009,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2393.3,
+        "sent_length_cv": 1.159,
+        "section_variance": 1.286,
+        "section_count": 18,
+        "sent_count": 43
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "坎贝尔定律.mdx",
+      "char_count": 1138,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 2066.2,
+        "sent_length_cv": 1.081,
+        "section_variance": 1.287,
+        "section_count": 21,
+        "sent_count": 45
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.833
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "墨菲定律.mdx",
+      "char_count": 1041,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1906.9,
+        "sent_length_cv": 0.983,
+        "section_variance": 1.512,
+        "section_count": 22,
+        "sent_count": 46
+      },
+      "perplexity": {
+        "char_entropy": 8.19,
+        "bigram_ttr": 0.857
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "温水煮青蛙.mdx",
+      "char_count": 990,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1211.0,
+        "sent_length_cv": 0.921,
+        "section_variance": 1.386,
+        "section_count": 23,
+        "sent_count": 44
+      },
+      "perplexity": {
+        "char_entropy": 8.22,
+        "bigram_ttr": 0.845
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "眼镜蛇效应.mdx",
+      "char_count": 1177,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 966.7,
+        "sent_length_cv": 0.706,
+        "section_variance": 1.354,
+        "section_count": 25,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.18,
+        "bigram_ttr": 0.823
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.4,
+      "priority": "low"
+    },
+    {
+      "file": "塞麦尔维斯反射.mdx",
+      "char_count": 1002,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1662.9,
+        "sent_length_cv": 0.742,
+        "section_variance": 1.369,
+        "section_count": 16,
+        "sent_count": 37
+      },
+      "perplexity": {
+        "char_entropy": 8.25,
+        "bigram_ttr": 0.883
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 0,
+      "dashes": 0,
+      "final_score": 96.5,
+      "priority": "low"
+    },
+    {
+      "file": "只有偏执狂才能生存.mdx",
+      "char_count": 1216,
+      "rule_score": 100,
+      "rule_hits": [],
+      "rule_hit_total": 0,
+      "para_entropy": {
+        "sent_length_variance": 1576.3,
+        "sent_length_cv": 0.947,
+        "section_variance": 1.107,
+        "section_count": 18,
+        "sent_count": 47
+      },
+      "perplexity": {
+        "char_entropy": 8.28,
+        "bigram_ttr": 0.834
+      },
+      "bold": {
+        "bold_count": 0,
+        "bold_density": 0.0
+      },
+      "emoji": 5,
+      "dashes": 0,
+      "final_score": 96.6,
+      "priority": "low"
+    }
+  ]
+}
